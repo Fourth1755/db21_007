@@ -16,10 +16,10 @@
             foreach(Orderdetail as $Orderdetail){
             echo "<tr><td>$Rate->Product_ID</td>
                 <td>$Orderdetail->Orderdetail_ID</td>
-                <td>$Order_ID->Order_ID</td>
-                <td>$Colordetail_ID->Colordetail_ID</td>
-                <td>$Orderdetail_QuantityColor->Orderdetail_QuantityColor</td>
-                <td>$Orderdetail_Quantity->Orderdetail_Quantity</td>
+                <td>$Orderdetail->Order_ID</td>
+                <td>$Orderdetail->Colordetail_ID</td>
+                <td>$Orderdetail->Orderdetail_QuantityColor</td>
+                <td>$Orderdetail->Orderdetail_Quantity</td>
                 <td><a href=?controller=rate&action=updateForm&Rate_ID=$Orderdetail->Orderdetail_ID>Update</a></td>
                 <td>Delete</td></tr>";
             }    
