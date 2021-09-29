@@ -5,14 +5,14 @@
         public $Colordetail_ID ;
         public $Orderdetail_QuantityColor ;
         public $Orderdetail_Quantity ;
-        public function __constuct($Orderdetail_ID,$Order_ID,$Colordetail_ID,$Orderdetail_QuantityColor,$Orderdetail_Quantity);
+        public function __constuct($Orderdetail_ID,$Order_ID,$Colordetail_ID,$Orderdetail_QuantityColor,$Orderdetail_Quantity){
             $this->Orderdetail_ID=$Orderdetail_ID;
             $this->Order_ID=$Order_ID;
             $this->Colordetail_ID=$Colordetail_ID;
             $this->Orderdetail_QuantityColor=$Orderdetail_QuantityColor;
             $this->Orderdetail_Quantity=$Orderdetail_Quantity;
     }
-    public static function get($id){
+    public static function get($Orderdetail_ID){
         require("connection_connect.php");
         $sql="SELECT * FROM QuotationDetail WHERE QuotationDetail_ID='$Orderdetail_ID' ";
         $result=$conn->query($sql);
