@@ -68,7 +68,7 @@ class Rate{
     }
 
     public static function delete($Rate_ID){
-        require_once("connection_connect.php");
+        require("connection_connect.php");
         $sql = "Delete from Product where Product_ID = '$Rate_ID'";
         $result = $conn->query($sql);
         require("connection_close.php");
