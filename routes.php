@@ -10,7 +10,7 @@
                         require_once("models/employeeModels.php");
                         $controller = new OrderController();
                         break;
-            case "rate": require_once("model/rateModel.php");
+            case "rate": require_once("models/rateModel.php");
                         $controller = new rateController();
                         break;
         }
