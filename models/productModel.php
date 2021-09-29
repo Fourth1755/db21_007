@@ -15,7 +15,7 @@ class Product{
     }
     public static function get($Product_ID){
         require("connection_connect.php");
-        $sql = "select * from Product where Product_ID = 'Product_ID'";
+        $sql = "SELECT * from Product where Product_ID = 'Product_ID'";
         $result = $conn->query($sql);
         $my_row = $result->fetch_assoc();
         $Product_ID = $my_row["Product_ID"];
@@ -31,7 +31,7 @@ class Product{
     public static function getAll(){
         $ProductList = [];
         require("connection_connect.php");
-        $sql = "select * from Product";
+        $sql = "SELECT * from Product";
         $result = $conn->query($sql);
         while($my_row = $result->fetch_assoc()){
             $result = $conn->query($sql);
@@ -50,7 +50,7 @@ class Product{
 
     public static function add($Product_ID, $Product_Name, $Product_Detail, $Category_ID, $Product_Stock){
         require("connection_connect.php");
-        $sql = "insert into Product(Product_ID, Product_Name, Product_Detail, Category_ID, Product_Stock) values('$Product_ID', '$Product_Name', '$Product_Detail', '$Category_ID', '$Product_Stock')";
+        $sql = "INSERT INTO Product(Product_ID, Product_Name, Product_Detail, Category_ID, Product_Stock) values('$Product_ID', '$Product_Name', '$Product_Detail', '$Category_ID', '$Product_Stock')";
         $result = $conn->query($sql);
         require("connection_close.php");
         return "add success $result row";
@@ -68,7 +68,7 @@ class Product{
 
     public static function delete($Product_ID){
         require_once("connection_connect.php");
-        $sql = "Delete from Product where Product_ID = '$Product_ID'";
+        $sql = "DELETE from Product where Product_ID = '$Product_ID'";
         $result = $conn->query($sql);
         require("connection_close.php");
         return "delete success $result row";

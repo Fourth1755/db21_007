@@ -11,7 +11,7 @@ class ColorDetail{
     }
     public static function get($ColorDetail_ID){
         require("connection_connect.php");
-        $sql = "select * from Rate where Rate_ID = '$ColorDetail_ID'";
+        $sql = "SELECT * from Rate where Rate_ID = '$ColorDetail_ID'";
         $result = $conn->query($sql);
         $my_row = $result->fetch_assoc();
         $Product_ID = $my_row["Product_ID"];
@@ -25,7 +25,7 @@ class ColorDetail{
     public static function getAll(){
         $ColorDetailList = [];
         require("connection_connect.php");
-        $sql = "select * from Product";
+        $sql = "SELECT * from Product";
         $result = $conn->query($sql);
         while($my_row = $result->fetch_assoc()){
             $result = $conn->query($sql);
