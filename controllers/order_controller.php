@@ -5,7 +5,7 @@
             require_once('views/order/index_order.php');
         }
         public function newOrder(){
-            
+
             require_once('views/order/newOrder.php');
         }
         public function addOrder(){
@@ -16,7 +16,7 @@
             $rating=$_GET['rating'];
             $year=$_GET['year'];
             $season=$_GET['season'];
-            Order::add($name,$episode,$aried,$studioID,$rating,$year,$season);
+            Order::add();
             OrderController::index();
         }
         public function updateForm(){
