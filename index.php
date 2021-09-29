@@ -31,6 +31,9 @@
           <a class="nav-link active" aria-current="page" href="?controller=pages&action=home">Home</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://158.108.207.4/db21">Index of /db21</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="?controller=order&action=index">Order</a>
         </li>
         <li class="nav-item">
