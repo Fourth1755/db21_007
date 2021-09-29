@@ -8,7 +8,7 @@
             $this->id=$id;
             $this->name=$name;
             $this->positionID=$positionID;
-            $this->$positionName=$positionName;
+            $this->positionName=$positionName;
         }
         public static function getAll(){
             $employeeList=[];
