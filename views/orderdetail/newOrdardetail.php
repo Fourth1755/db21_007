@@ -8,7 +8,7 @@
 </head>
 <body>
     <br>
-    (Quotation_ID,Quotation_Date,Seller_ID,Customer_ID,Quotation_Deposit,Manager_ID,Quotation_DateApprov,Extra_Product,Quotation_DateMenufacture,Quotation_TransmissionStatus
+    (Orderdetail_ID,$Order_ID,$Colordetail_ID,$Orderdetail_QuantityColor,$Orderdetail_Quantity
     <div class="container">
         <form method="get" action="" style="width: 40%; ">
     <div class="mb-3">
@@ -20,7 +20,7 @@
         <input type="number" class="form-control" name= "episode" placeholder="Episodes">
     </div>
     <div class="mb-3">
-        <label for="formGroupExampleInput2" class="form-label">Seller
+        <label for="formGroupExampleInput2" class="form-label">Seller_ID
             <select name="sellerID" class="form-select" aria-label="Default select example">
             <option selected>Open this select Seller</option>
                 <?php
@@ -31,18 +31,7 @@
             </select>
         </label>
     </div>
-    <div class="mb-3">
-        <label for="formGroupExampleInput2" class="form-label">Customer
-            <select name="customerID" class="form-select" aria-label="Default select example">
-            <option selected>Open this select Seller</option>
-                <?php
-                    foreach($customer_list as $cus){
-                        echo"<option value=$cus->id>$cus->name</option>";
-                    }    
-                ?>
-            </select>
-        </label>
-    </div>
+    
 
 
 
