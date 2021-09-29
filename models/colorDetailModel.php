@@ -42,7 +42,7 @@ class ColorDetail{
 
     public static function add($Product_ID, $ColorDetail_ID, $Color_Name){
         require("connection_connect.php");
-        $sql = "insert into Product(Product_ID, ColorDetail_ID, Color_Name) values('$Product_ID', '$ColorDetail_ID', '$Color_Name')";
+        $sql = "INSERT INTO Product(Product_ID, ColorDetail_ID, Color_Name) values('$Product_ID', '$ColorDetail_ID', '$Color_Name')";
         $result = $conn->query($sql);
         require("connection_close.php");
         return "add success $result row";
@@ -59,7 +59,7 @@ class ColorDetail{
 
     public static function delete($ColorDetail_ID){
         require_once("connection_connect.php");
-        $sql = "Delete from Product where Product_ID = '$ColorDetail_ID'";
+        $sql = "DELETE from Product where Product_ID = '$ColorDetail_ID'";
         $result = $conn->query($sql);
         require("connection_close.php");
         return "delete success $result row";
