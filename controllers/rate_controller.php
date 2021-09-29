@@ -2,7 +2,7 @@
      class rateController{
         public function index(){
             $rateList = Rate::getAll();
-            require_once('views/rate/index_order.php');
+            require_once('views/rate/index_rate.php');
         }
         public function addRate(){
             $Product_ID=$_GET['Product_ID'];
