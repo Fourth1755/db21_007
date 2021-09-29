@@ -1,8 +1,8 @@
 <?php
      class OrderdetailController{
         public function index(){
-            $Orderdetail=Orderdetail::getAll();
-            require_once('views/orderdetail/index_Orderdetail.php');
+            $orderdetail_list=Orderdetail::getAll();
+            require_once('views/orderdetail/index_orderdetail.php');
         }
         public function newOrderdetail(){
 
@@ -19,9 +19,9 @@
         }
         public function updateForm(){
             $Orderdetail_ID=$_GET['Orderdetail_ID'];
-            $Orderdetail=Orderdetail::get($Orderdetail_ID);
+            $orderdetail=Orderdetail::get($Orderdetail_ID);
             //$studio_list=Studio::getAll();
-            require_once('views/Orderdetail/updateForm.php');
+            require_once('views/orderdetail/updateForm.php');
         }
     }
 ?>
