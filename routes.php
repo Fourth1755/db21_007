@@ -1,5 +1,8 @@
 <?php
     $controllers =array('pages'=>['home','error'],'order'=>['index','newOrder']);
+=======
+    $controllers =array('pages'=>['home','error'],'order'=>['index'], 'rate'=>['index']);
+>>>>>>> 7136a9f931f02141f4d693c76506274b493a89bf
     function call($controller,$action){
         //echo "routes to".$controller."-".$action."<br>";
         require_once("controllers/".$controller."_controller.php");
