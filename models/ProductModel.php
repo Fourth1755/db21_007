@@ -1,10 +1,10 @@
 <?php
 class productModel{
-    public $Product_ID
-    public $Product_Name
-    public $Product_Detail
-    public $Category_ID
-    public $Product_Stock
+    public $Product_ID;
+    public $Product_Name;
+    public $Product_Detail;
+    public $Category_ID;
+    public $Product_Stock;
 }
 
 public function__construct($Product_ID, $Product_Name, $Product_Detail, $Category_ID, $Product_Stock){
