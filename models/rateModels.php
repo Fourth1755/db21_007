@@ -15,7 +15,7 @@ class Rate{
     }
     public static function get($Rate_ID){
         require("connection_connect.php");
-        $sql = "select * from Rate where Rate_ID = '$Rate_ID'";
+        $sql = "SELECT * FROM Rate WHERE Rate_ID = '$Rate_ID'";
         $result = $conn->query($sql);
         $my_row = $result->fetch_assoc();
         $Rate_ID = $my_row["Rate_ID"];
@@ -31,7 +31,7 @@ class Rate{
     public static function getAll(){
         $RateList = [];
         require("connection_connect.php");
-        $sql = "SELECT * from Rate";
+        $sql = "SELECT * FROM Rate";
         $result = $conn->query($sql);
         while($my_row = $result->fetch_assoc()){
             $result = $conn->query($sql);
@@ -69,7 +69,7 @@ class Rate{
 
     public static function delete($Rate_ID){
         require("connection_connect.php");
-        $sql = "DELETE from Rate where Rate_ID = '$Rate_ID'";
+        $sql = "DELETE FROM Rate WHERE Rate_ID = '$Rate_ID'";
         $result = $conn->query($sql);
         require("connection_close.php");
         return "delete success $result row";

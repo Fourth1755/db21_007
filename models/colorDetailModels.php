@@ -11,7 +11,7 @@ class ColorDetail{
     }
     public static function get($ColorDetail_ID){
         require("connection_connect.php");
-        $sql = "SELECT * from ColorDetail where ColorDetail_ID = '$ColorDetail_ID'";
+        $sql = "SELECT * FROM ColorDetail WHERE ColorDetail_ID = '$ColorDetail_ID'";
         $result = $conn->query($sql);
         $my_row = $result->fetch_assoc();
         $Product_ID = $my_row["Product_ID"];
@@ -25,7 +25,7 @@ class ColorDetail{
     public static function getAll(){
         $ColorDetailList = [];
         require("connection_connect.php");
-        $sql = "SELECT * from ColorDetail";
+        $sql = "SELECT * FROM ColorDetail";
         $result = $conn->query($sql);
         while($my_row = $result->fetch_assoc()){
             $result = $conn->query($sql);
@@ -59,7 +59,7 @@ class ColorDetail{
 
     public static function delete($ColorDetail_ID){
         require_once("connection_connect.php");
-        $sql = "DELETE from ColorDetail where ColorDetail_ID = '$ColorDetail_ID'";
+        $sql = "DELETE FROM ColorDetail WHERE ColorDetail_ID = '$ColorDetail_ID'";
         $result = $conn->query($sql);
         require("connection_close.php");
         return "delete success $result row";
