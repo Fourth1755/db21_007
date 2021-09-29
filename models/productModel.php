@@ -1,5 +1,5 @@
 <?php
-class productModel{
+class Product{
     public $Product_ID;
     public $Product_Name;
     public $Product_Detail;
@@ -26,7 +26,7 @@ public static function get($Product_ID){
     $Product_Stock = $my_row[Product_Stock];
 
     require("connection_close.php");
-    return new new productModel($Product_ID, $Product_Name, $Product_Detail, $Category_ID, $Product_Stock);
+    return new new Product($Product_ID, $Product_Name, $Product_Detail, $Category_ID, $Product_Stock);
 }
 
 public static function getAll(){
@@ -42,7 +42,7 @@ public static function getAll(){
     $Product_Detail = $my_row[Product_Detail];
     $Category_ID = $my_row[Category_ID];
     $Product_Stock = $my_row[Product_Stock];
-    $ProductList[] = new productModel($Product_ID, $Product_Name, $Product_Detail, $Category_ID, $Product_Stock);
+    $ProductList[] = new Product($Product_ID, $Product_Name, $Product_Detail, $Category_ID, $Product_Stock);
     }
     require("connection_close.php");
 
