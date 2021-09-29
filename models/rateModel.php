@@ -26,7 +26,7 @@ public static function get($Rate_ID){
     $Product_ID = $my_row[Product_ID];
 
     require("connection_close.php");
-    return new new Rate($Rate_ID, $Rate_Quantity, $Rate_Price, $Rate_ScreenPrice, $Product_ID);
+    return new Rate($Rate_ID, $Rate_Quantity, $Rate_Price, $Rate_ScreenPrice, $Product_ID);
 }
 
 public static function getAll(){
@@ -36,13 +36,13 @@ public static function getAll(){
     $result = conn->query($sql);
     while($my_row = $result->fetch_assoc()){
         $result = $conn->query($sql);
-    $my_row = $result->fetch_assoc();
-    $Rate_ID = $my_row[Rate_ID];
-    $Rate_Quantity = $my_row[Rate_Quantity];
-    $Rate_Price = $my_row[Rate_Price];
-    $Rate_ScreenPrice = $my_row[Rate_ScreenPrice];
-    $Product_ID = $my_row[Product_ID];
-    $ProductList[] = new Rate($Rate_ID, $Rate_Quantity, $Rate_Price, $Rate_ScreenPrice, $Product_ID);
+        $my_row = $result->fetch_assoc();
+        $Rate_ID = $my_row[Rate_ID];
+        $Rate_Quantity = $my_row[Rate_Quantity];
+        $Rate_Price = $my_row[Rate_Price];
+        $Rate_ScreenPrice = $my_row[Rate_ScreenPrice];
+        $Product_ID = $my_row[Product_ID];
+        $RateList[] = new Rate($Rate_ID, $Rate_Quantity, $Rate_Price, $Rate_ScreenPrice, $Product_ID);
     }
     require("connection_close.php");
 
