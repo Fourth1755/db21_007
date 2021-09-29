@@ -15,7 +15,7 @@
         }
         public function updateForm(){
             $Rate_ID=$_GET['Rate_ID'];
-            $order=Order::get($Rate_ID);
+            $Rate=Rate::get($Rate_ID);
             //$studio_list=Studio::getAll();
             require_once('views/rate/updateForm.php');
         }
