@@ -1,6 +1,6 @@
 <?php
     //เชื่อมต่อ server
-    $severname = "158.108.207.4:5738";
+    $severname = "localhost";
     $username = "db21_007";
     $password ="db21_007";
     $dbname = "db21_007";
