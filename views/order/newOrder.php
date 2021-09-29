@@ -34,7 +34,7 @@
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Customer
             <select name="customerID" class="form-select" aria-label="Default select example">
-            <option selected>Open this select Seller</option>
+            <option selected>Open this select Customer</option>
                 <?php
                     foreach($customer_list as $cus){
                         echo"<option value=$cus->id>$cus->name</option>";
