@@ -20,7 +20,7 @@
                 <td>$Rate->Rate_Quantity</td>
                 <td>$Rate->Rate_Price</td>
                 <td>$Rate->Rate_ScreenPrice</td>
-                <td><a href=?controller=order&action=updateForm&orderID=$Rate->Rate_ID>Update</a></td>
+                <td><a href=?controller=rate&action=updateForm&orderID=$Rate->Rate_ID>Update</a></td>
                 <td>Delete</td></tr>";
             }    
             echo "</table>";
