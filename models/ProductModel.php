@@ -50,4 +50,32 @@ public static function getAll(){
     return $ProductList;
 }
 
+public static function add($Product_ID, $Product_Name, $Product_Detail, $Category_ID, $Product_Stock){
+    require("connection_connect.php");
+    $sql = "insert into Product(Product_ID, Product_Name, Product_Detail, Category_ID, Product_Stock) values('$Product_ID', '$Product_Name', '$Product_Detail', '$Category_ID', '$Product_Stock')";
+    $result = conn->query($sql);
+    require("connection_close.php");
+    return "add success $result row";
+
+}
+
+public static function update($Product_ID, $Product_Name, $Product_Detail, $Category_ID, $Product_Stock){
+    require("connection_connect.php");
+    $sql = "UPDATE Product SET Product = '$Product_ID', Product_Name = '$Product_Name', Product_Detail = '$Product_Detail', Category_ID = '$Category_ID',
+    Product_Stock = '$Product_Stock'";
+    $result = conn->query($sql);
+    require("connection_close.php");
+    return "update success $result row";
+}
+
+public static function delete($Product_ID){
+    require_once("connection_connect.php");
+    $sql = "Delete from Product where Product_ID = '$Product_ID'";
+    $result = conn->query($sql);
+    require("connection_close.php");
+    return "delete success $result row";
+}
+
+
+
 ?>
