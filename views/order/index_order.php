@@ -10,7 +10,7 @@
     <div class="container">
         <h1>Order</h1>
         <table class="table">
-        <tr><td>ID</td><td>Date</td><td>SellerID</td><td>Deposit</td><td>ManagerID</td><td>Date Approv</td><td>Extra Product</td>
+        <tr><td>ID</td><td>Date</td><td>SellerID</td><td>CustomerID</td><td>Deposit</td><td>ManagerID</td><td>Date Approv</td><td>Extra Product</td>
         <td>Date Menufacture</td><td>Transmission Status</td>
         <td>Update</td><td>Delete</td></tr>
         <?php
@@ -18,6 +18,7 @@
             echo "<tr><td>$order->id</td>
                 <td>$order->date</td>
                 <td>$order->sellerID</td>
+                <td>$order->customerID</td>
                 <td>$order->deposit</td>
                 <td>$order->managerID</td>
                 <td>$order->dateApprov</td>
