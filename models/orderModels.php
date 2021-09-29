@@ -61,9 +61,9 @@
             require("connection_close.php");
             return $orderList;
         }
-        public static function add($name,$episode,$aried,$studioID,$rating,$year,$season){
+        public static function add($id,$date,$sellerID,$customerID,$deposit,$managerID,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus){
             require("connection_connect.php");
-            $sql ="INSERT INTO Quotation (animeName,animeEpisode,animeAried,studioID,animeRating,animeYear,animeSeason)
+            $sql ="INSERT INTO Quotation (Quotation_ID,Quotation_Date,Seller_ID,Customer_ID,Quotation_Deposit,Manager_ID,Quotation_DateApprov,Extra_Product,Quotation_DateMenufacture,Quotation_TransmissionStatus)
             VALUES('$id','$date','$sellerID','$customerID','$deposit','$managerID','$dateApprov','$extraProduct','$dateMenufacture','$transmissionStatus')";
             $result=$conn->query($sql);
             require("connection_close.php");
