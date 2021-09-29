@@ -15,4 +15,17 @@ public function__construct($Product_ID, $Product_Name, $Product_Detail, $Categor
     $this->$Product_Stock = $Product_Stock
 }
 
+public static function get($Product_ID){
+    require("connection_connect.php");
+    $sql = "select * from Product where Product_ID = 'Product_ID'";
+    $result = $conn->query($sql);
+    $my_row = $result->fetch_assoc();
+    $Product_ID = $my_row[Product_ID];
+    $Product_Name = $my_row[Product_Name];
+    $Product_Detail = $my_row[Product_Detail];
+    $Category_ID = $my_row[Category_ID];
+    $Product_Stock = $my_row[Product_Stock];
+
+}
+
 ?>
