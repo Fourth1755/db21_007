@@ -9,7 +9,7 @@
 <body >
     <div class="container">
         <h1>Order</h1>
-        <table class="table" style="width: 50%;" >
+        <table class="table">
         <tr><td>ID</td><td>Date</td><td>SellerID</td><td>Deposit</td><td>ManagerID</td><td>Date Approv</td><td>Extra Product</td>
         <td>Date Menufacture</td><td>Transmission Status</td>
         <td>Update</td><td>Delete</td></tr>
@@ -36,13 +36,3 @@
     
 </body>
 </html>
-public $id;
-        public $date;
-        public $sellerID;
-        public $customerID;
-        public $deposit;
-        public $managerID;
-        public $dateApprov;
-        public $extraProduct;
-        public $dateMenufacture;
-        public $transmissionStatus;
