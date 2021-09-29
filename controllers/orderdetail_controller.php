@@ -2,11 +2,11 @@
      class OrderdetailController{
         public function index(){
             $Orderdetail=Orderdetail::getAll();
-            require_once('views/Orderdetail/index_Orderdetail.php');
+            require_once('views/orderdetail/index_Orderdetail.php');
         }
         public function newOrderdetail(){
 
-            require_once('views/Orderdetail/Orderdetail.php');
+            require_once('views/orderdetail/Orderdetail.php');
         }
         public function addOrderdetail(){
             $Orderdetail_ID=$_GET['Orderdetail_ID'];
