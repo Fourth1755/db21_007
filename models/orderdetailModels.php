@@ -11,13 +11,8 @@
             $this->Colordetail_ID=$Colordetail_ID;
             $this->Orderdetail_QuantityColor=$Orderdetail_QuantityColor;
             $this->Orderdetail_Quantity=$Orderdetail_Quantity;
-<<<<<<< HEAD
     }
     public static function get($Orderdetail_ID){
-=======
-        }
-    public static function get($id){
->>>>>>> cf97c0567ef056fc77d912ed45555435c9409d4e
         require("connection_connect.php");
         $sql="SELECT * FROM QuotationDetail WHERE QuotationDetail_ID='$Orderdetail_ID' ";
         $result=$conn->query($sql);
