@@ -13,7 +13,7 @@
         <form method="get" action="" style="width: 40%; ">
     <div class="mb-3">
         <label for="formGroupExampleInput" class="form-label">Quotation_ID</label>
-        <input type="text" class="form-control" name= "name" placeholder="Anime input placeholder" > 
+        <input type="text" class="form-control" name= "name" placeholder="ID" > 
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Quotation_Date</label>
