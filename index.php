@@ -37,7 +37,7 @@
           <a class="nav-link active" aria-current="page" href="?controller=order&action=index">Order</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="?controller=&action=index">Orderdetail</a>
+          <a class="nav-link active" aria-current="page" href="?controller=orderdetail&action=index">Orderdetail</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="?controller=rate&action=index">Rate</a>
