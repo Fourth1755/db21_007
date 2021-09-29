@@ -7,12 +7,21 @@ class productModel{
     public $Product_Stock;
 }
 
+<<<<<<< HEAD
+public function __construct($Product_ID, $Product_Name, $Product_Detail, $Category_ID, $Product_Stock){
+    $this->Product_ID = $Product_ID
+    $this->Prodcut_Name = $Product_Name
+    $this->Product_Detail = $Product_Detail
+    $this->Category_ID = $Category_ID
+    $this->$Product_Stock = $Product_Stock
+=======
 public function__construct($Product_ID, $Product_Name, $Product_Detail, $Category_ID, $Product_Stock){
     $this->Product_ID = $Product_ID;
     $this->Prodcut_Name = $Product_Name;
     $this->Product_Detail = $Product_Detail;
     $this->Category_ID = $Category_ID;
     $this->$Product_Stock = $Product_Stock;
+>>>>>>> a6d0f365a6d8f4d6df92b9e5ad5544a96483d75d
 }
 
 public static function get($Product_ID){
