@@ -28,8 +28,6 @@ class ColorDetail{
         $sql = "SELECT * FROM ColorDetail";
         $result = $conn->query($sql);
         while($my_row = $result->fetch_assoc()){
-            $result = $conn->query($sql);
-            $my_row = $result->fetch_assoc();
             $Product_ID = $my_row["Product_ID"];
             $ColorDetail_ID = $my_row["ColorDetail_ID"];
             $Color_Name = $my_row["Color_Name"];
