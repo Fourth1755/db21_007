@@ -7,7 +7,7 @@ class productModel{
     public $Product_Stock
 }
 
-public function__construct($Product_ID, $Product_Name, $Product_Detail, $Category_ID, $Product_Stock){
+public function __construct($Product_ID, $Product_Name, $Product_Detail, $Category_ID, $Product_Stock){
     $this->Product_ID = $Product_ID
     $this->Prodcut_Name = $Product_Name
     $this->Product_Detail = $Product_Detail
