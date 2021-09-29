@@ -61,30 +61,10 @@
             require("connection_close.php");
             return $orderList;
         }
-        public static function search($key){
-            require("connection_connect.php");
-            $sql="SELECT * FROM anime NATURAL JOIN studio WHERE (animeName LIKE'%$key%' OR animeAried LIKE'%$key%' 
-            OR animeEpisode LIKE'%$key%'OR studioName LIKE'%$key%'OR animeYear LIKE'%$key%'OR animeSeason LIKE'%$key%')";
-            $result=$conn->query($sql);
-            while($my_row = $result->fetch_assoc()){
-                $id=$my_row["animeID"];
-                $name=$my_row["animeName"];
-                $episode=$my_row["animeEpisode"];
-                $aried=$my_row["animeAried"];
-                $studioID=$my_row["studioID"];
-                $studioName=$my_row["studioName"];
-                $rating=$my_row["animeRating"];
-                $year=$my_row["animeYear"];
-                $season=$my_row["animeSeason"];
-                $animeList[]=new Order($id,$date,$sellerID,$customerID,$deposit,$managerID,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus);
-            }
-            require("connection_close.php");
-            return $animeList;
-        }
         public static function add($name,$episode,$aried,$studioID,$rating,$year,$season){
             require("connection_connect.php");
-            $sql ="INSERT INTO anime (animeName,animeEpisode,animeAried,studioID,animeRating,animeYear,animeSeason)
-            VALUES('$name','$episode','$aried','$studioID','$rating','$year','$season')";
+            $sql ="INSERT INTO Quotation (animeName,animeEpisode,animeAried,studioID,animeRating,animeYear,animeSeason)
+            VALUES('$id','$date','$sellerID','$customerID','$deposit','$managerID','$dateApprov','$extraProduct','$dateMenufacture','$transmissionStatus')";
             $result=$conn->query($sql);
             require("connection_close.php");
             return "Add success $result rows";
