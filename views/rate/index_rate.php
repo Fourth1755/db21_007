@@ -13,7 +13,7 @@
         <tr><td>Product_ID</td><td>Rate_ID</td><td>Rate_Quantity</td><td>Rate_Price</td><td>Rate_ScreenPrice</td>
         <td>Update</td><td>Delete</td></tr>
         <?php
-            foreach($RateList as $Rate){
+            foreach($rateList as $Rate){
             echo "<tr>
                 <td>$Rate->Product_ID</td>
                 <td>$Rate->Rate_ID</td>
