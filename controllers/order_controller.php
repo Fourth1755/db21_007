@@ -4,6 +4,10 @@
             $order_list=Order::getAll();
             require_once('views/order/index_order.php');
         }
+        public function employee(){
+            $employee_list=Employee::getAll();
+            require_once('views/order/employee.php');
+        }
         public function newOrder(){
             $seller_list=Employee::getAll();
             $manager_list=Employee::getAll();
@@ -11,16 +15,16 @@
             require_once('views/order/newOrder.php');
         }
         public function addOrder(){
-            $id=$_GET["Quotation_ID"];
-            $date=$_GET["Quotation_Date"];
-            $sellerID=$_GET["Seller_ID"];
-            $customerID=$_GET["Customer_ID"];
-            $deposit=$_GET["Quotation_Deposit"];
-            $managerID=$_GET["Manager_ID"];
-            $dateApprov=$_GET["Quotation_DateApprov"];
-            $extraProduct=$_GET["Extra_Product"];
-            $dateMenufacture=$_GET["Quotation_DateMenufacture"];
-            $transmissionStatus=$_GET["Quotation_TransmissionStatus"];
+            $id=$_GET["id"];
+            $date=$_GET["date"];
+            $sellerID=$_GET["sellerID"];
+            $customerID=$_GET["customerID"];
+            $deposit=$_GET["deposit"];
+            $managerID=$_GET["managerID"];
+            $dateApprov=$_GET["dateApprov"];
+            $extraProduct=$_GET["extraProduct"];
+            $dateMenufacture=$_GET["dateMenufacture"];
+            $transmissionStatus=$_GET["transmissionStatus"];
             Order::add($id,$date,$sellerID,$customerID,$deposit,$managerID,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus);
             OrderController::index();
         }

@@ -20,7 +20,7 @@
         <input type="number" class="form-control" name= "episode" placeholder="Episodes">
     </div>
     <div class="mb-3">
-        <label for="formGroupExampleInput2" class="form-label">Seller_ID
+        <label for="formGroupExampleInput2" class="form-label">Seller
             <select name="sellerID" class="form-select" aria-label="Default select example">
             <option selected>Open this select Seller</option>
                 <?php
@@ -31,7 +31,18 @@
             </select>
         </label>
     </div>
-    
+    <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Customer
+            <select name="customerID" class="form-select" aria-label="Default select example">
+            <option selected>Open this select Seller</option>
+                <?php
+                    foreach($customer_list as $cus){
+                        echo"<option value=$cus->id>$cus->name</option>";
+                    }    
+                ?>
+            </select>
+        </label>
+    </div>
 
 
 

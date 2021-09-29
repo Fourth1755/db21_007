@@ -16,11 +16,11 @@
             $sql="SELECT * FROM Employee NATURAL JOIN Position";
             $result=$conn->query($sql);
             while($my_row = $result->fetch_assoc()){
-                $employeeID=$my_row["Employee_ID"];
-                $employeeName=$my_row["Employee_Name"];
+                $id=$my_row["Employee_ID"];
+                $name=$my_row["Employee_Name"];
                 $positionID=$my_row["Position_ID"];
                 $positionName=$my_row["Position_Name"];
-                $employeeList[]=new Employee($employeeID,$employeeName,$positionID,$positionName);
+                $employeeList[]=new Employee($id,$name,$positionID,$positionName);
             }
             require("connection_close.php");
             return $employeeList;
