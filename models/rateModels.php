@@ -21,11 +21,12 @@
             $sql = "SELECT * FROM Rate";
             $result = $conn->query($sql);
             while($my_row = $result->fetch_assoc()){
-                $Product_ID = $my_row["Product_ID"];
+                
                 $Rate_ID = $my_row["Rate_ID"];
                 $Rate_Quantity = $my_row["Rate_Quantity"];
                 $Rate_Price = $my_row["Rate_Price"];
                 $Rate_ScreenPrice = $my_row["Rate_ScreenPrice"];
+                $Product_ID = $my_row["Product_ID"];
 
                 $rateList[] = new Rate($Rate_ID, $Rate_Quantity, $Rate_Price, $Rate_ScreenPrice, $Product_ID);
             }
