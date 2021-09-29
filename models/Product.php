@@ -14,4 +14,5 @@ public function__construct($Product_ID, $Product_Name, $Product_Detail, $Categor
     $this->Category_ID = $Category_ID
     $this->$Product_Stock = $Product_Stock
 }
+
 ?>
