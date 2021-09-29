@@ -34,8 +34,6 @@ class Rate{
         $sql = "SELECT * from Rate";
         $result = $conn->query($sql);
         while($my_row = $result->fetch_assoc()){
-            $result = $conn->query($sql);
-            $my_row = $result->fetch_assoc();
             $Rate_ID = $my_row["Rate_ID"];
             $Rate_Quantity = $my_row["Rate_Quantity"];
             $Rate_Price = $my_row["Rate_Price"];
