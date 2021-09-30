@@ -17,11 +17,11 @@
         $sql="SELECT * FROM QuotationDetail WHERE QuotationDetail_ID='$Orderdetail_ID' ";
         $result=$conn->query($sql);
         $my_row=$result->fetch_assoc();
-        $Orderdetail_ID = $my_row["Orderdetail_ID"];
-        $Order_ID = $my_row["Order_ID"];
-        $Colordetail_ID = $my_row["Colordetail_ID"];
-        $Orderdetail_QuantityColor = $my_row["Orderdetail_QuantityColor"];
-        $Orderdetail_Quantity = $my_row["Orderdetail_Quantity"];
+        $Orderdetail_ID = $my_row["QuotationDetail_ID"];
+        $Order_ID = $my_row["Quotation_ID"];
+        $Colordetail_ID = $my_row["ColorDetail_ID"];
+        $Orderdetail_QuantityColor = $my_row["QuotationDetail_QuantityColor"];
+        $Orderdetail_Quantity = $my_row["QuotationDetail_Quantity"];
         require("connection_close.php");
         return new Orderdetail($Orderdetail_ID,$Order_ID,$Colordetail_ID,$Orderdetail_QuantityColor,$Orderdetail_Quantity);
     }
