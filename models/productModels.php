@@ -16,9 +16,9 @@
         }
 
         public static function getAll(){
-            $ProductList = [];
+            $productList = [];
             require("connection_connect.php");
-            $sql = "SELECT * FROM Rate";
+            $sql = "SELECT * FROM Product";
             $result = $conn->query($sql);
             while($my_row = $result->fetch_assoc()){
                 
@@ -28,28 +28,11 @@
                 $Category_ID = $my_row["Category_ID"];
                 $Product_Stock = $my_row["Product_Stock"];
 
-                $ProductList[] = new Product($Product_ID, $Product_Name, $Product_Detail, $Category_ID, $Product_Stock);
+                $productList[] = new Product($Product_ID, $Product_Name, $Product_Detail, $Category_ID, $Product_Stock);
             }
 
             require("connection_close.php");
-            return $rateList;
-        }
-
-        public function get($Product_ID){
-
-            require("connection_connect.php");
-            $sql = "SELECT * FROM Product WHERE Product_ID = $Product_ID";
-            $result = $conn->query($sql);
-            $my_row = $result->fetch_assoc();
-            $Product_ID = $my_row["Product_ID"];
-            $Product_Name = $my_row["Product_Name"];
-            $Product_Detail = $my_row["Product_Detail"];
-            $Category_ID = $my_row["Category_ID"];
-            $Product_Stock = $my_row["Product_Stock"];
-            require("connection_close.php");
-
-            return new Product($Product_ID, $Product_Name, $Product_Detail, $Category_ID, $Product_Stock);
-
+            return $productList;
         }
 
 
