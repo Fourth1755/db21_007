@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add new order</title>
+    <title>Update order</title>
 </head>
 <body>
-    
     <div class="container">
-        <h1>Add new order</h1>
+        <h1>Update order</h1>
         <form method="get" action="" style="width: 40%; ">
     <div class="mb-3">
         <label for="formGroupExampleInput" class="form-label">ID</label>
@@ -44,6 +43,40 @@
                 ?>
             </select>
         </label>
+    </div>
+    <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Deposit</label>
+        <input type="text" class="form-control" name="deposit" placeholder="Quotation_Deposit">
+    </div>
+    <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Manager
+            <select name="managerID" class="form-select" aria-label="Default select example">
+            <option selected>Open this select Manager</option>
+                <?php
+                    foreach($employee_list as $man){
+                        if($man->positionID=='POS04'){
+                            echo"<option value=$man->id>$man->name</option>";
+                        } 
+                    }    
+                ?>
+            </select>
+        </label>
+    </div>
+    <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Date approv</label>
+        <input type="date" class="form-control" name="dateApprov" placeholder="Quotation_DateApprov">
+    </div>
+    <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Extra Product</label>
+        <input type="text" class="form-control" name="extraProduct" placeholder="Extra_Product">
+    </div>
+    <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Date menufacture</label>
+        <input type="date" class="form-control" name="dateMenufacture" placeholder="Date_Menufacture">
+    </div>
+    <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Transmission Status</label>
+        <input type="text" class="form-control" name="transmissionStatus" placeholder="Transmission_Status" value="">
     </div>
     <br>
     <input type="hidden" name="controller" value="order" class="form-control">
