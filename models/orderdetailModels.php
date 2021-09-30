@@ -49,7 +49,7 @@
         VALUES('$Orderdetail_ID','$Order_ID','$Colordetail_ID','$Orderdetail_QuantityColor','$Orderdetail_Quantity')";
         $result=$conn->query($sql);
         require("connection_close.php");
-        return "add success $result rows";
+        return "Add success $result rows";
 
     }
     public static function update($Orderdetail_ID,$Order_ID,$Colordetail_ID,$Orderdetail_QuantityColor,$Orderdetail_Quantity){
@@ -64,7 +64,7 @@
         $sql = "DELETE * FROM QuotationDetail WHERE QuotationDetail_ID='$Orderdetail_ID'";
         $result = $conn->query($sql);
         require("connection_close.php");
-        return "delete success $result rows";
+        return "Delete success $result rows";
     }
     }
 ?>
