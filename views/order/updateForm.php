@@ -12,11 +12,11 @@
         <form method="get" action="" style="width: 40%; ">
     <div class="mb-3">
         <label for="formGroupExampleInput" class="form-label">ID</label>
-        <input type="text" class="form-control" name= "id" placeholder="Quotation_ID Ex 11001"> 
+        <input type="text" class="form-control" name= "id"  value="<?php echo $order->id;?> placeholder="Quotation_ID Ex 11001"> 
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Date</label>
-        <input type="date" class="form-control" name= "date" placeholder="Quotation_Date">
+        <input type="date" class="form-control" name= "date" value="<?php echo $order->date;?> placeholder="Quotation_Date">
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Seller
@@ -25,7 +25,11 @@
                 <?php
                     foreach($employee_list as $sell){
                         if($sell->positionID=='POS01'){
-                            echo"<option value=$sell->id>$sell->name</option>";
+                            echo"<option value=$sell->id";
+                            if($sell->id==$order->sellerID){
+                                echo "selected='selected'";
+                            }
+                        echo ">$sell->name</option>";
                         }    
                     }    
                 ?>
@@ -38,15 +42,19 @@
             <option selected>Open this select Customer</option>
                 <?php
                     foreach($customer_list as $cus){
-                        echo"<option value=$cus->id>$cus->name</option>";
-                    }    
-                ?>
+                        echo"<option value=$cus->id";
+                            if($cus->id==$order->customerID){
+                                echo "selected='selected'";
+                            }
+                        echo ">$cus->name</option>";
+                    } 
+                ?>    
             </select>
         </label>
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Deposit</label>
-        <input type="text" class="form-control" name="deposit" placeholder="Quotation_Deposit">
+        <input type="text" class="form-control" name="deposit" value="<?php echo $order->deposit;?> placeholder="Quotation_Deposit">
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Manager
@@ -55,7 +63,11 @@
                 <?php
                     foreach($employee_list as $man){
                         if($man->positionID=='POS04'){
-                            echo"<option value=$man->id>$man->name</option>";
+                            echo"<option value=$man->id";
+                            if($man->id==$order->managerID){
+                                echo "selected='selected'";
+                            }
+                        echo">$man->name</option>";
                         } 
                     }    
                 ?>
@@ -64,19 +76,19 @@
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Date approv</label>
-        <input type="date" class="form-control" name="dateApprov" placeholder="Quotation_DateApprov">
+        <input type="date" class="form-control" name="dateApprov" value="<?php echo $order->dateApprov;?> placeholder="Quotation_DateApprov">
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Extra Product</label>
-        <input type="text" class="form-control" name="extraProduct" placeholder="Extra_Product">
+        <input type="text" class="form-control" name="extraProduct" value="<?php echo $order->extraProduct;?> placeholder="Extra_Product">
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Date menufacture</label>
-        <input type="date" class="form-control" name="dateMenufacture" placeholder="Date_Menufacture">
+        <input type="date" class="form-control" name="dateMenufacture" value="<?php echo $order->dateMenufacture;?> placeholder="Date_Menufacture">
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Transmission Status</label>
-        <input type="text" class="form-control" name="transmissionStatus" placeholder="Transmission_Status" value="">
+        <input type="text" class="form-control" name="transmissionStatus" value="<?php echo $order->transmissionStatus;?> placeholder="Transmission_Status" value="">
     </div>
     <br>
     <input type="hidden" name="controller" value="order" class="form-control">
