@@ -23,7 +23,7 @@
             }
             echo "</table>";
         ?>
-    <a class= "btn btn-success" href=?controller=rate&action=addRate>Add</a>
+    <a class= "btn btn-success" href=?controller=rate&action=newRate>Add</a>
     </div>
     
     
