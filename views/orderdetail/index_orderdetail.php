@@ -25,7 +25,7 @@
             }    
             echo "</table>";
         ?>
-    <!--<a class= "btn btn-success" href=?controller=orderdetail&action=newOrderdetail>add new</a>-->
+    <a class= "btn btn-success" href=?controller=orderdetail&action=newOrderdetail>Add</a>    
     </div>
     
     
