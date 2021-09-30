@@ -17,7 +17,7 @@
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Date</label>
-        <input type="number" class="form-control" name= "date" placeholder="Quotation_Date">
+        <input type="date" class="form-control" name= "date" placeholder="Quotation_Date">
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Seller
@@ -65,7 +65,7 @@
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Date approv</label>
-        <input type="text" class="form-control" name="dateApprov" placeholder="Quotation_DateApprov">
+        <input type="date" class="form-control" name="dateApprov" placeholder="Quotation_DateApprov">
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Extra Product</label>
@@ -73,7 +73,7 @@
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Date menufacture</label>
-        <input type="text" class="form-control" name="dateMenufacture" placeholder="Date_Menufacture">
+        <input type="date" class="form-control" name="dateMenufacture" placeholder="Date_Menufacture">
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Transmission Status</label>
