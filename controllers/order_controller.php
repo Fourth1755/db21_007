@@ -27,13 +27,14 @@
             if($deposit==""){
                 $deposit=0;
             }
-            Order::add($id,$date,$sellerID,$customerID,$deposit,$managerID,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus);
+            Order::add($id,$date,$sellerID,$customerID);
             OrderController::index();
         }
         public function updateForm(){
             $id=$_GET['orderID'];
             $order=Order::get($id);
-            //$studio_list=Studio::getAll();
+            $employee_list=Employee::getAll();
+            $customer_list=Customer::getAll();
             require_once('views/order/updateForm.php');
         }
     }

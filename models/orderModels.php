@@ -61,18 +61,19 @@
             require("connection_close.php");
             return $orderList;
         }
-        public static function add($id,$date,$sellerID,$customerID,$deposit,$managerID,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus){
+        public static function add($id,$date,$sellerID,$customerID){
             require("connection_connect.php");
             $sql ="INSERT INTO Quotation (Quotation_ID,Quotation_Date,Seller_ID,Customer_ID,Quotation_Deposit,Manager_ID,Quotation_DateApprov,Extra_Product,Quotation_DateMenufacture,Quotation_TransmissionStatus)
-            VALUES('$id','$date','$sellerID','$customerID','$deposit','$managerID','$dateApprov','$extraProduct','$dateMenufacture','$transmissionStatus')";
+            VALUES('$id','$date','$sellerID','$customerID',NULL,NULL,NULL,NULL,NULL,NULL)";
             $result=$conn->query($sql);
             require("connection_close.php");
             return "Add success $result rows";
         }
-        public static function update($id,$name,$episode,$aried,$studioID,$rating,$year,$season){
+        public static function update($id,$date,$sellerID,$customerID,$deposit,$managerID,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus){
             require("connection_connect.php");
-            $sql="UPDATE anime SET animeName='$name',animeEpisode='$episode',animeAried='$aried',studioID='$studioID',
-            animeRating='$rating',animeYear='$year',animeSeason='$season' WHERE animeID='$id' ";
+            $sql="UPDATE Quotation SET Quotation_ID='$id',Quotation_Date='$date',Seller_ID='$sellerID',Customer_ID='$customerID',
+            Quotation_Deposit='$deposit',Manager_ID='$managerID',Quotation_DateApprov='$dateApprov',Extra_Product='$extraProduct'
+            ,Quotation_DateMenufacture='$dateMenufacture',Quotation_TransmissionStatus='$transmissionStatus' WHERE Quotation_ID='$id' ";
             $result=$conn->query($sql);
             require("connection_close.php");
             return "Update success $result rows";
