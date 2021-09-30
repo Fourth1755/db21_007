@@ -35,7 +35,15 @@
             return $rateList;
         }
 
-        
+        public function add($Rate_ID, $Rate_Quantity, $Rate_Price, $Rate_ScreenPrice, $Product_ID){
+            require("connection_connect.php");
+            $sql = "INSERT INTO Rate (Rate_ID, Rate_Quantity, Rate_Price, Rate_ScreenPrice, Product_ID) values ('$Rate_ID', '$Rate_Quantity', '$Rate_Price', '$Rate_ScreenPrice', '$Product_ID')";
+            $result = $conn->query($sql);
+            require("connection_close.php");
+            return "add success $result row";
+        }
+
+
 
     }
 
