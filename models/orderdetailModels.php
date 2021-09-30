@@ -27,7 +27,7 @@
     }
 
     public static function getAll(){
-        $Orderdetail = [];
+        $OrderdetailList = [];
         require("connection_connect.php");
         $sql = "SELECT * FROM QuotationDetail";
         $result = $conn->query($sql);
