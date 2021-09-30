@@ -27,21 +27,6 @@
             if($deposit==""){
                 $deposit=0;
             }
-            if($managerID==""){
-                $managerID=NULL;
-            }
-            if($dateApprov==""){
-                $dateApprov=NULL;
-            }
-            if($extraProduct==""){
-                $extraProduct=NULL;
-            }
-            if($dateMenufacture==""){
-                $dateMenufacture=NULL;
-            }
-            if($transmissionStatus==""){
-                $transmissionStatus=NULL;
-            }
             Order::add($id,$date,$sellerID,$customerID,$deposit,$managerID,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus);
             OrderController::index();
         }

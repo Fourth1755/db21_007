@@ -65,19 +65,19 @@
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Date approv</label>
-        <input type="date" class="form-control" name="dateApprov" placeholder="Quotation_DateApprov">
+        <input type="date" class="form-control" name="dateApprov" placeholder="Quotation_DateApprov" value="">
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Extra Product</label>
-        <input type="text" class="form-control" name="extraProduct" placeholder="Extra_Product">
+        <input type="text" class="form-control" name="extraProduct" placeholder="Extra_Product" value="">
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Date menufacture</label>
-        <input type="date" class="form-control" name="dateMenufacture" placeholder="Date_Menufacture">
+        <input type="date" class="form-control" name="dateMenufacture" placeholder="Date_Menufacture" value="">
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Transmission Status</label>
-        <input type="text" class="form-control" name="transmissionStatus" placeholder="Transmission_Status">
+        <input type="text" class="form-control" name="transmissionStatus" placeholder="Transmission_Status" value="">
     </div>
     <br>
     <input type="hidden" name="controller" value="order" class="form-control">
