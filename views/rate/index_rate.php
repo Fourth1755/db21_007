@@ -20,10 +20,10 @@
                 <td>$Rate->Rate_ScreenPrice</td>
                 <td><a href=?controller=rate&action=updateForm&Rate_ID=$Rate->Rate_ID>Update</a></td>
                 <td>Delete</td></tr>";
-            }    
+            }
             echo "</table>";
         ?>
-    <!--<a class= "btn btn-success" href=?controller=rate&action=newOrder>add new</a>-->
+    <a class= "btn btn-success" href=?controller=rate&action=addRate>Add</a>
     </div>
     
     
