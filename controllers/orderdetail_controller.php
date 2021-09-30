@@ -5,7 +5,7 @@
             require_once('views/orderdetail/index_orderdetail.php');
         }
         public function newOrderdetail(){
-            $orderdetail_List = Orderdetail::getAll();
+            $orderdetail_list = Orderdetail::getAll();
             require_once('views/orderdetail/Orderdetail.php');
         }
         public function addOrderdetail(){
@@ -15,7 +15,7 @@
             $Orderdetail_QuantityColor=$_GET['Orderdetail_QuantityColor'];
             $Orderdetail_Quantity=$_GET['Orderdetail_Quantity'];
             Orderdetail::add($Orderdetail_ID,$Order_ID,$Colordetail_ID,$Orderdetail_QuantityColor,$Orderdetail_Quantity);
-            
+
             OrderdetailController::index();
         }
         public function updateForm(){
