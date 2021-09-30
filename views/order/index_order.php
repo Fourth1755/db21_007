@@ -21,6 +21,11 @@
         </li>
       </ul>
     </div>
+    <form class="d-flex" method="get" action="">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="key">
+        <input type="hidden" name="controller" value="anime"/>
+        <button class="btn btn-outline-success" type="submit" value="search" name="action">Search</button>
+      </form>
     </div>
     </nav>
         <table class="table">
