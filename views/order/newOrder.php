@@ -23,7 +23,7 @@
             <select name="sellerID" class="form-select" aria-label="Default select example">
             <option selected>Open this select Seller</option>
                 <?php
-                    foreach($employee_List as $sell){
+                    foreach($employee_list as $sell){
                         echo"<option value=$sell->id>$sell->name</option>";
                     }    
                 ?>
