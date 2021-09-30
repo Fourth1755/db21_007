@@ -1,7 +1,7 @@
 <?php
      class OrderdetailController{
         public function index(){
-            $order_list = Orderdetail::getAll();
+            $orderdetail_list = Orderdetail::getAll();
             require_once('views/orderdetail/index_orderdetail.php');
         }
         public function newOrderdetail(){
