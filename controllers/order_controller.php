@@ -13,7 +13,7 @@
             $customer_list=Customer::getAll();
             require_once('views/order/newOrder.php');
         }
-        public function addOrder(){
+        public function addOrder($id,$date,$sellerID,$customerID,$deposit,$managerID,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus){
             $id=$_GET["id"];
             $date=$_GET["date"];
             $sellerID=$_GET["sellerID"];
