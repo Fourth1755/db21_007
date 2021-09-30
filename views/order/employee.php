@@ -28,7 +28,7 @@
         <tr><td>ID</td><td>Name</td><td>positionID</td><td>positionName</td>
         <td>Update</td><td>Delete</td></tr>
         <?php
-            foreach($employee_List as $emp){
+            foreach($employee_list as $emp){
             echo "<tr><td>$emp->id</td>
                 <td>$emp->name</td>
                 <td>$emp->positionID</td>

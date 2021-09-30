@@ -12,7 +12,7 @@
         <form method="get" action="" style="width: 40%; ">
     <div class="mb-3">
         <label for="formGroupExampleInput" class="form-label">ID</label>
-        <input type="text" class="form-control" name= "id" placeholder="Quotation_ID Ex 11001" > 
+        <input type="text" class="form-control" name= "id" placeholder="Quotation_ID Ex 11001"> 
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Date</label>
