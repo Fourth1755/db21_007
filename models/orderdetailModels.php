@@ -37,10 +37,10 @@
             $Colordetail_ID = $my_row["ColorDetail_ID"];
             $Orderdetail_QuantityColor = $my_row["QuotationDetail_QuantityColor"];
             $Orderdetail_Quantity = $my_row["QuotationDetail_Quantity"];
-            $Orderdetail[] = new Orderdetail($Orderdetail_ID,$Order_ID,$Colordetail_ID,$Orderdetail_QuantityColor,$Orderdetail_Quantity);
+            $OrderdetailList[] = new Orderdetail($Orderdetail_ID,$Order_ID,$Colordetail_ID,$Orderdetail_QuantityColor,$Orderdetail_Quantity);
         }
         require("connection_close.php");
-        return $Orderdetail;
+        return $OrderdetailList;
     }
 
     public static function add($Orderdetail_ID,$Order_ID,$Colordetail_ID,$Orderdetail_QuantityColor,$Orderdetail_Quantity){
@@ -49,8 +49,14 @@
         VALUES('$Orderdetail_ID','$Order_ID','$Colordetail_ID','$Orderdetail_QuantityColor','$Orderdetail_Quantity')";
         $result=$conn->query($sql);
         require("connection_close.php");
-        return "add success $result row";
+        return "add success $result rows";
 
+    }
+    public static function update($Orderdetail_ID,$Order_ID,$Colordetail_ID,$Orderdetail_QuantityColor,$Orderdetail_Quantity){
+        require("connection_connect.php");
+        $sql="UPDATE QuotationDetail SET QuotationDetail_ID='$Orderdetail_ID',Quotation_ID=$Order_ID,ColorDetail_ID='$Colordetail_ID',QuotationDetail_QuantityColor='$Orderdetail_QuantityColor',QuotationDetail_Quantity='$$Orderdetail_Quantity');
+        require("connection_close.php");
+        return "Update success $result rows";
     }
 
     public static function delete($Orderdetail_ID){
@@ -58,7 +64,7 @@
         $sql = "DELETE * FROM QuotationDetail WHERE QuotationDetail_ID='$Orderdetail_ID'";
         $result = $conn->query($sql);
         require("connection_close.php");
-        return "delete success $result row";
+        return "delete success $result rows";
     }
     }
 ?>
