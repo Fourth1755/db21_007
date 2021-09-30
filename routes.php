@@ -16,6 +16,7 @@
                         $controller = new OrderdetailController();
                         break;
             case "rate": require_once("models/rateModels.php");
+                        require_once("models/productModels.php");
                         $controller = new rateController();
                         break;
         }
