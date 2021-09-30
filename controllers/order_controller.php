@@ -24,6 +24,9 @@
             $extraProduct=$_GET["extraProduct"];
             $dateMenufacture=$_GET["dateMenufacture"];
             $transmissionStatus=$_GET["transmissionStatus"];
+            if($deposit==""){
+                $deposit=0;
+            }
             Order::add($id,$date,$sellerID,$customerID,$deposit,$managerID,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus);
             OrderController::index();
         }
