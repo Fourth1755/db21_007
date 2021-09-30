@@ -81,7 +81,7 @@
     </div>
     <br>
     <input type="hidden" name="controller" value="order" class="form-control">
-    <button type="submit" class="btn btn" name="action" value="order">Back</button>
+    <button type="submit" class="btn btn" name="action" value="index">Back</button>
     <button type="submit" class="btn btn-success" name="action" value="addOrder">Save</button>
     </form>
     </div>
