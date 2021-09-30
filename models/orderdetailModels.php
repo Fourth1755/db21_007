@@ -32,11 +32,11 @@
         $sql = "SELECT * FROM QuotationDetail";
         $result = $conn->query($sql);
         while($my_row = $result->fetch_assoc()){
-            $Orderdetail_ID = $my_row["Orderdetail_ID"];
-            $Order_ID = $my_row["Order_ID"];
-            $Colordetail_ID = $my_row["Colordetail_ID"];
-            $Orderdetail_QuantityColor = $my_row["Orderdetail_QuantityColor"];
-            $Orderdetail_Quantity = $my_row["Orderdetail_Quantity"];
+            $Orderdetail_ID = $my_row["QuotationDetail_ID"];
+            $Order_ID = $my_row["Quotation_ID"];
+            $Colordetail_ID = $my_row["ColorDetail_ID"];
+            $Orderdetail_QuantityColor = $my_row["QuotationDetail_QuantityColor"];
+            $Orderdetail_Quantity = $my_row["QuotationDetail_Quantity"];
             $Orderdetail[] = new Orderdetail($Orderdetail_ID,$Order_ID,$Colordetail_ID,$Orderdetail_QuantityColor,$Orderdetail_Quantity);
         }
         require("connection_close.php");
@@ -45,9 +45,9 @@
 
     public static function add($Orderdetail_ID,$Order_ID,$Colordetail_ID,$Orderdetail_QuantityColor,$Orderdetail_Quantity){
         require("connection_connect.php");
-        $sql = "INSERT INTO Orderdetail(Orderdetail_ID,Order_ID,Colordetail_ID,Orderdetail_QuantityColor,Orderdetail_Quantity) values('$Orderdetail_ID', '$Order_ID', '$Colordetail_ID', 
-        '$Orderdetail_QuantityColor', '$Orderdetail_Quantity')";
-        $result = $conn->query($sql);
+        $sql ="INSERT INTO QuotationDetail (QuotationDetail_ID,Quotation_ID,ColorDetail_ID,QuotationDetail_QuantityColor,QuotationDetail_Quantity)
+        VALUES('$Orderdetail_ID','$Order_ID','$Colordetail_ID','$Orderdetail_QuantityColor','$Orderdetail_Quantity')";
+        $result=$conn->query($sql);
         require("connection_close.php");
         return "add success $result row";
 
