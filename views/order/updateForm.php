@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h1>Update order</h1>
-        <form method="get" action="" style="width: 40%; ">
+        <form method="get" action="" style="width: 40%;">
     <div class="mb-3">
         <label for="formGroupExampleInput" class="form-label">ID</label>
         <input type="text" class="form-control" name= "id"  value="<?php echo $order->id;?>" placeholder="Quotation_ID Ex 11001"> 
@@ -21,7 +21,7 @@
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Seller
             <select name="sellerID" class="form-select" aria-label="Default select example">
-            <option selected>Open this select Seller</option>
+            <option selected disabled hidden>Open this select Seller</option>
                 <?php
                     foreach($employee_list as $sell){
                         if($sell->positionID=='POS01'){
@@ -39,7 +39,7 @@
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Customer
             <select name="customerID" class="form-select" aria-label="Default select example">
-            <option selected>Open this select Customer</option>
+            <option selected disabled hidden>Open this select Customer</option>
                 <?php
                     foreach($customer_list as $cus){
                         echo"<option value=$cus->id";
@@ -59,7 +59,7 @@
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Manager
             <select name="managerID" class="form-select" aria-label="Default select example">
-            <option selected>Open this select Manager</option>
+            <option selected disabled hidden>Open this select Manager</option>
                 <?php
                     foreach($employee_list as $man){
                         if($man->positionID=='POS04'){
@@ -93,7 +93,7 @@
     <br>
     <input type="hidden" name="controller" value="order" class="form-control">
     <button type="submit" class="btn btn" name="action" value="index">Back</button>
-    <button type="submit" class="btn btn-success" name="action" value="updateOrder">Save</button>
+    <button type="submit" class="btn btn-success" name="action" value="updateForm">Save</button>
     </form>
     </div>
     
