@@ -13,14 +13,14 @@
         <tr><td>Orderdetail_ID</td><td>Order_ID</td><td>Colordetail_ID</td><td>Orderdetail_QuantityColor</td><td>Orderdetail_Quantity</td>
         <td>Update</td><td>Delete</td></tr>
         <?php
-            foreach(Orderdetail as $Orderdetail){
+            foreach($orderdetail_list as $orderdetail){
             echo "<tr><td>$Rate->Product_ID</td>
-                <td>$Orderdetail->Orderdetail_ID</td>
-                <td>$Orderdetail->Order_ID</td>
-                <td>$Orderdetail->Colordetail_ID</td>
-                <td>$Orderdetail->Orderdetail_QuantityColor</td>
-                <td>$Orderdetail->Orderdetail_Quantity</td>
-                <td><a href=?controller=rate&action=updateForm&Rate_ID=$Orderdetail->Orderdetail_ID>Update</a></td>
+                <td>$orderdetail->Orderdetail_ID</td>
+                <td>$orderdetail->Order_ID</td>
+                <td>$orderdetail->Colordetail_ID</td>
+                <td>$orderdetail->Orderdetail_QuantityColor</td>
+                <td>$orderdetail->Orderdetail_Quantity</td>
+                <td><a href=?controller=rate&action=updateForm&Rate_ID=$orderdetail->Orderdetail_ID>Update</a></td>
                 <td>Delete</td></tr>";
             }    
             echo "</table>";
