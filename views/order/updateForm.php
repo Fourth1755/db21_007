@@ -21,7 +21,6 @@
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Seller
             <select name="sellerID" class="form-select" aria-label="Default select example">
-            <option selected disabled hidden>Open this select Seller</option>
                 <?php
                     foreach($employee_list as $sell){
                         if($sell->positionID=='POS01'){
@@ -39,7 +38,6 @@
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Customer
             <select name="customerID" class="form-select" aria-label="Default select example">
-            <option selected disabled hidden>Open this select Customer</option>
                 <?php
                     foreach($customer_list as $cus){
                         echo"<option value=$cus->id";
@@ -59,7 +57,6 @@
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Manager
             <select name="managerID" class="form-select" aria-label="Default select example">
-            <option selected disabled hidden>Open this select Manager</option>
                 <?php
                     foreach($employee_list as $man){
                         if($man->positionID=='POS04'){
