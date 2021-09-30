@@ -55,8 +55,8 @@
             <option selected>Open this select Manager</option>
                 <?php
                     foreach($employee_list as $man){
-                        if($sell->positionID=='POS04'){
-                            echo"<option value=$sell->id>$sell->name</option>";
+                        if($man->positionID=='POS04'){
+                            echo"<option value=$man->id>$man->name</option>";
                         } 
                     }    
                 ?>
