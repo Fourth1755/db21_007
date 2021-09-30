@@ -4,27 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add New Order</title>
+    <title>Add new order</title>
 </head>
 <body>
-    <br>
-    (Quotation_ID,Quotation_Date,Seller_ID,Customer_ID,Quotation_Deposit,Manager_ID,Quotation_DateApprov,Extra_Product,Quotation_DateMenufacture,Quotation_TransmissionStatus
+    <h1>Add new order</h1>
     <div class="container">
         <form method="get" action="" style="width: 40%; ">
     <div class="mb-3">
-        <label for="formGroupExampleInput" class="form-label">Quotation_ID</label>
-        <input type="text" class="form-control" name= "name" placeholder="ID" > 
+        <label for="formGroupExampleInput" class="form-label">ID</label>
+        <input type="text" class="form-control" name= "id" placeholder="Quotation_ID Ex 11001" > 
     </div>
     <div class="mb-3">
-        <label for="formGroupExampleInput2" class="form-label">Quotation_Date</label>
-        <input type="number" class="form-control" name= "episode" placeholder="Episodes">
+        <label for="formGroupExampleInput2" class="form-label">Date</label>
+        <input type="number" class="form-control" name= "date" placeholder="Quotation_Date">
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Seller
             <select name="sellerID" class="form-select" aria-label="Default select example">
             <option selected>Open this select Seller</option>
                 <?php
-                    foreach($seller_list as $sell){
+                    foreach($employee_List as $sell){
                         echo"<option value=$sell->id>$sell->name</option>";
                     }    
                 ?>
@@ -36,24 +35,49 @@
             <select name="customerID" class="form-select" aria-label="Default select example">
             <option selected>Open this select Customer</option>
                 <?php
-                    foreach($customer_list as $cus){
+                    foreach($customer_List as $cus){
                         echo"<option value=$cus->id>$cus->name</option>";
                     }    
                 ?>
             </select>
         </label>
     </div>
-
-
-
     <div class="mb-3">
-        <label for="formGroupExampleInput2" class="form-label">Quotation_Deposit</label>
-        <input type="text" class="form-control" name="year" placeholder="year">
+        <label for="formGroupExampleInput2" class="form-label">Deposit</label>
+        <input type="text" class="form-control" name="deposit" placeholder="Quotation_Deposit">
+    </div>
+    <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Manager
+            <select name="managerID" class="form-select" aria-label="Default select example">
+            <option selected>Open this select Manager</option>
+                <?php
+                    foreach($employee_List as $man){
+                        echo"<option value=$man->id>$man->name</option>";
+                    }    
+                ?>
+            </select>
+        </label>
+    </div>
+    <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Date approv</label>
+        <input type="text" class="form-control" name="dateApprov" placeholder="Quotation_DateApprov">
+    </div>
+    <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Extra Product</label>
+        <input type="text" class="form-control" name="extraProduct" placeholder="Extra_Product">
+    </div>
+    <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Date menufacture</label>
+        <input type="text" class="form-control" name="dateMenufacture" placeholder="Date_Menufacture">
+    </div>
+    <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Transmission Status</label>
+        <input type="text" class="form-control" name="transmissionStatus" placeholder="Transmission_Status">
     </div>
     <br>
-    <input type="hidden" name="controller" value="anime" class="form-control">
-    <button type="submit" class="btn btn" name="action" value="index">Back</button>
-    <button type="submit" class="btn btn-success" name="action" value="addAnime">Save</button>
+    <input type="hidden" name="controller" value="order" class="form-control">
+    <button type="submit" class="btn btn" name="action" value="order">Back</button>
+    <button type="submit" class="btn btn-success" name="action" value="addOrder">Save</button>
     </form>
     </div>
     

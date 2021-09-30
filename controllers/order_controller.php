@@ -9,8 +9,7 @@
             require_once('views/order/employee.php');
         }
         public function newOrder(){
-            $seller_list=Employee::getAll();
-            $manager_list=Employee::getAll();
+            $employee_List=Employee::getAll();
             $customer_List=Customer::getAll();
             require_once('views/order/newOrder.php');
         }
