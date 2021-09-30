@@ -12,11 +12,11 @@
         <form method="get" action="" style="width: 40%; ">
     <div class="mb-3">
         <label for="formGroupExampleInput" class="form-label">ID</label>
-        <input type="text" class="form-control" name= "id"  value="<?php echo $order->id;?> placeholder="Quotation_ID Ex 11001"> 
+        <input type="text" class="form-control" name= "id"  value="<?php echo $order->id;?>" placeholder="Quotation_ID Ex 11001"> 
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Date</label>
-        <input type="date" class="form-control" name= "date" value="<?php echo $order->date;?> placeholder="Quotation_Date">
+        <input type="date" class="form-control" name= "date" value="<?php echo $order->date;?>" placeholder="Quotation_Date">
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Seller
@@ -54,7 +54,7 @@
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Deposit</label>
-        <input type="text" class="form-control" name="deposit" value="<?php echo $order->deposit;?> placeholder="Quotation_Deposit">
+        <input type="text" class="form-control" name="deposit" value="<?php echo $order->deposit;?>" placeholder="Quotation_Deposit">
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Manager
@@ -76,24 +76,24 @@
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Date approv</label>
-        <input type="date" class="form-control" name="dateApprov" value="<?php echo $order->dateApprov;?> placeholder="Quotation_DateApprov">
+        <input type="date" class="form-control" name="dateApprov" value="<?php echo $order->dateApprov;?>" placeholder="Quotation_DateApprov">
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Extra Product</label>
-        <input type="text" class="form-control" name="extraProduct" value="<?php echo $order->extraProduct;?> placeholder="Extra_Product">
+        <input type="text" class="form-control" name="extraProduct" value="<?php echo $order->extraProduct;?>" placeholder="Extra_Product">
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Date menufacture</label>
-        <input type="date" class="form-control" name="dateMenufacture" value="<?php echo $order->dateMenufacture;?> placeholder="Date_Menufacture">
+        <input type="date" class="form-control" name="dateMenufacture" value="<?php echo $order->dateMenufacture;?>" placeholder="Date_Menufacture">
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Transmission Status</label>
-        <input type="text" class="form-control" name="transmissionStatus" value="<?php echo $order->transmissionStatus;?> placeholder="Transmission_Status" value="">
+        <input type="text" class="form-control" name="transmissionStatus" value="<?php echo $order->transmissionStatus;?>" placeholder="Transmission_Status" value="">
     </div>
     <br>
     <input type="hidden" name="controller" value="order" class="form-control">
     <button type="submit" class="btn btn" name="action" value="index">Back</button>
-    <button type="submit" class="btn btn-success" name="action" value="addOrder">Save</button>
+    <button type="submit" class="btn btn-success" name="action" value="updateOrder">Save</button>
     </form>
     </div>
     
