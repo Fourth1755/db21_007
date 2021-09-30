@@ -18,7 +18,7 @@
     <label>Rate_Quantity <input type="text" name="Rate_Quantity"/>></label><br>
     <label>Rate_Price <input type="text" name="Rate_Price"/>></label><br>
     <label>Rate_ScreenPrice <input type="text" name="Rate_ScreenPrice"/>></label><br>
-    <input type="hidden" name="controller" value="Rate"/>
+    <input type="hidden" name="controller" value="rate"/>
     <button type="submit" name="action" value="index">Back</button>
     <button type="submit" name="action" value="addRate">Save</button>
     </form>
