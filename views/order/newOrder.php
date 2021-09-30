@@ -7,8 +7,9 @@
     <title>Add new order</title>
 </head>
 <body>
-    <h1>Add new order</h1>
+    
     <div class="container">
+        <h1>Add new order</h1>
         <form method="get" action="" style="width: 40%; ">
     <div class="mb-3">
         <label for="formGroupExampleInput" class="form-label">ID</label>
@@ -24,7 +25,9 @@
             <option selected>Open this select Seller</option>
                 <?php
                     foreach($employee_list as $sell){
-                        echo"<option value=$sell->id>$sell->name</option>";
+                        if($sell->positionID=='POS01'){
+                            echo"<option value=$sell->id>$sell->name</option>";
+                        }    
                     }    
                 ?>
             </select>
@@ -52,7 +55,9 @@
             <option selected>Open this select Manager</option>
                 <?php
                     foreach($employee_list as $man){
-                        echo"<option value=$man->id>$man->name</option>";
+                        if($sell->positionID=='POS04'){
+                            echo"<option value=$sell->id>$sell->name</option>";
+                        } 
                     }    
                 ?>
             </select>
