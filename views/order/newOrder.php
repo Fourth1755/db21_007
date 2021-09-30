@@ -35,7 +35,7 @@
             <select name="customerID" class="form-select" aria-label="Default select example">
             <option selected>Open this select Customer</option>
                 <?php
-                    foreach($customer_List as $cus){
+                    foreach($customer_list as $cus){
                         echo"<option value=$cus->id>$cus->name</option>";
                     }    
                 ?>
@@ -51,7 +51,7 @@
             <select name="managerID" class="form-select" aria-label="Default select example">
             <option selected>Open this select Manager</option>
                 <?php
-                    foreach($employee_List as $man){
+                    foreach($employee_list as $man){
                         echo"<option value=$man->id>$man->name</option>";
                     }    
                 ?>
