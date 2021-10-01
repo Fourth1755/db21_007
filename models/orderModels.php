@@ -61,7 +61,7 @@
             require("connection_close.php");
             return $orderList;
         }
-        public static function add($id,$date,$sellerID,$customerID){
+        public static function add($id,$date,$sellerID,$customerID,$deposit,$managerID,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus){
             require("connection_connect.php");
             //$sql ="INSERT INTO Quotation (Quotation_ID,Quotation_Date,Seller_ID,Customer_ID,Quotation_Deposit,Manager_ID,Quotation_DateApprov,Extra_Product,Quotation_DateMenufacture,Quotation_TransmissionStatus)
             //VALUES('$id','$date','$sellerID','$customerID',NULL,NULL,NULL,NULL,NULL,NULL)";
