@@ -22,7 +22,7 @@
         
         <input type="hidden" name="controller" value="rate"/>
         <button type="submit" name="action" value="index_rate">Back</button>
-        <button type="submit" name="action" value="update">Update</button>
+        <button type="submit" name="action" value="updateRate">Update</button>
     </form>
 </body>
 </html>
