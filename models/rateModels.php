@@ -84,10 +84,10 @@
             return $rateList;
         }
 
-        public function update($Rate_ID, $Rate_Quantity, $Rate_Price, $Rate_ScreenPrice, $Product_ID, $Product_Name){
+        public function update($Rate_ID, $Rate_Quantity, $Rate_Price, $Rate_ScreenPrice, $Product_ID){
             require("connection_connect.php");
             $sql = "UPDATE Rate SET Rate_ID = '$Rate_ID', Rate_Quantity = '$Rate_Quantity', Rate_Price = '$Rate_Price', Rate_ScreenPrice = '$Rate_ScreenPrice',
-            Product_ID = '$Product_ID', Product_Name = '$Product_Name'";
+            Product_ID = '$Product_ID'";
             $result = $conn->query($sql);
             require("connection_close.php");
             return "update success $result row";

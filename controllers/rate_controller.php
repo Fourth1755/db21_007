@@ -25,11 +25,21 @@
             require_once('views/rate/index_rate.php');
         }
 
-        public function updateRate(){
+        public function updateRateForm(){
             $Rate_ID = $_GET['Rate_ID'];
             $Rate = Rate::get($Rate_ID);
             $productList = Product::getAll();
-            require_once('views/rate/updateRate.php');
+            require_once('views/rate/updateRateForm.php');
+        }
+
+        public function updateRate(){
+            $Product_ID = $_GET['Product_ID'];
+            $Rate_ID = $_GET['Rate_ID'];
+            $Rate_Quantity = $_GET['Rate_Quantity'];
+            $Rate_Price = $_GET['Rate_Price'];
+            $Rate_ScreenPrice = $_GET['Rate_ScreenPrice'];
+            Rate::update($Rate_ID, $Rate_Quantity, $Rate_Price, $Rate_ScreenPrice, $Product_ID);
+            rateController::index_rate();
         }
         
     }
