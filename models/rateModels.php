@@ -20,20 +20,16 @@
         public static function get($Rate_ID){
             require("connection_connect.php");
             $sql = "SELECT Product_ID, Product_Name, Rate_ID, Rate_Quantity, Rate_Price, Rate_ScreenPrice FROM Rate NATURAL JOIN Product 
-            WHERE Rate_ID = $Rate_ID";
-            echo "Hello1";
+            WHERE Rate_ID = '$Rate_ID'";
             $result = $conn->query($sql);
             $my_row = $result->fetch_assoc();
-            echo "Hello2";
             $Rate_ID = $my_row["Rate_ID"];
             $Rate_Quantity = $my_row["Rate_Quantity"];
             $Rate_Price = $my_row["Rate_Price"];
             $Rate_ScreenPrice = $my_row["Rate_ScreenPrice"];
             $Product_ID = $my_row["Product_ID"];
             $Product_Name = $my_row["Product_Name"];
-            echo "Hello3";
             require("connection_close.php");
-            echo "Hello4";
             return new Rate($Rate_ID, $Rate_Quantity, $Rate_Price, $Rate_ScreenPrice, $Product_ID, $Product_Name);
 
         }
