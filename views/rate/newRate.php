@@ -8,7 +8,7 @@
 </head>
 <body>
     <form>
-    <label>Product_Name <select>
+    <label>Product_Name<select>
         <?php foreach($productList as $Product){
             echo "<option values = $Product->Product_ID>$Product->Product_Name</option>";
             }

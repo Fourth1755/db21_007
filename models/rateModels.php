@@ -57,10 +57,11 @@
 
         public static function add($Rate_ID, $Rate_Quantity, $Rate_Price, $Rate_ScreenPrice, $Product_ID){
             require("connection_connect.php");
+            echo "$Rate_ID, $Rate_Quantity, $Rate_Price, $Rate_ScreenPrice, $Product_ID";
             $sql = "INSERT INTO Rate (Rate_ID, Rate_Quantity, Rate_Price, Rate_ScreenPrice, Product_ID) values ('$Rate_ID', '$Rate_Quantity', '$Rate_Price', '$Rate_ScreenPrice', '$Product_ID')";
             $result = $conn->query($sql);
             require("connection_close.php");
-            return "add success $result row";
+            return "Add success $result row";
         }
 
         public static function search($key){
