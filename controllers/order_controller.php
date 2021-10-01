@@ -18,13 +18,13 @@
             $date=$_GET["date"];
             $sellerID=$_GET["sellerID"];
             $customerID=$_GET["customerID"];
-            //$deposit=$_GET["deposit"];
+            $deposit=$_GET["deposit"];
             //$managerID=$_GET["managerID"];
             //$dateApprov=$_GET["dateApprov"];
             //$extraProduct=$_GET["extraProduct"];
             //$dateMenufacture=$_GET["dateMenufacture"];
             //$transmissionStatus=$_GET["transmissionStatus"];
-            Order::add($id,$date,$sellerID,$customerID);
+            Order::add($id,$date,$sellerID,$deposit);
             OrderController::index();
         }
         public function updateForm(){
@@ -39,7 +39,13 @@
             $date=$_GET["date"];
             $sellerID=$_GET["sellerID"];
             $customerID=$_GET["customerID"];
-            Order::update($id,$date,$sellerID,$customerID);
+            $deposit=$_GET["deposit"];
+            $managerID=$_GET["managerID"];
+            $dateApprov=$_GET["dateApprov"];
+            $extraProduct=$_GET["extraProduct"];
+            $dateMenufacture=$_GET["dateMenufacture"];
+            $transmissionStatus=$_GET["transmissionStatus"];
+            Order::update($id,$date,$sellerID,$customerID,$deposit,$managerID,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus);
             OrderController::index();
         }
         public function deleteConfirm(){
