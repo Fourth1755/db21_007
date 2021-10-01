@@ -24,7 +24,7 @@
             $extraProduct=$_GET["extraProduct"];
             $dateMenufacture=$_GET["dateMenufacture"];
             $transmissionStatus=$_GET["transmissionStatus"];
-            Order::add($id,$date,$sellerID,$customerID,$deposit,$managerID,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus);
+            Order::add($id,$date,$sellerID,$customerID);
             OrderController::index();
         }
         public function updateForm(){
