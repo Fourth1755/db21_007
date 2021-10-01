@@ -11,7 +11,7 @@
         <label>Product_Name<select name="Product_ID">
             <?php foreach($productList as $Product){
                 echo "<option value=$Product->Product_ID";
-                if($Product->Product_ID == $Rate->Product_ID){echo"selected = 'selected'";}
+                if($Product->Product_ID == $Rate->Product_ID){echo" selected = 'selected'";}
                 echo ">$Product->Product_Name</option>";
                 }
             ?>
