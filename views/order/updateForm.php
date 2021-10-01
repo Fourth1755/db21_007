@@ -25,8 +25,8 @@
                     foreach($employee_list as $sell){
                         if($sell->positionID=='POS01'){
                             echo"<option value=$sell->id";
-                            if($sell->id==$order->sellerID){
-                                echo "selected='selected' ";
+                            if($sell->id == $order->sellerID){
+                                echo "selected ='selected' ";
                             }
                         echo ">$sell->name</option>";
                         }    
@@ -45,6 +45,7 @@
                                 echo "selected='selected'";
                             }
                         echo ">$cus->name</option>";
+                        echo "$order->customerID";
                     } 
                 ?>    
             </select>
