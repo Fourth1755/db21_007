@@ -28,14 +28,14 @@
             OrderController::index();
         }
         public function updateForm(){
-            $id=$_GET["id"];
+            $id=$_GET["orderID"];
             $order=Order::get($id);
             $employee_list=Employee::getAll();
             $customer_list=Customer::getAll();
             require_once('views/order/updateForm.php');
         }
         public function update(){
-            $id=$_GET["id"];
+            $id=$_GET["orderID"];
             $date=$_GET["date"];
             $sellerID=$_GET["sellerID"];
             $customerID=$_GET["customerID"];
