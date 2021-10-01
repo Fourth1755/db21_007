@@ -17,7 +17,7 @@
             $this->Product_Name = $Product_Name;
         }
 
-        public function get($Rate_ID){
+        public static function get($Rate_ID){
             require("connection_connect.php");
             $sql = "SELECT Product_ID, Product_Name, Rate_ID, Rate_Quantity, Rate_Price, Rate_ScreenPrice FROM Rate NATURAL JOIN Product 
             WHERE Rate_ID = $Rate_ID";
@@ -56,7 +56,7 @@
             return $rateList;
         }
 
-        public function add($Rate_ID, $Rate_Quantity, $Rate_Price, $Rate_ScreenPrice, $Product_ID){
+        public static function add($Rate_ID, $Rate_Quantity, $Rate_Price, $Rate_ScreenPrice, $Product_ID){
             require("connection_connect.php");
             $sql = "INSERT INTO Rate (Rate_ID, Rate_Quantity, Rate_Price, Rate_ScreenPrice, Product_ID) values ('$Rate_ID', '$Rate_Quantity', '$Rate_Price', '$Rate_ScreenPrice', '$Product_ID')";
             $result = $conn->query($sql);
@@ -64,7 +64,7 @@
             return "add success $result row";
         }
 
-        public function search($key){
+        public static function search($key){
             require("connection_connect.php");
             $sql = "SELECT Product_ID, Product_Name, Rate_ID, Rate_Quantity, Rate_Price, Rate_ScreenPrice FROM Rate NATURAL JOIN Product
             WHERE (Rate_ID LIKE'%$key' OR Product_ID LIKE'%$key' OR Product_Name LIKE'%$key' OR Rate_Quantity LIKE'%$key' OR Rate_Quantity LIKE '$key'
@@ -84,7 +84,7 @@
             return $rateList;
         }
 
-        public function update($Rate_ID, $Rate_Quantity, $Rate_Price, $Rate_ScreenPrice, $Product_ID){
+        public static function update($Rate_ID, $Rate_Quantity, $Rate_Price, $Rate_ScreenPrice, $Product_ID){
             require("connection_connect.php");
             $sql = "UPDATE Rate SET Rate_ID = '$Rate_ID', Rate_Quantity = '$Rate_Quantity', Rate_Price = '$Rate_Price', Rate_ScreenPrice = '$Rate_ScreenPrice',
             Product_ID = '$Product_ID'";
