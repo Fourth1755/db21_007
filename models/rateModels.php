@@ -46,6 +46,26 @@
             return "add success $result row";
         }
 
+        public function search($key){
+            require("connection_connect.php");
+            $sql = "SELECT Product_ID, Product_Name, Rate_ID, Rate_Quantity, Rate_Price, Rate_ScreenPrice FROM Rate NATURAL JOIN Product
+            WHERE (Rate_ID LIKE'%$key' OR Product_ID LIKE'%$key' OR Product_Name LIKE'%$key' OR Rate_Quantity LIKE'%$key' OR Rate_Quantity LIKE '$key'
+            OR Rate_Price LIKE '$key' OR Rate_ScreenPrice LIKE '$key')";
+            $result = $conn->query($sql);
+            while($my_row = $result->fetch_assoc()){
+                $Rate_ID = $my_row["Rate_ID"];
+                $Rate_Quantity = $my_row["Rate_Quantity"];
+                $Rate_Price = $my_row["Rate_Price"];
+                $Rate_ScreenPrice = $my_row["Rate_ScreenPrice"];
+                $Product_ID = $my_row["Product_ID"];
+                $Product_Name = $my_row["Product_Name"];
+
+                $rateList[] = new Rate($Rate_ID, $Rate_Quantity, $Rate_Price, $Rate_ScreenPrice, $Product_ID, $Product_Name);
+            }
+            require("connection_close.php");
+            return $rateList;
+        }
+
 
 
     }
