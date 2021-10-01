@@ -58,15 +58,11 @@
         <label for="formGroupExampleInput2" class="form-label">Manager
             <select name="managerID" class="form-select" aria-label="Default select example">
                 <?php
+                    if($order->managerID==NULL){
+                        echo "<option selected disabled hidden>Open this select Manager</option>";
+                    }
                     foreach($employee_list as $man){
-                        if($man->positionID=='POS04'){
-                            echo"<option value=$man->id";
-                            if($order->managerID==NULL){
-                                echo "selected='selected'";
-                            }
-                        echo">Open this select Manager</option>";
-                        } 
-                        else if($man->positionID=='POS04'){
+                    if($man->positionID=='POS04'){
                             echo"<option value=$man->id";
                             if($man->id==$order->managerID){
                                 echo "selected='selected'";
