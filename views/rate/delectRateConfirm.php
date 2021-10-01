@@ -14,7 +14,7 @@
         <input type="hidden" name="controller" value="rate"/>
         <input type="hidden" name="Rate_ID" value="<?php echo $Rate->Rate_ID;?>"/>
         <button type="submit" name="action" value="index_rate">Back</button>
-        <button type="submit" name="action" value="delete">Delete</button>
+        <button type="submit" name="action" value="deleteRate">Delete</button>
     </form>
 
 </body>
