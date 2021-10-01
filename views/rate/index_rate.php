@@ -19,8 +19,8 @@
         <?php
             foreach($rateList as $Rate){
             echo "<tr>
-                <td>$Rate->Product_Name</td>
                 <td>$Rate->Product_ID</td>
+                <td>$Rate->Product_Name</td>
                 <td>$Rate->Rate_ID</td>
                 <td>$Rate->Rate_Quantity</td>
                 <td>$Rate->Rate_Price</td>
