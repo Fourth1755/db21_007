@@ -26,7 +26,7 @@
                         if($sell->positionID=='POS01'){
                             echo"<option value=$sell->id";
                             if($sell->id==$order->sellerID){
-                                echo "selected='selected'";
+                                echo "selected='selected' ";
                             }
                         echo ">$sell->name</option>";
                         }    
@@ -43,6 +43,7 @@
                         echo"<option value=$cus->id";
                             if($cus->id==$order->customerID){
                                 echo "selected='selected'";
+                                echo $order->customerID;
                             }
                         echo ">$cus->name</option>";
                     } 
