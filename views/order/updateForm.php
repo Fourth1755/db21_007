@@ -28,7 +28,7 @@
                             if($sell->id == $order->sellerID){
                                 echo "selected ='selected' ";
                             }
-                        echo ">$sell->name</option>";
+                        echo ">$sell->name  $order->sellerID</option>";
                         }    
                     }    
                 ?>
