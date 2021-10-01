@@ -61,6 +61,13 @@
                     foreach($employee_list as $man){
                         if($man->positionID=='POS04'){
                             echo"<option value=$man->id";
+                            if($order->managerID==NULL){
+                                echo "selected='selected'";
+                            }
+                        echo">Open this select Manager</option>";
+                        } 
+                        else if($man->positionID=='POS04'){
+                            echo"<option value=$man->id";
                             if($man->id==$order->managerID){
                                 echo "selected='selected'";
                             }
