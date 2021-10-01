@@ -17,6 +17,24 @@
             $this->Product_Name = $Product_Name;
         }
 
+        public function get($Rate_ID){
+            require("connection_connect.php");
+            $sql = "SELECT Product_ID, Product_Name, Rate_ID, Rate_Quantity, Rate_Price, Rate_ScreenPrice FROM Rate NATURAL JOIN Product 
+            WHERE Rate_ID = $Rate_ID";
+            $result = $conn->query($sql);
+            $my_row = $result->fetch_assoc();
+            $Rate_ID = $my_row["Rate_ID"];
+            $Rate_Quantity = $my_row["Rate_Quantity"];
+            $Rate_Price = $my_row["Rate_Price"];
+            $Rate_ScreenPrice = $my_row["Rate_ScreenPrice"];
+            $Product_ID = $my_row["Product_ID"];
+            $Product_Name = $my_row["Product_Name"];
+            require("connection_close.php");
+
+            return new Rate($Rate_ID, $Rate_Quantity, $Rate_Price, $Rate_ScreenPrice, $Product_ID, $Product_Name);
+
+        }
+
         public static function getAll(){
             $rateList = [];
             require("connection_connect.php");
@@ -66,6 +84,14 @@
             return $rateList;
         }
 
+        public function update($Rate_ID, $Rate_Quantity, $Rate_Price, $Rate_ScreenPrice, $Product_ID, $Product_Name){
+            require("connection_connect.php");
+            $sql = "UPDATE Rate SET Rate_ID = '$Rate_ID', Rate_Quantity = '$Rate_Quantity', Rate_Price = '$Rate_Price', Rate_ScreenPrice = '$Rate_ScreenPrice',
+            Product_ID = '$Product_ID', Product_Name = '$Product_Name'";
+            $result = $conn->query($sql);
+            require("connection_close.php");
+            return "update success $result row";
+        }
 
 
     }

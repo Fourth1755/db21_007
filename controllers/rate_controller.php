@@ -24,6 +24,13 @@
             $rateList = Rate::search($key);
             require_once('views/rate/index_rate.php');
         }
+
+        public function updateRate(){
+            $Rate_ID = $_GET['Rate_ID'];
+            $Rate = Rate::get($Rate_ID);
+            $productList = Product::getAll();
+            require_once('views/rate/updateRate.php');
+        }
         
     }
 ?>
