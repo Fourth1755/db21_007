@@ -10,7 +10,8 @@
     <form>
     <label>Product_Name<select name="Product_ID">
         <?php foreach($productList as $Product){
-            echo "<option values = $Product->Product_ID>$Product->Product_Name</option>";
+            echo "<option value=$Product->Product_ID>
+            $Product->Product_Name</option>";
             }
         ?>
     </select></label><br>
