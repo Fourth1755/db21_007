@@ -44,8 +44,8 @@
                 <td>$order->extraProduct</td>
                 <td>$order->dateMenufacture</td>
                 <td>$order->transmissionStatus</td>
-                <td><a href=?controller=order&action=updateForm&orderID=$order->id>Update</a></td>
-                <td><a href=?controller=order&action=deleteConfirm&orderID=$order->id>Delete</a></td>
+                <td><a href=?controller=order&action=updateForm&id=$order->id>Update</a></td>
+                <td><a href=?controller=order&action=deleteConfirm&id=$order->id>Delete</a></td>
                 </tr>";
             }    
             echo "</table>";

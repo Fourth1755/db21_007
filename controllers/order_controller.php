@@ -18,17 +18,17 @@
             $date=$_GET["date"];
             $sellerID=$_GET["sellerID"];
             $customerID=$_GET["customerID"];
-            $deposit=$_GET["deposit"];
-            $managerID=$_GET["managerID"];
-            $dateApprov=$_GET["dateApprov"];
-            $extraProduct=$_GET["extraProduct"];
-            $dateMenufacture=$_GET["dateMenufacture"];
-            $transmissionStatus=$_GET["transmissionStatus"];
+            //$deposit=$_GET["deposit"];
+            //$managerID=$_GET["managerID"];
+            //$dateApprov=$_GET["dateApprov"];
+            //$extraProduct=$_GET["extraProduct"];
+            //$dateMenufacture=$_GET["dateMenufacture"];
+            //$transmissionStatus=$_GET["transmissionStatus"];
             Order::add($id,$date,$sellerID,$customerID);
             OrderController::index();
         }
         public function updateForm(){
-            $id=$_GET['orderID'];
+            $id=$_GET["id"];
             $order=Order::get($id);
             $employee_list=Employee::getAll();
             $customer_list=Customer::getAll();
@@ -39,13 +39,6 @@
             $date=$_GET["date"];
             $sellerID=$_GET["sellerID"];
             $customerID=$_GET["customerID"];
-            $deposit=$_GET["deposit"];
-            $managerID=$_GET["managerID"];
-            $dateApprov=$_GET["dateApprov"];
-            $extraProduct=$_GET["extraProduct"];
-            $dateMenufacture=$_GET["dateMenufacture"];
-            $transmissionStatus=$_GET["transmissionStatus"];
-            //Order::update($id,$date,$sellerID,$customerID,$deposit,$managerID,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus);
             Order::update($id,$date,$sellerID,$customerID);
             OrderController::index();
         }

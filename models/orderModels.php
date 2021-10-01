@@ -73,11 +73,7 @@
         }
         public static function update($id,$date,$sellerID,$customerID){
             require("connection_connect.php");
-            //$sql="UPDATE Quotation SET Quotation_ID='$id',Quotation_Date='$date',Seller_ID='$sellerID',Customer_ID='$customerID',
-            //Quotation_Deposit='$deposit',Manager_ID='$managerID',Quotation_DateApprov='$dateApprov',Extra_Product='$extraProduct'
-            //,Quotation_DateMenufacture='$dateMenufacture',Quotation_TransmissionStatus='$transmissionStatus' WHERE Quotation_ID='$id' ";
-            $sql="UPDATE Quotation SET Quotation_ID='$id',Quotation_Date='$date',Seller_ID='$sellerID',Customer_ID='$customerID',
-            WHERE Quotation_ID='$id' ";
+            $sql="UPDATE Quotation SET Quotation_Date='$date',Seller_ID='$sellerID' ,Customer_ID='$customerID' WHERE Quotation_ID='$id'";
             $result=$conn->query($sql);
             require("connection_close.php");
             return "Update success $result rows";
