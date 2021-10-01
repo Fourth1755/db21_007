@@ -8,12 +8,12 @@
 </head>
 <body>
     <form method="get" action="">
-        <label>Product_Name<select name="Product_ID">
+        <label>Product_Name <select>
             <?php foreach($productList as $Product){
                 echo "<option values = $Product->Product_ID>$Product->Product_Name</option>";
                 }
             ?>
-        </label><br>
+        </select></label><br>
         <label>Rate_ID<input type="text" name="Rate_ID" value="<?php echo $Rate->Rate_ID;?>"></label><br>
         <label>Rate_Quantity<input type="text" name="Rate_Quantity" value="<?php echo $Rate->Rate_Quantity;?>"></label><br>
         <label>Rate_Price<input type="text" name="Rate_Price" value="<?php echo $Rate->Rate_Price;?>"></label><br>
