@@ -25,7 +25,7 @@
                     foreach($employee_list as $sell){
                         if($sell->positionID=='POS01'){
                             echo"<option value=$sell->id";
-                            if($sell->id == $order->sellerID){
+                            if($sell->id==$order->sellerID){
                                 echo "selected ='selected' ";
                             }
                         echo ">$sell->id $sell->name  $order->sellerID</option>";
