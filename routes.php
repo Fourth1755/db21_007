@@ -1,8 +1,9 @@
 <?php
-    $controllers =array('pages'=>['home', 'error'], 'order'=>['index','newOrder','employee','addOrder','updateForm','update'], 'orderdetail'=>['index','newOrderdetail','addOrderdetail'],
-    'rate'=>['index_rate','newRate','addRate','search','updateRateForm','updateRate','delectRateConfirm','deleteRate']);
+    $controllers =array('pages'=>['home', 'error'], 
+    'order'=>['index','newOrder','employee','addOrder','updateForm','update','deleteConfirm','delete'], 
+    'orderdetail'=>['index','newOrderdetail','addOrderdetail'],
+    'rate'=>['index_rate','newRate','addRate','search','updateRateForm','updateRate','deleteRateConfirm','deleteRate']);
     function call($controller, $action){
-        //echo "routes to".$controller."-".$action."<br>";
         require_once("controllers/".$controller."_controller.php");
         switch($controller){
             case "pages": $controller = new PagesController();

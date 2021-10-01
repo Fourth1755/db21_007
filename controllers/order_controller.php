@@ -48,5 +48,15 @@
             Order::update($id,$date,$sellerID,$customerID,$deposit,$managerID,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus);
             OrderController::index();
         }
+        public function deleteConfirm(){
+            $id=$_GET['orderID'];
+            $order=Order::get($id);
+            require_once('views/order/deleteConfirm.php');
+        }
+        public function delete(){
+            $id=$_GET['orderID'];
+            $order=Order::delete($id);
+            OrderController::index();
+        }
     }
 ?>
