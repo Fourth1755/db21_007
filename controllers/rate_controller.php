@@ -41,6 +41,12 @@
             Rate::update($Rate_ID, $Rate_Quantity, $Rate_Price, $Rate_ScreenPrice, $Product_ID);
             rateController::index_rate();
         }
+
+        public function delectRateConfirm(){
+            $Rate_ID = $_GET['Rate_ID'];
+            $Rate_ID = Rate::get($Rate_ID);
+            require_once('views/rate/delectRateConfirm.php');
+        }
         
     }
 ?>
