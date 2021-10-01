@@ -73,7 +73,7 @@
         }
         public static function update($id,$date,$sellerID,$customerID,$deposit,$managerID,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus){
             require("connection_connect.php");
-            $sql="UPDATE IGNORE Quotation SET Quotation_ID='$id',Quotation_Date='$date',Seller_ID='$sellerID',Customer_ID='$customerID',
+            $sql="UPDATE Quotation SET Quotation_ID='$id',Quotation_Date='$date',Seller_ID='$sellerID',Customer_ID='$customerID',
             Quotation_Deposit='$deposit',Manager_ID='$managerID',Quotation_DateApprov='$dateApprov',Extra_Product='$extraProduct'
             ,Quotation_DateMenufacture='$dateMenufacture',Quotation_TransmissionStatus='$transmissionStatus' WHERE Quotation_ID='$id' ";
             $result=$conn->query($sql);
@@ -82,7 +82,7 @@
         }
         public static function delete($id){
             require("connection_connect.php");
-            $sql="DELETE FROM anime WHERE animeID='$id'";
+            $sql="DELETE FROM Quotation WHERE Quotation_ID='$id'";
             $result=$conn->query($sql);
             require("connection_close.php");
             return "Delete success $result rows";

@@ -45,10 +45,6 @@
             </select>
         </label>
     </div>
-    <div class="mb-3">
-        <label for="formGroupExampleInput2" class="form-label">Deposit</label>
-        <input type="text" class="form-control" name="deposit" placeholder="Quotation_Deposit">
-    </div>
     <br>
     <input type="hidden" name="controller" value="order" class="form-control">
     <button type="submit" class="btn btn" name="action" value="index">Back</button>
