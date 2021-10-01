@@ -25,8 +25,12 @@
                 <td>$Rate->Rate_Quantity</td>
                 <td>$Rate->Rate_Price</td>
                 <td>$Rate->Rate_ScreenPrice</td>
-                <td><a href=?controller=rate&action=updateRateForm&Rate_ID=$Rate->Rate_ID>Update</a></td>
-                <td>Delete</td></tr>";
+                <td>
+                    <a href=?controller=rate&action=updateRateForm&Rate_ID=$Rate->Rate_ID>Update</a>
+                </td>
+                <td>
+                    <a href=?controller=rate&action=delectRateConfirm&Rate_ID=$Rate->Rate_ID>Delete</a>
+                </td></tr>";
             }
             echo "</table>";
         ?>
