@@ -34,7 +34,7 @@
             $customer_list=Customer::getAll();
             require_once('views/order/updateForm.php');
         }
-        public function update(){
+        public function updateOrder(){
             $id=$_GET["orderID"];
             $date=$_GET["date"];
             $sellerID=$_GET["sellerID"];

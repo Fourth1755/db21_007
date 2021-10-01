@@ -45,8 +45,9 @@
                                 echo "selected='selected'";
                             }
                         echo ">$cus->name</option>";
-                        echo "$order->customerID";
+                        
                     } 
+                    echo "$order->customerID";
                 ?>    
             </select>
         </label>
@@ -94,7 +95,7 @@
     <br>
     <input type="hidden" name="controller" value="order" class="form-control">
     <button type="submit" class="btn btn" name="action" value="index">Back</button>
-    <button type="submit" class="btn btn-success" name="action" value="update">Update</button>
+    <button type="submit" class="btn btn-success" name="action" value="updateOrder">Update</button>
     </form>
     </div>
     
