@@ -1,11 +1,7 @@
 <?php
-<<<<<<< HEAD
     $controllers =array('pages'=>['home', 'error'], 
     'order'=>['index','newOrder','employee','addOrder','updateForm','update','deleteConfirm','delete'], 
     'orderdetail'=>['index','newOrderdetail','addOrderdetail'],
-=======
-    $controllers =array('pages'=>['home', 'error'], 'order'=>['index','newOrder','employee','addOrder','updateForm','update'], 'orderdetail'=>['index','newOrderdetail','addOrderdetail'],
->>>>>>> 7a477cdd38e01d9d3f57f6c4e86315631ac4a1b2
     'rate'=>['index_rate','newRate','addRate','search','updateRateForm','updateRate','deleteRateConfirm','deleteRate']);
     function call($controller, $action){
         require_once("controllers/".$controller."_controller.php");
