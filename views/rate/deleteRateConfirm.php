@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php echo "<br>Are you sure to delete this Rate <br>
-                <br>$Rate->Product_Name, $Rate->Rate_ID, $Rate->Rate_Quantity, $Rate->Rate_Price, $Rate->Rate_ScreenPrice<br>";
+                <br>Product_Name:$Rate->Product_Name, Rate_ID:$Rate->Rate_ID, Rate_Quantity:$Rate->Rate_Quantity, Rate_Price:$Rate->Rate_Price, Rate_ScreenPrice:$Rate->Rate_ScreenPrice<br>";
     ?>
     <form method="get" action="">
         <input type="hidden" name="controller" value="rate"/>
