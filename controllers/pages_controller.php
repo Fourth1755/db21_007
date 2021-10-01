@@ -1,10 +1,10 @@
 <?php
     class PagesController{
         public function home(){
-            require_once('view/home.php');
+            require_once('views/home.php');
         }
         public function error(){
-            require_once('view/error.php');
+            require_once('views/error.php');
         }
     }
 ?>
