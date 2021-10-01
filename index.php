@@ -41,7 +41,7 @@
           <a class="nav-link active" aria-current="page" href="?controller=orderdetail&action=index">Orderdetail</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="?controller=rate&action=index">Rate</a>
+          <a class="nav-link active" aria-current="page" href="?controller=rate&action=index_rate">Rate</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
