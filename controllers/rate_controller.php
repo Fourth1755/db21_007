@@ -17,7 +17,12 @@
             $Rate_ScreenPrice = $_GET['Rate_ScreenPrice'];
             Rate::add($Rate_ID, $Rate_Quantity, $Rate_Price, $Rate_ScreenPrice, $Product_ID);
             rateController::index_rate();
+        }
 
+        public function search(){
+            $key = $_GET['key'];
+            $rateList = Rate::search($key);
+            require_once('views/rate/index_rate.php');
         }
         
     }

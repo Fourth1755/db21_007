@@ -9,6 +9,11 @@
 <body >
     <div class="container">
         <h1>Rate</h1>
+        <form method="get"action="">
+            <input type="text" name="key">
+            <input type="hidden" name="controller" value="rate">
+            <button type="submit" name="action" value="search">Search</button>
+        </form>
         <table class="table">
         <tr><td>Product_ID</td><td>Product_Name</td><td>Rate_ID</td><td>Rate_Quantity</td><td>Rate_Price</td><td>Rate_ScreenPrice</td><td>Update</td><td>Delete</td></tr>
         <?php
