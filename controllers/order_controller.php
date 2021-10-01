@@ -24,7 +24,10 @@
             //$extraProduct=$_GET["extraProduct"];
             //$dateMenufacture=$_GET["dateMenufacture"];
             //$transmissionStatus=$_GET["transmissionStatus"];
-            Order::add($id,$date,$sellerID,$deposit);
+            if($deposit==NULL){
+                $deposit=0;
+            }
+            Order::add($id,$date,$sellerID,$customerID,$deposit);
             OrderController::index();
         }
         public function updateForm(){
@@ -45,6 +48,12 @@
             $extraProduct=$_GET["extraProduct"];
             $dateMenufacture=$_GET["dateMenufacture"];
             $transmissionStatus=$_GET["transmissionStatus"];
+            if($deposit==NULL){
+                $deposit=0;
+            }
+            if($extraProduct==NULL){
+                $extraProduct=0;
+            }
             Order::update($id,$date,$sellerID,$customerID,$deposit,$managerID,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus);
             OrderController::index();
         }
