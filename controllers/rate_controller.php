@@ -16,6 +16,7 @@
             $Rate_Price = $_GET['Rate_Price'];
             $Rate_ScreenPrice = $_GET['Rate_ScreenPrice'];
             Rate::add($Rate_ID, $Rate_Quantity, $Rate_Price, $Rate_ScreenPrice, $Product_ID);
+            
             rateController::index_rate();
         }
 
