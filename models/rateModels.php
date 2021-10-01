@@ -92,6 +92,15 @@
             return "update success $result row";
         }
 
+        public static function delete($Rate_ID){
+            require("connection_connect.php");
+            $sql = "DELETE FROM Rate WHERE Rate_ID = '$Rate_ID'";
+            $result = $conn->query($sql);
+            require("connection_close.php");
+
+            return "Delete success $result row";
+        }
+
 
     }
 
