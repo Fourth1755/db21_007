@@ -73,14 +73,23 @@
         }
         public static function update($id,$date,$sellerID,$customerID,$deposit,$managerID,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus){
             require("connection_connect.php");
-            if($dateMenufacture!=NULL){
+            if($dateMenufacture!=""){
                 $dateMenufacture="'".$dateMenufacture."'";
             }
-            if($dateApprov!=NULL){
+            else{
+                $dateMenufacture="NULL";
+            }
+            if($dateApprov!=""){
                 $dateApprov="'".$dateApprov."'";
             }
-            if($managerID!=NULL){
+            else{
+                $dateApprov="NULL";
+            }
+            if($managerID!=""){
                 $managerID="'".$managerID."'";
+            }
+            else{
+                $managerID="NULL";
             }
             $sql="UPDATE Quotation SET Quotation_ID='$id',Quotation_Date='$date',Seller_ID='$sellerID',Customer_ID='$customerID', 
             Quotation_Deposit='$deposit',Manager_ID=$managerID,Quotation_DateApprov=$dateApprov,Extra_Product='$extraProduct',
