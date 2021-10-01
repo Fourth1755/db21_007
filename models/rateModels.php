@@ -20,7 +20,7 @@
         public static function getAll(){
             $rateList = [];
             require("connection_connect.php");
-            $sql = "SELECT Product_ID, Product_Name, Rate_ID, Rate_Quantity, Rate_ScreenPrice FROM Rate NATURAL JOIN Product";
+            $sql = "SELECT Product_ID, Product_Name, Rate_ID, Rate_Quantity, Rate_Price, Rate_ScreenPrice FROM Rate NATURAL JOIN Product";
             $result = $conn->query($sql);
             while($my_row = $result->fetch_assoc()){
                 
@@ -29,6 +29,7 @@
                 $Rate_Price = $my_row["Rate_Price"];
                 $Rate_ScreenPrice = $my_row["Rate_ScreenPrice"];
                 $Product_ID = $my_row["Product_ID"];
+                $Product_ID = $my_row["Product_Name"];
 
                 $rateList[] = new Rate($Rate_ID, $Rate_Quantity, $Rate_Price, $Rate_ScreenPrice, $Product_ID, $Product_Name);
             }
