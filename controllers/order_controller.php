@@ -34,5 +34,19 @@
             $customer_list=Customer::getAll();
             require_once('views/order/updateForm.php');
         }
+        public function update(){
+            $id=$_GET["id"];
+            $date=$_GET["date"];
+            $sellerID=$_GET["sellerID"];
+            $customerID=$_GET["customerID"];
+            $deposit=$_GET["deposit"];
+            $managerID=$_GET["managerID"];
+            $dateApprov=$_GET["dateApprov"];
+            $extraProduct=$_GET["extraProduct"];
+            $dateMenufacture=$_GET["dateMenufacture"];
+            $transmissionStatus=$_GET["transmissionStatus"];
+            Order::update($id,$date,$sellerID,$customerID,$deposit,$managerID,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus);
+            OrderController::index();
+        }
     }
 ?>
