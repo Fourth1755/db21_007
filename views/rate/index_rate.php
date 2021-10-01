@@ -29,7 +29,7 @@
                     <a href=?controller=rate&action=updateRateForm&Rate_ID=$Rate->Rate_ID>Update</a>
                 </td>
                 <td>
-                    <a href=?controller=rate&action=delectRateConfirm&Rate_ID=$Rate->Rate_ID>Delete</a>
+                    <a href=?controller=rate&action=deleteRateConfirm&Rate_ID=$Rate->Rate_ID>Delete</a>
                 </td></tr>";
             }
             echo "</table>";
