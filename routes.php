@@ -1,6 +1,6 @@
 <?php
     $controllers =array('pages'=>['home', 'error'], 'order'=>['index','newOrder','employee','addOrder','updateForm'], 'orderdetail'=>['index','newOrderdetail','addOrderdetail'],
-    'rate'=>['index','newRate','addRate']);
+    'rate'=>['index_rate','newRate','addRate']);
     function call($controller, $action){
         //echo "routes to".$controller."-".$action."<br>";
         require_once("controllers/".$controller."_controller.php");
