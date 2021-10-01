@@ -10,10 +10,12 @@
     <div class="container">
         <h1>Rate</h1>
         <table class="table">
-        <tr><td>Product_ID</td><td>Rate_ID</td><td>Rate_Quantity</td><td>Rate_Price</td><td>Rate_ScreenPrice</td><td>Update</td><td>Delete</td></tr>
+        <tr><td>Product_ID</td><td>Product_Name</td><td>Rate_ID</td><td>Rate_Quantity</td><td>Rate_Price</td><td>Rate_ScreenPrice</td><td>Update</td><td>Delete</td></tr>
         <?php
             foreach($rateList as $Rate){
-            echo "<tr><td>$Rate->Product_ID</td>
+            echo "<tr>
+                <td>$Rate->Product_Name</td>
+                <td>$Rate->Product_ID</td>
                 <td>$Rate->Rate_ID</td>
                 <td>$Rate->Rate_Quantity</td>
                 <td>$Rate->Rate_Price</td>
