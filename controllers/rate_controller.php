@@ -28,7 +28,7 @@
 
         public function updateRateForm(){
             $Rate_ID = $_GET['Rate_ID'];
-            $rate = Rate::get($Rate_ID); 
+            $Rate = Rate::get($Rate_ID); 
             $productList = Product::getAll();
             require_once('views/rate/updateRateForm.php');
         }
