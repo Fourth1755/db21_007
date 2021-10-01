@@ -29,7 +29,7 @@
                 $Rate_Price = $my_row["Rate_Price"];
                 $Rate_ScreenPrice = $my_row["Rate_ScreenPrice"];
                 $Product_ID = $my_row["Product_ID"];
-                $Product_ID = $my_row["Product_Name"];
+                $Product_Name = $my_row["Product_Name"];
 
                 $rateList[] = new Rate($Rate_ID, $Rate_Quantity, $Rate_Price, $Rate_ScreenPrice, $Product_ID, $Product_Name);
             }
