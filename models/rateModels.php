@@ -97,7 +97,6 @@
             $sql = "DELETE FROM Rate WHERE Rate_ID = '$Rate_ID'";
             $result = $conn->query($sql);
             require("connection_close.php");
-
             return "Delete success $result row";
         }
 

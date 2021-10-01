@@ -50,6 +50,7 @@
 
         public function deleteRate(){
             $Rate_ID = $_GET['Rate_ID'];
+            Rate::delete($Rate_ID);
             rateController::index_rate();
         }
         
