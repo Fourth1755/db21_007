@@ -8,6 +8,10 @@
             $employee_list=Employee::getAll();
             require_once('views/order/employee.php');
         }
+        public function customer(){
+            $customer_list=Customer::getAll();
+            require_once('views/order/customer.php');
+        }
         public function newOrder(){
             $employee_list=Employee::getAll();
             $customer_list=Customer::getAll();

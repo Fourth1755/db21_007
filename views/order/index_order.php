@@ -21,7 +21,13 @@
         </li>
       </ul>
     </div>
-
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="?controller=order&action=customer">Customer</a>
+        </li>
+      </ul>
+    </div>
     <form class="d-flex" method="get" action="">
         <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="key">
         <input type="hidden" name="controller" value="order">

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv=Content-Type content="text/html; charset=tis-620">
-    <title>Employee</title>
+    <title>Customer</title>
 </head>
 <body >
     <div class="container">
@@ -35,11 +35,11 @@
         <tr><td>ID</td><td>Name</td><td>positionID</td><td>positionName</td>
         <td>Update</td><td>Delete</td></tr>
         <?php
-            foreach($employee_list as $emp){
-            echo "<tr><td>$emp->id</td>
-                <td>$emp->name</td>
-                <td>$emp->positionID</td>
-                <td>$emp->positionName</td>
+            foreach($customer_list as $cus){
+            echo "<tr><td>$cus->id</td>
+                <td>$cus->name</td>
+                <td>$cus->address</td>
+                <td>$cus->tel</td>
                 <td>Update</td>
                 <td>Delete</td></tr>";
             }    
