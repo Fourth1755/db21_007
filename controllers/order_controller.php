@@ -48,18 +48,12 @@
             $extraProduct=$_GET["extraProduct"];
             $dateMenufacture=$_GET["dateMenufacture"];
             $transmissionStatus=$_GET["transmissionStatus"];
-            if($deposit==NULL){
-                $deposit=0;
-            }
-            if($extraProduct==NULL){
-                $extraProduct=0;
-            }
             Order::update($id,$date,$sellerID,$customerID,$deposit,$managerID,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus);
             OrderController::index();
         }
         public function search(){
             $key=$_GET["key"];
-            $order=Order::search($key);
+            $order_list=Order::search($key);
             require_once('views/order/index_order.php');
         }
         public function deleteConfirm(){

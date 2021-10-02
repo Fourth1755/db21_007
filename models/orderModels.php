@@ -13,16 +13,16 @@
         public $extraProduct;
         public $dateMenufacture;
         public $transmissionStatus;
-        public function __construct($id,$date,$sellerID,$sellerName,$customerID,$customerName,$deposit,$managerID,$managerName,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus){
+        public function __construct($id,$date,$sellerID,$customerID,$customerName,$deposit,$managerID,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus){
             $this->id=$id;
             $this->date=$date;
             $this->sellerID=$sellerID;
-            $this->sellerName=$sellerName;
+            //$this->sellerName=$sellerName;
             $this->customerID=$customerID;
             $this->customerName=$customerName;
             $this->deposit=$deposit;
             $this->managerID=$managerID;
-            $this->managerName=$managerName;
+            //$this->managerName=$managerName;
             $this->dateApprov=$dateApprov;
             $this->extraProduct=$extraProduct;
             $this->dateMenufacture=$dateMenufacture;
@@ -36,18 +36,18 @@
             $id=$my_row["Quotation_ID"];
             $date=$my_row["Quotation_Date"];
             $sellerID=$my_row["Seller_ID"];
-            $sellerName=$my_row["Employee_Name"];
+            //$sellerName=$my_row["Employee_Name"];
             $customerID=$my_row["Customer_ID"];
             $customerName=$my_row["Customer_Name"];
             $deposit=$my_row["Quotation_Deposit"];
-            $managerID=$my_row["Manager_ID"];
+            //$managerID=$my_row["Manager_ID"];
             $managerName=$my_row["Employee_Name"];
             $dateApprov=$my_row["Quotation_DateApprov"];
             $extraProduct=$my_row["Extra_Product"];
             $dateMenufacture=$my_row["Quotation_DateMenufacture"];
             $transmissionStatus=$my_row["Quotation_TransmissionStatus"];
             require("connection_close.php");
-            return new Order($id,$date,$sellerID,$sellerName,$customerID,$customerName,$deposit,$managerID,$managerName,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus);
+            return new Order($id,$date,$sellerID,$customerID,$customerName,$deposit,$managerID,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus);
         }
         public static function getAll(){
             $orderList=[];
@@ -58,17 +58,17 @@
                 $id=$my_row["Quotation_ID"];
                 $date=$my_row["Quotation_Date"];
                 $sellerID=$my_row["Seller_ID"];
-                $sellerName=$my_row["Employee_Name"];
+                //$sellerName=$my_row["Employee_Name"];
                 $customerID=$my_row["Customer_ID"];
                 $customerName=$my_row["Customer_Name"];
                 $deposit=$my_row["Quotation_Deposit"];
                 $managerID=$my_row["Manager_ID"];
-                $managerName=$my_row["Employee_Name"];
+                //$managerName=$my_row["Employee_Name"];
                 $dateApprov=$my_row["Quotation_DateApprov"];
                 $extraProduct=$my_row["Extra_Product"];
                 $dateMenufacture=$my_row["Quotation_DateMenufacture"];
                 $transmissionStatus=$my_row["Quotation_TransmissionStatus"];
-                $orderList[]=new Order($id,$date,$sellerID,$sellerName,$customerID,$customerName,$deposit,$managerID,$managerName,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus);
+                $orderList[]=new Order($id,$date,$sellerID,$customerID,$customerName,$deposit,$managerID,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus);
             }
             require("connection_close.php");
             return $orderList;
@@ -106,7 +106,7 @@
                 $extraProduct=$my_row["Extra_Product"];
                 $dateMenufacture=$my_row["Quotation_DateMenufacture"];
                 $transmissionStatus=$my_row["Quotation_TransmissionStatus"];
-                $orderList[]=new Order($id,$date,$sellerID,$sellerName,$customerID,$customerName,$deposit,$managerID,$managerName,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus);
+                $orderList[]=new Order($id,$date,$sellerID,$customerID,$customerName,$deposit,$managerID,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus);
             }
             require("connection_close.php");
             return $orderList;
@@ -131,6 +131,12 @@
             }
             else{
                 $managerID="NULL";
+            }
+            if($deposit==NULL){
+                $deposit=0;
+            }
+            if($extraProduct==NULL){
+                $extraProduct=0;
             }
             $sql="UPDATE Quotation SET Quotation_ID='$id',Quotation_Date='$date',Seller_ID='$sellerID',Customer_ID='$customerID', 
             Quotation_Deposit='$deposit',Manager_ID=$managerID,Quotation_DateApprov=$dateApprov,Extra_Product='$extraProduct',
