@@ -19,8 +19,6 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="?controller=order&action=employee">Employee</a>
         </li>
-      </ul>
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="?controller=order&action=customer">Customer</a>
         </li>
