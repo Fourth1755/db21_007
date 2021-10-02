@@ -89,6 +89,23 @@
         <input type="date" class="form-control" name="dateMenufacture" value="<?php echo $order->dateMenufacture;?>" placeholder="Date_Menufacture"/>
     </div>
     <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Transmission Status
+            <select name="transmissionStatus" class="form-select" aria-label="Default select example">
+                <?php
+                    if($order->managerID==NULL){
+                        echo "<option selected disabled hidden>Open this select Manager</option>";
+                    }
+                    else{
+                        echo "<option selected disabled hidden value=$order->transmissionStatus";
+                        echo ">$order->transmissionStatus</option>";
+                    }
+                ?>
+                <option value="ส่งแล้ว">ส่งแล้ว</option>
+                <option value="ยังไม่ได้ส่ง">ยังไม่ได้ส่ง</option>
+            </select>
+        </label>
+    </div>
+    <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Transmission Status</label>
         <input type="text" class="form-control" name="transmissionStatus" value="<?php echo $order->transmissionStatus;?>" placeholder="Transmission_Status"/>
     </div> 
