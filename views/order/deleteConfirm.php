@@ -8,6 +8,7 @@
     <title>Delete Order</title>
 </head>
 <body>
+    <div class="container">
     <?php
     echo "<br>Are you sure to delete this order <br>
     <br> $order->id $order->date $order->sellerID $order->customerID <br>";
@@ -18,5 +19,6 @@
         <button class="btn btn-light" type="submit" name="action" value="index">Back</button>
         <button  class="btn btn-danger" type="submit" name="action" value="delete">Delete</button>
     </form>
+    </div>
 </body>
 </html>
