@@ -46,14 +46,15 @@
                 <td>$order->dateApprov</td>
                 <td>$order->extraProduct</td>
                 <td>$order->dateMenufacture</td>
-                <td>$order->transmissionStatus</td>
-                <td><a href=?controller=order&action=updateForm&orderID=$order->id>Update</a></td>
-                <td><a href=?controller=order&action=deleteConfirm&orderID=$order->id>Delete</a></td>
-                </tr>";
+                <td>$order->transmissionStatus</td>";?>
+                <td><a class="btn btn-primary" href=?controller=order&action=updateForm&<?php echo "orderID=$order->id";?>>Update</a></td>
+                <td><a class="btn btn-danger"href=?controller=order&action=deleteConfirm&<?php echo "orderID=$order->id";?>>Delete</a></td>
+                </tr>
+            <?php
             }    
             echo "</table>";
         ?>
-    <a class= "btn btn-success" href=?controller=order&action=newOrder>add new</a>
+    <a class= "btn btn-success" href=?controller=order&action=newOrder>Add new</a>
     </div>
     
     
