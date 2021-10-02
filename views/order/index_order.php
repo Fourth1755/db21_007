@@ -47,7 +47,7 @@
                 <td>$order->extraProduct</td>
                 <td>$order->dateMenufacture</td>
                 <td>$order->transmissionStatus</td>";?>
-                <td><a class="btn btn-primary" href=?controller=order&action=updateForm&<?php echo "orderID=$order->id";?>>Update</a></td>
+                <td><a type="button" class="btn btn-outline-primary" href=?controller=order&action=updateForm&<?php echo "orderID=$order->id";?>>Update</a></td>
                 <td><a class="btn btn-danger"href=?controller=order&action=deleteConfirm&<?php echo "orderID=$order->id";?>>Delete</a></td>
                 </tr>
             <?php
