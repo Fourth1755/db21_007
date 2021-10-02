@@ -92,8 +92,8 @@
         <label for="formGroupExampleInput2" class="form-label">Transmission Status
             <select name="transmissionStatus" class="form-select" aria-label="Default select example">
                 <?php
-                    if($order->managerID==NULL){
-                        echo "<option selected disabled hidden>Open this select Manager</option>";
+                    if($order->managerID==""){
+                        echo "<option selected disabled hidden>Open this select Status</option>";
                     }
                     else{
                         echo "<option selected disabled hidden value=$order->transmissionStatus";
@@ -104,10 +104,6 @@
                 <option value="ยังไม่ได้ส่ง">ยังไม่ได้ส่ง</option>
             </select>
         </label>
-    </div>
-    <div class="mb-3">
-        <label for="formGroupExampleInput2" class="form-label">Transmission Status</label>
-        <input type="text" class="form-control" name="transmissionStatus" value="<?php echo $order->transmissionStatus;?>" placeholder="Transmission_Status"/>
     </div> 
     <br>
     <input type="hidden" name="controller" value="order" class="form-control">
