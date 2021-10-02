@@ -36,10 +36,10 @@
             foreach($order_list as $order){
             echo "<tr><td>$order->id</td>
                 <td>$order->date</td>
-                <td>$order->sellerName</td>
+                <td>$order->sellerID</td>
                 <td>$order->customerName</td>
                 <td>$order->deposit</td>
-                <td>$order->managerName</td>
+                <td>$order->managerID</td>
                 <td>$order->dateApprov</td>
                 <td>$order->extraProduct</td>
                 <td>$order->dateMenufacture</td>
