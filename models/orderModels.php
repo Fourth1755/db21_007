@@ -30,7 +30,7 @@
         }
         public static function get($id){
             require("connection_connect.php");
-            $sql="SELECT * FROM Quotation NATURAL JOIN Customer NATURAL JOIN Employee WHERE Quotation_ID='$id' ";
+            $sql="SELECT DISTINCT * FROM Quotation NATURAL JOIN Customer NATURAL JOIN Employee WHERE Quotation_ID='$id' ";
             $result=$conn->query($sql);
             $my_row=$result->fetch_assoc();
             $id=$my_row["Quotation_ID"];
@@ -52,7 +52,7 @@
         public static function getAll(){
             $orderList=[];
             require("connection_connect.php");
-            $sql="SELECT * FROM Quotation NATURAL JOIN Customer NATURAL JOIN Employee";//เขียนเพิ่มมา
+            $sql="SELECT DISTINCT * FROM Quotation NATURAL JOIN Customer NATURAL JOIN Employee";//เขียนเพิ่มมา
             $result=$conn->query($sql);
             while($my_row = $result->fetch_assoc()){
                 $id=$my_row["Quotation_ID"];
@@ -86,11 +86,11 @@
         public static function search($key){
             $orderList=[];
             require("connection_connect.php");
-            $sql="SELECT * FROM Quotation NATURAL JOIN Customer NATURAL JOIN Employee 
-            WHERE (Quotation_ID LIKE '%$key%' OR Quotation_Date LIKE '%$key%' OR Seller_ID LIKE '%$key%' OR Employee_Name LIKE '%$key%'
-            OR Customer_ID LIKE '%$key%'OR Customer_Name LIKE '%$key%' OR Quotation_Deposit LIKE '%$key%' OR  
-            OR Quotation_DateApprov LIKE '%$key%' OR Extra_Product LIKE '%$key%' OR Quotation_DateMenufacture LIKE '%$key%'
-            OR Quotation_TransmissionStatus LIKE '%$key%') AND Quotation_ID='$id'";
+            $sql="SELECT DISTINCT * FROM Quotation NATURAL JOIN Customer NATURAL JOIN Employee 
+            WHERE (Quotation_ID LIKE '%$key' OR Quotation_Date LIKE '%$key' OR Seller_ID LIKE '%$key' OR Employee_Name LIKE '%$key'
+            OR Customer_ID LIKE '%$key'OR Customer_Name LIKE '%$key' OR Quotation_Deposit LIKE '$key' OR  
+            OR Quotation_DateApprov LIKE '%$key' OR Extra_Product LIKE '$key' OR Quotation_DateMenufacture LIKE '%$key'
+            OR Quotation_TransmissionStatus LIKE '%$key')";
             $result=$conn->query($sql);
             while($my_row = $result->fetch_assoc()){
                 $id=$my_row["Quotation_ID"];
