@@ -54,6 +54,7 @@
         public function search(){
             $key=$_GET["key"];
             //$order_list=Order::search($key);
+            $order_list=Order::getAll();
             require_once('views/order/index_order.php');
         }
         public function deleteConfirm(){

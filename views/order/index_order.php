@@ -27,11 +27,6 @@
         <input type="hidden" name="controller" value="order">
         <button class="btn btn-outline-success" type="submit" value="search" name="action">Search</button>
       </form>
-      <form method="get"action="">
-            <input type="text" name="key">
-            <input type="hidden" name="controller" value="rate">
-            <button type="submit" name="action" value="search">Search</button>
-        </form>
     </div>
     </nav>
         <table class="table">
