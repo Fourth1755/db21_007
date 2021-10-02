@@ -30,7 +30,13 @@
         }
         public static function get($id){
             require("connection_connect.php");
-            $sql="SELECT DISTINCT * FROM Quotation WHERE Quotation_ID='$id' ";
+            //$sql="SELECT DISTINCT * FROM Quotation WHERE Quotation_ID='$id' ";
+            $sql="SELECT Quotation.Quotation_ID AS Quotation_ID,Quotation_Date,Seller_ID,Employee_Name AS Seller_Name,Quotation.Customer_ID AS Customer_ID,
+            Customer_Name,Quotation_Deposit,Quotation.Manager_ID,Manager_Name,Quotation_DateApprov,Extra_Product,
+            Quotation_DateMenufacture,Quotation_TransmissionStatus FROM Quotation 
+            LEFT JOIN(SELECT Quotation_ID,Employee_ID,Employee_Name AS Manager_Name FROM Quotation LEFT JOIN Employee ON Quotation.Manager_ID=Employee.Employee_ID) AS a 
+            ON Quotation.Quotation_ID=a.Quotation_ID LEFT JOIN Employee ON Quotation.Seller_ID=Employee.Employee_ID 
+            LEFT JOIN Customer ON Quotation.Customer_ID=Customer.Customer_ID WHERE Quotation.Quotation_ID='$id'";
             $result=$conn->query($sql);
             $my_row=$result->fetch_assoc();
             $id=$my_row["Quotation_ID"];
