@@ -3,20 +3,26 @@
         public $id;
         public $date;
         public $sellerID;
+        public $sellerName;
         public $customerID;
+        public $customerName;
         public $deposit;
         public $managerID;
+        public $managerName;
         public $dateApprov;
         public $extraProduct;
         public $dateMenufacture;
         public $transmissionStatus;
-        public function __construct($id,$date,$sellerID,$customerID,$deposit,$managerID,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus){
+        public function __construct($id,$date,$sellerID,$sellerName,$customerID,$customerName,$deposit,$managerID,$managerName,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus){
             $this->id=$id;
             $this->date=$date;
             $this->sellerID=$sellerID;
+            $this->sellerName=$sellerName;
             $this->customerID=$customerID;
+            $this->customerName=$customerName;
             $this->deposit=$deposit;
             $this->managerID=$managerID;
+            $this->managerName=$managerName;
             $this->dateApprov=$dateApprov;
             $this->extraProduct=$extraProduct;
             $this->dateMenufacture=$dateMenufacture;
@@ -24,39 +30,45 @@
         }
         public static function get($id){
             require("connection_connect.php");
-            $sql="SELECT * FROM Quotation WHERE Quotation_ID='$id' ";
+            $sql="SELECT * FROM Quotation NATURAL JOIN Customer NATURAL JOIN Employee WHERE Quotation_ID='$id' ";
             $result=$conn->query($sql);
             $my_row=$result->fetch_assoc();
             $id=$my_row["Quotation_ID"];
             $date=$my_row["Quotation_Date"];
             $sellerID=$my_row["Seller_ID"];
+            $sellerName=$my_row["Employee_Name"];
             $customerID=$my_row["Customer_ID"];
+            $customerName=$my_row["Customer_Name"];
             $deposit=$my_row["Quotation_Deposit"];
             $managerID=$my_row["Manager_ID"];
+            $managerName=$my_row["Employee_Name"];
             $dateApprov=$my_row["Quotation_DateApprov"];
             $extraProduct=$my_row["Extra_Product"];
             $dateMenufacture=$my_row["Quotation_DateMenufacture"];
             $transmissionStatus=$my_row["Quotation_TransmissionStatus"];
             require("connection_close.php");
-            return new Order($id,$date,$sellerID,$customerID,$deposit,$managerID,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus);
+            return new Order($id,$date,$sellerID,$sellerName,$customerID,$customerName,$deposit,$managerID,$managerName,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus);
         }
         public static function getAll(){
             $orderList=[];
             require("connection_connect.php");
-            $sql="SELECT * FROM Quotation";
+            $sql="SELECT * FROM Quotation NATURAL JOIN Customer NATURAL JOIN Employee";//เขียนเพิ่มมา
             $result=$conn->query($sql);
             while($my_row = $result->fetch_assoc()){
                 $id=$my_row["Quotation_ID"];
                 $date=$my_row["Quotation_Date"];
                 $sellerID=$my_row["Seller_ID"];
+                $sellerName=$my_row["Employee_Name"];
                 $customerID=$my_row["Customer_ID"];
+                $customerName=$my_row["Customer_Name"];
                 $deposit=$my_row["Quotation_Deposit"];
                 $managerID=$my_row["Manager_ID"];
+                $managerName=$my_row["Employee_Name"];
                 $dateApprov=$my_row["Quotation_DateApprov"];
                 $extraProduct=$my_row["Extra_Product"];
                 $dateMenufacture=$my_row["Quotation_DateMenufacture"];
                 $transmissionStatus=$my_row["Quotation_TransmissionStatus"];
-                $orderList[]=new Order($id,$date,$sellerID,$customerID,$deposit,$managerID,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus);
+                $orderList[]=new Order($id,$date,$sellerID,$sellerName,$customerID,$customerName,$deposit,$managerID,$managerName,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus);
             }
             require("connection_close.php");
             return $orderList;
@@ -70,6 +82,35 @@
             $result=$conn->query($sql);
             require("connection_close.php");
             return "Add success $result rows";
+        }
+        public static function search($key){
+            $orderList=[];
+            require("connection_connect.php");
+            $sql="SELECT * FROM Quotation NATURAL JOIN Customer NATURAL JOIN Employee 
+            WHERE (Quotation_ID LIKE '%$key%' OR Quotation_Date LIKE '%$key%' OR Seller_ID LIKE '%$key%' OR Employee_Name LIKE '%$key%'
+            OR Customer_ID LIKE '%$key%'OR Customer_Name LIKE '%$key%' OR Quotation_Deposit LIKE '%$key%' OR  
+            OR Quotation_DateApprov LIKE '%$key%' OR Extra_Product LIKE '%$key%' OR Quotation_DateMenufacture LIKE '%$key%'
+            OR Quotation_TransmissionStatus LIKE '%$key%') AND Quotation_ID='$id'";
+            $result=$conn->query($sql);
+            while($my_row = $result->fetch_assoc()){
+                $id=$my_row["Quotation_ID"];
+                $date=$my_row["Quotation_Date"];
+                $sellerID=$my_row["Seller_ID"];
+                $sellerName=$my_row["Employee_Name"];
+                $customerID=$my_row["Customer_ID"];
+                $customerName=$my_row["Customer_Name"];
+                $deposit=$my_row["Quotation_Deposit"];
+                $managerID=$my_row["Manager_ID"];
+                $managerName=$my_row["Employee_Name"];
+                $dateApprov=$my_row["Quotation_DateApprov"];
+                $extraProduct=$my_row["Extra_Product"];
+                $dateMenufacture=$my_row["Quotation_DateMenufacture"];
+                $transmissionStatus=$my_row["Quotation_TransmissionStatus"];
+                $orderList[]=new Order($id,$date,$sellerID,$sellerName,$customerID,$customerName,$deposit,$managerID,$managerName,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus);
+            }
+            require("connection_close.php");
+            return $orderList;
+
         }
         public static function update($id,$date,$sellerID,$customerID,$deposit,$managerID,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus){
             require("connection_connect.php");

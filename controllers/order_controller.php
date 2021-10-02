@@ -57,6 +57,11 @@
             Order::update($id,$date,$sellerID,$customerID,$deposit,$managerID,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus);
             OrderController::index();
         }
+        public function search(){
+            $key=$_GET["key"];
+            $order=Order::search($key);
+            require_once('views/order/index_order.php');
+        }
         public function deleteConfirm(){
             $id=$_GET['orderID'];
             $order=Order::get($id);

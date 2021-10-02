@@ -23,23 +23,23 @@
     </div>
     <form class="d-flex" method="get" action="">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="key">
-        <input type="hidden" name="controller" value="anime"/>
+        <input type="hidden" name="controller" value="order"/>
         <button class="btn btn-outline-success" type="submit" value="search" name="action">Search</button>
       </form>
     </div>
     </nav>
         <table class="table">
-        <tr><td>ID</td><td>Date</td><td>SellerID</td><td>CustomerID</td><td>Deposit</td><td>ManagerID</td><td>Date Approv</td><td>Extra Product</td>
+        <tr><td>ID</td><td>Date</td><td>Seller Name</td><td>Customer Name</td><td>Deposit</td><td>Manager Name</td><td>Date Approv</td><td>Extra Product</td>
         <td>Date Menufacture</td><td>Transmission Status</td>
         <td>Update</td><td>Delete</td></tr>
         <?php
             foreach($order_list as $order){
             echo "<tr><td>$order->id</td>
                 <td>$order->date</td>
-                <td>$order->sellerID</td>
-                <td>$order->customerID</td>
+                <td>$order->sellerName</td>
+                <td>$order->customerName</td>
                 <td>$order->deposit</td>
-                <td>$order->managerID</td>
+                <td>$order->managerName</td>
                 <td>$order->dateApprov</td>
                 <td>$order->extraProduct</td>
                 <td>$order->dateMenufacture</td>
