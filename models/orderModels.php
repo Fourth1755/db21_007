@@ -102,8 +102,8 @@
             //OR Quotation_DateApprov LIKE '%$key' OR Extra_Product LIKE '$key' OR Quotation_DateMenufacture LIKE '%$key'
             //OR Quotation_TransmissionStatus LIKE '%$key')";
 
-            $sql="SELECT * FROM Quotation WHERE (Quotation_ID LIKE '%$key' OR Quotation_Date LIKE '%$key' OR Seller_ID LIKE '%$key' 
-            OR Customer_ID LIKE '%$key' OR Quotation_Deposit LIKE '$key')";
+            //$sql="SELECT * FROM Quotation WHERE (Quotation_ID LIKE '%$key' OR Quotation_Date LIKE '%$key' OR Seller_ID LIKE '%$key' 
+            //OR Customer_ID LIKE '%$key' OR Quotation_Deposit LIKE '$key')";
 
             $sql="SELECT  Quotation.Quotation_ID AS Quotation_ID,Quotation_Date,Seller_ID,Employee_Name AS Seller_Name,Quotation.Customer_ID AS Customer_ID,
             Customer_Name,Quotation_Deposit,Quotation.Manager_ID,Manager_Name,Quotation_DateApprov,Extra_Product,
