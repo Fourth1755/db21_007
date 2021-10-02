@@ -8,7 +8,7 @@
 </head>
 <body >
     <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-dark bg-primary">
   <div class="container-fluid">
     <a class="navbar-brand" href="?controller=order&action=index">Order</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,7 +27,7 @@
     <form class="d-flex" method="get" action="">
         <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="key">
         <input type="hidden" name="controller" value="order">
-        <button class="btn btn-outline-success" type="submit" value="search" name="action">Search</button>
+        <button class="btn btn-outline-light" type="submit" value="search" name="action">Search</button>
       </form>
     </div>
     </nav>

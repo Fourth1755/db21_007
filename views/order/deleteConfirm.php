@@ -15,8 +15,8 @@
     <form method="get" action="">
         <input type="hidden" name="controller" value="order"/>
         <input type="hidden" name="orderID" value="<?php echo $order->id?>"/>
-        <button type="submit" name="action" value="index">Back</button>
-        <button type="submit" name="action" value="delete">Delete</button>
+        <button class="btn btn-light" type="submit" name="action" value="index">Back</button>
+        <button  class="btn btn-danger" type="submit" name="action" value="delete">Delete</button>
     </form>
 </body>
 </html>
