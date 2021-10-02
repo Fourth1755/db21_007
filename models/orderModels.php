@@ -84,10 +84,8 @@
             return "Add success $result rows";
         }
         public static function search($key){
-            $orderList=[];
             require("connection_connect.php");
-            $sql="SELECT * FROM Quotation 
-            WHERE (Quotation_ID LIKE '%$key' OR Quotation_Date LIKE '%$key' OR Seller_ID LIKE '%$key' 
+            $sql="SELECT * FROM Quotation WHERE (Quotation_ID LIKE '%$key' OR Quotation_Date LIKE '%$key' OR Seller_ID LIKE '%$key' 
             OR Customer_ID LIKE '%$key' OR Quotation_Deposit LIKE '$key' OR  
             OR Quotation_DateApprov LIKE '%$key' OR Extra_Product LIKE '$key' OR Quotation_DateMenufacture LIKE '%$key'
             OR Quotation_TransmissionStatus LIKE '%$key')";

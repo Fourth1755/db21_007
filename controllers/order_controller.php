@@ -52,8 +52,8 @@
             OrderController::index();
         }
         public function search(){
-            $key=$_GET['key'];
-            $order_list=Order::search($key);
+            $key=$_GET["key"];
+            //$order_list=Order::search($key);
             require_once('views/order/index_order.php');
         }
         public function deleteConfirm(){
