@@ -9,11 +9,12 @@
 </head>
 <body>
     <div class="container">
+    <h1>Delete order</h1>
     <?php
     echo "<br>Are you sure to delete this order <br>
     <br> $order->id $order->date $order->sellerID $order->customerID <br>";
     ?>
-    <form method="get" action="">
+    <form method="get" action="" style="width: 40%; ">
         <input type="hidden" name="controller" value="order"/>
         <input type="hidden" name="orderID" value="<?php echo $order->id?>"/>
         <button class="btn btn-light" type="submit" name="action" value="index">Back</button>
