@@ -22,7 +22,7 @@
       </ul>
     </div>
     <form class="d-flex" method="get" action="">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="key">
+        <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="key">
         <input type="hidden" name="controller" value="order"/>
         <button class="btn btn-outline-success" type="submit" value="search" name="action">Search</button>
       </form>
@@ -37,7 +37,7 @@
             echo "<tr><td>$order->id</td>
                 <td>$order->date</td>
                 <td>$order->sellerID</td>
-                <td>$order->customerName</td>
+                <td>$order->customerID</td>
                 <td>$order->deposit</td>
                 <td>$order->managerID</td>
                 <td>$order->dateApprov</td>

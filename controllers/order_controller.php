@@ -52,7 +52,7 @@
             OrderController::index();
         }
         public function search(){
-            $key=$_GET["key"];
+            $key=$_GET['key'];
             $order_list=Order::search($key);
             require_once('views/order/index_order.php');
         }
