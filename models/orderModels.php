@@ -110,7 +110,7 @@
             Quotation_DateMenufacture,Quotation_TransmissionStatus FROM Quotation 
             LEFT JOIN(SELECT Quotation_ID,Employee_ID,Employee_Name AS Manager_Name FROM Quotation LEFT JOIN Employee ON Quotation.Manager_ID=Employee.Employee_ID) AS a 
             ON Quotation.Quotation_ID=a.Quotation_ID LEFT JOIN Employee ON Quotation.Seller_ID=Employee.Employee_ID 
-            LEFT JOIN Customer ON Quotation.Customer_ID=Customer.Customer_ID  ORDER BY Quotation_ID 
+            LEFT JOIN Customer ON Quotation.Customer_ID=Customer.Customer_ID
             WHERE (Quotation_ID LIKE '%$key' OR Quotation_Date LIKE '%$key' OR Seller_ID LIKE '%$key' OR Seller_Name LIKE '%$key'
             OR Customer_ID LIKE '%$key' OR Customer_Name LIKE '%$key' OR Quotation_Deposit LIKE '$key')";
             $result=$conn->query($sql);
