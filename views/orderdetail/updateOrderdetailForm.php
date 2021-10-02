@@ -8,20 +8,20 @@
 </head>
 <body>
     <form method="get" action="">
-        <label>Product_Name<select name="Product_ID">
-            <?php foreach($productList as $Product){
-                echo "<option value=$Product->Product_ID";
-                if($Product->Product_ID == $Rate->Product_ID){echo" selected = 'selected'";}
-                echo ">$Product->Product_Name</option>";
+        <label>Orderdetail_ID<select name="Orderdetail_ID">
+            <?php foreach($orderdetail_list as $Orderdetail){
+                echo "<option value=$Orderdetail->Orderdetail_ID";
+                if($Orderdetail->Orderdetail_ID == $Orderdetail->Product_ID){echo" selected = 'selected'";}
+                echo ">$Orderdetail->Product_Name</option>";
                 }
             ?>
         </select></label><br>
-        <label>Rate_ID<input type="text" name="Rate_ID" value="<?php echo $Rate->Rate_ID;?>"></label><br>
-        <label>Rate_Quantity<input type="text" name="Rate_Quantity" value="<?php echo $Rate->Rate_Quantity;?>"></label><br>
-        <label>Rate_Price<input type="text" name="Rate_Price" value="<?php echo $Rate->Rate_Price;?>"></label><br>
-        <label>Rate_ScreenPrice<input type="text" name="Rate_ScreenPrice" value="<?php echo $Rate->Rate_ScreenPrice;?>"></label><br>
+        <label>Order_ID<input type="text" name="Order_ID" value="<?php echo $orderdetail->Order_ID;?>"></label><br>
+        <label>Colordetail_ID<input type="text" name="Colordetail_ID" value="<?php echo $orderdetail->Colordetail_ID;?>"></label><br>
+        <label>Orderdetail_QuantityColor<input type="text" name="Orderdetail_QuantityColor" value="<?php echo $orderdetail->Orderdetail_QuantityColor;?>"></label><br>
+        <label>Orderdetail_Quantity<input type="text" name="Orderdetail_Quantity" value="<?php echo $orderdetail->Orderdetail_Quantity;?>"></label><br>
         
-        <input type="hidden" name="controller" value="rate"/>
+        <input type="hidden" name="controller" value="orderdetail"/>
         <button type="submit" name="action" value="index_rate">Back</button>
         <button type="submit" name="action" value="updateRate">Update</button>
     </form>
