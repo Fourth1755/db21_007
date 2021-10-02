@@ -1,7 +1,7 @@
 <?php
     $controllers =array('pages'=>['home', 'error'], 
     'order'=>['index','newOrder','employee','customer','addOrder','updateForm','updateOrder','search','deleteConfirm','delete'], 
-    'orderdetail'=>['index','newOrderdetail','addOrderdetail'],
+    'orderdetail'=>['index','newOrderdetail','addOrderdetail','updateOrderdetailForm','updateOrderdetail','search','deleteConfirm','delete'],
     'rate'=>['index_rate','newRate','addRate','search','updateRateForm','updateRate','deleteRateConfirm','deleteRate']);
     function call($controller, $action){
         require_once("controllers/".$controller."_controller.php");
@@ -14,6 +14,7 @@
                         $controller = new OrderController();
                         break;
             case "orderdetail": require_once("models/orderdetailModels.php");
+                        require_once("models/colordetailModels.php");
                         $controller = new OrderdetailController();
                         break;
             case "rate": require_once("models/rateModels.php");
