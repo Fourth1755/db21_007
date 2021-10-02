@@ -32,7 +32,7 @@
     </div>
     </nav>
         <table class="table">
-        <tr><td>ID</td><td>Name</td><td>positionID</td><td>positionName</td>
+        <tr><td>ID</td><td>Name</td><td>Address</td><td>Phone number</td>
         <td>Update</td><td>Delete</td></tr>
         <?php
             foreach($customer_list as $cus){
