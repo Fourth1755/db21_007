@@ -5,7 +5,7 @@
             require_once('views/orderdetail/index_orderdetail.php');
         }
         public function newOrderdetail(){
-            $productList = Product::getAll();
+            $colordetail_list = Colordetail::getAll();
             require_once('views/orderdetail/newOrderdetail.php');
         }
 
@@ -21,6 +21,20 @@
             OrderdetailController::index();
 
         }
-        
+        public function search(){
+            $key=$_GET["key"];
+            $orderdetail_list=Orderdetail::search($key);
+            require_once('views/orderdetail/index_orderdetail.php');
+        }
+        public function deleteConfirm(){
+            $Orderdetail_ID=$_GET['Orderdetail_ID'];
+            $Orderdetail = Orderdetail::getAll($Orderdetail_ID);
+            require_once('views/orderdetail/index_orderdetail.php');
+        }
+        public function delete(){
+            $Orderdetail_ID=$_GET['Orderdetail_ID'];
+            $Orderdetail=Order::delete($Orderdetail_ID);
+            OrderdetailController::index();
+        }
     }
 ?>
