@@ -85,10 +85,12 @@
         }
         public static function search($key){
             require("connection_connect.php");
+            //$sql="SELECT * FROM Quotation WHERE (Quotation_ID LIKE '%$key' OR Quotation_Date LIKE '%$key' OR Seller_ID LIKE '%$key' 
+            //OR Customer_ID LIKE '%$key' OR Quotation_Deposit LIKE '$key' OR  
+            //OR Quotation_DateApprov LIKE '%$key' OR Extra_Product LIKE '$key' OR Quotation_DateMenufacture LIKE '%$key'
+            //OR Quotation_TransmissionStatus LIKE '%$key')";
             $sql="SELECT * FROM Quotation WHERE (Quotation_ID LIKE '%$key' OR Quotation_Date LIKE '%$key' OR Seller_ID LIKE '%$key' 
-            OR Customer_ID LIKE '%$key' OR Quotation_Deposit LIKE '$key' OR  
-            OR Quotation_DateApprov LIKE '%$key' OR Extra_Product LIKE '$key' OR Quotation_DateMenufacture LIKE '%$key'
-            OR Quotation_TransmissionStatus LIKE '%$key')";
+            OR Customer_ID LIKE '%$key' OR Quotation_Deposit LIKE '$key')";
             $result=$conn->query($sql);
             while($my_row = $result->fetch_assoc()){
                 $id=$my_row["Quotation_ID"];
