@@ -5,6 +5,7 @@
             require_once('views/orderdetail/index_orderdetail.php');
         }
         public function newOrderdetail(){
+            $order_list = Order::getAll();
             $colordetail_list = Colordetail::getAll();
             require_once('views/orderdetail/newOrderdetail.php');
         }
