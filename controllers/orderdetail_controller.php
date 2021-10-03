@@ -21,6 +21,20 @@
             OrderdetailController::index();
 
         }
+        public function updateOrderForm(){
+            $Orderdetail_ID=$_GET["Orderdetail_ID"];
+            $orderdetail=Orderdetail::get($Orderdetail_ID);
+            require_once('views/orderdetail/updateOrderdetailForm.php');
+        }
+        public function updateOrder(){
+            $Orderdetail_ID=$_GET["Orderdetail_ID"];
+            $Order_ID=$_GET["Order_ID"];
+            $Colordetail_ID=$_GET["Colordetail_ID"];
+            $Orderdetail_QuantityColor=$_GET["Orderdetail_QuantityColor"];
+            $Orderdetail_Quantity=$_GET["Orderdetail_Quantity"];
+            Orderdetail::update($Orderdetail_ID, $Order_ID,  $Colordetail_ID, $Orderdetail_QuantityColor,$Orderdetail_Quantity);
+            OrderdetailController::index();
+        }
         public function search(){
             $key=$_GET["key"];
             $orderdetail_list=Orderdetail::search($key);
