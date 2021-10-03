@@ -10,15 +10,15 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
-        <a class="navbar-brand" >Rate</a>
+        <a class="navbar-brand" href="?controller=order&action=index">Rate</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
-        <form class="d-flex" method="get" action="">
-            <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="key">
-            <input type="hidden" name="controller" value="rate">
-            <button class="btn btn-outline-light" type="submit" value="search" name="action">Search</button>
-        </form>
+    <form class="d-flex" method="get" action="">
+        <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="key">
+        <input type="hidden" name="controller" value="rate">
+        <button class="btn btn-outline-light" type="submit" value="search" name="action">Search</button>
+      </form>
     </div>
     </nav>
         <table class="table">
@@ -31,13 +31,10 @@
                 <td>$Rate->Rate_ID</td>
                 <td>$Rate->Rate_Quantity</td>
                 <td>$Rate->Rate_Price</td>
-                <td>$Rate->Rate_ScreenPrice</td>
-                <td>
-                    <a href=?controller=rate&action=updateRateForm&Rate_ID=$Rate->Rate_ID>Update</a>
-                </td>
-                <td>
-                    <a href=?controller=rate&action=deleteRateConfirm&Rate_ID=$Rate->Rate_ID>Delete</a>
-                </td></tr>";
+                <td>$Rate->Rate_ScreenPrice</td>"?>
+                <td><a type="button" class="btn btn-outline-primary" href=?controller=rate&action=updateRateForm&<?php echo "Rate_ID=$Rate->Rate_ID";?>>Update</a></td>
+                <td><a class="btn btn-danger" href=?controller=rate&action=deleteRateConfirm&<?php echo "Rate_ID=$Rate->Rate_ID";?>>Delete</a></td></tr>
+                <?php
             }
             echo "</table>";
         ?>
