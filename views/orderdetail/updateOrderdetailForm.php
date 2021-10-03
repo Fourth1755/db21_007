@@ -22,8 +22,8 @@
         <label>Orderdetail_Quantity<input type="text" name="Orderdetail_Quantity" value="<?php echo $orderdetail->Orderdetail_Quantity;?>"></label><br>
         
         <input type="hidden" name="controller" value="orderdetail"/>
-        <button type="submit" name="action" value="index_rate">Back</button>
-        <button type="submit" name="action" value="updateRate">Update</button>
+        <button type="submit" name="action" value="index_orderdetail">Back</button>
+        <button type="submit" name="action" value="updateOrderdetail">Update</button>
     </form>
 </body>
 </html>
