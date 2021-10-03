@@ -22,12 +22,12 @@
             OrderdetailController::index();
 
         }
-        public function updateOrderForm(){
+        public function updateOrderdetailForm(){
             $Orderdetail_ID=$_GET["Orderdetail_ID"];
             $orderdetail=Orderdetail::get($Orderdetail_ID);
             require_once('views/orderdetail/updateOrderdetailForm.php');
         }
-        public function updateOrder(){
+        public function updateOrderdetail(){
             $Orderdetail_ID=$_GET["Orderdetail_ID"];
             $Order_ID=$_GET["Order_ID"];
             $Colordetail_ID=$_GET["Colordetail_ID"];
