@@ -8,12 +8,19 @@
 </head>
 <body >
     <div class="container">
-        <h1>Rate</h1>
-        <form method="get"action="">
-            <input type="text" name="key">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" >Rate</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <form class="d-flex" method="get" action="">
+            <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="key">
             <input type="hidden" name="controller" value="rate">
-            <button type="submit" name="action" value="search">Search</button>
+            <button class="btn btn-outline-light" type="submit" value="search" name="action">Search</button>
         </form>
+    </div>
+    </nav>
         <table class="table">
         <tr><td>Product_ID</td><td>Product_Name</td><td>Rate_ID</td><td>Rate_Quantity</td><td>Rate_Price</td><td>Rate_ScreenPrice</td><td>Update</td><td>Delete</td></tr>
         <?php
