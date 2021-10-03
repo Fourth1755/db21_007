@@ -7,23 +7,45 @@
     <title>updateRateForm</title>
 </head>
 <body>
-    <form method="get" action="">
-        <label>Product_Name<select name="Product_ID">
-            <?php foreach($productList as $Product){
-                echo "<option value=$Product->Product_ID";
-                if($Product->Product_ID == $Rate->Product_ID){echo" selected = 'selected'";}
-                echo ">$Product->Product_Name</option>";
-                }
-            ?>
-        </select></label><br>
-        <label>Rate_ID<input type="text" name="Rate_ID" value="<?php echo $Rate->Rate_ID;?>"></label><br>
-        <label>Rate_Quantity<input type="text" name="Rate_Quantity" value="<?php echo $Rate->Rate_Quantity;?>"></label><br>
-        <label>Rate_Price<input type="text" name="Rate_Price" value="<?php echo $Rate->Rate_Price;?>"></label><br>
-        <label>Rate_ScreenPrice<input type="text" name="Rate_ScreenPrice" value="<?php echo $Rate->Rate_ScreenPrice;?>"></label><br>
-        
-        <input type="hidden" name="controller" value="rate"/>
-        <button type="submit" name="action" value="index_rate">Back</button>
-        <button type="submit" name="action" value="updateRate">Update</button>
-    </form>
+<div class="container">
+        <h1>Add new Rate</h1>
+            <form method="get" action="" style="width: 40%; ">
+                <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Product_Name
+                        <select name="Product_ID" class="form-select" aria-label="Default select example">
+                                <?php foreach($productList as $Product){
+                                    echo "<option value=$Product->Product_ID";
+                                    if($Product->Product_ID == $Rate->Product_ID){echo" selected = 'selected'";}
+                                    echo ">$Product->Product_Name</option>";
+                                    }
+                                ?>
+                        </select>
+                    </label><br>
+                </div>
+                <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Rate_ID 
+                        <input type="text" name="Rate_ID" value="<?php echo $Rate->Rate_ID;?>">
+                    </label><br>
+                </div>
+                <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Rate_Quantity 
+                        <input type="text" name="Rate_Quantity" value="<?php echo $Rate->Rate_Quantity;?>">
+                    </label><br>
+                </div>
+                <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Rate_Price 
+                        <input type="text" name="Rate_Price" value="<?php echo $Rate->Rate_Price;?>">
+                    </label><br>
+                </div>
+                <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Rate_ScreenPrice 
+                        <input type="text" name="Rate_ScreenPrice" value="<?php echo $Rate->Rate_ScreenPrice;?>">
+                    </label><br>
+                </div>
+            <input type="hidden" name="controller" value="rate"/>
+            <button type="submit" class="btn btn-light" name="action" value="index_rate">Back</button>
+            <button type="submit" class="btn btn-success" name="action" value="updateRate">Update</button>
+        </form>
+    </div>
 </body>
 </html>
