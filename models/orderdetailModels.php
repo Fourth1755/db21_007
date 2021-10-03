@@ -69,7 +69,7 @@
                 $OrderdetailList[] = new Orderdetail($Orderdetail_ID,$Order_ID,$Colordetail_ID,$Orderdetail_QuantityColor,$Orderdetail_Quantity);
             }
             require("connection_close.php");
-            return $rateList;
+            return $OrderdetailList;
         }
         public static function update($Orderdetail_ID,$Order_ID,$Colordetail_ID,$Orderdetail_QuantityColor,$Orderdetail_Quantity){
             require("connection_connect.php");

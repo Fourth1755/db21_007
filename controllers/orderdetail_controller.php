@@ -41,14 +41,14 @@
             $orderdetail_list=Orderdetail::search($key);
             require_once('views/orderdetail/index_orderdetail.php');
         }
-        public function deleteConfirm(){
+        public function deleteOrderdetailConfirm(){
             $Orderdetail_ID=$_GET['Orderdetail_ID'];
-            $orderdetail = Orderdetail::getAll($Orderdetail_ID);
-            require_once('views/orderdetail/index_orderdetail.php');
+            $orderdetail = Orderdetail::get($Orderdetail_ID);
+            require_once('views/orderdetail/deleteOrderdetailConfirm.php');
         }
-        public function delete(){
+        public function deleteOrderdetail(){
             $Orderdetail_ID=$_GET['Orderdetail_ID'];
-            $orderdetail = Orderdetail::delete($Orderdetail_ID);
+            Orderdetail::delete($Orderdetail_ID);
             OrderdetailController::index();
         }
     }

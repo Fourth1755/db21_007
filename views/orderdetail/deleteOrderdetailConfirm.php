@@ -10,7 +10,7 @@
 <div class="container">
 <h1>Delete orderdetail</h1>
 <table class="table">
-<h4>Are you sure to delete this order</h4>
+<h4>Are you sure to delete this orderdetail</h4>
 <tr><td>Orderdetail_ID</td><td>Order_ID</td><td>Colordetail_ID</td><td>Orderdetail_QuantityColor</td><td>Orderdetail_Quantity</td><td>Update</td><td>Delete</td></tr>
     <?php 
         echo "<tr><br><td>$orderdetail->Orderdetail_ID</td>
