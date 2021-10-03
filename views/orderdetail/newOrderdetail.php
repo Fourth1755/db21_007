@@ -58,7 +58,7 @@
         <input type="text" class="form-control" name= "Orderdetail_Quantity" placeholder=" Ex 500">
     </div>
     <br>
-    <input type="hidden" name="controller" value="Orderdetail"/>
+    <input type="hidden" name="controller" value="orderdetail"/>
     <button type="submit" name="action" value="index">Back</button>
     <button type="submit" name="action" value="addOrderdetail">Save</button>
     </form>
