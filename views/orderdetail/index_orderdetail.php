@@ -20,18 +20,13 @@
                 <td>$orderdetail->Colordetail_ID</td>
                 <td>$orderdetail->Orderdetail_QuantityColor</td>
                 <td>$orderdetail->Orderdetail_Quantity</td>
-                <td><a href=?controller=orderdetail&action=updateForm&Rate_ID=$orderdetail->Orderdetail_ID>Update</a></td>
+                <td><a href=?controller=orderdetail&action=updateForm&Orderdetail_ID=$orderdetail->Orderdetail_ID>Update</a></td>
                 <td>Delete</td></tr>";
             }    
             echo "</table>";
         ?>
     <a class= "btn btn-success" href=?controller=orderdetail&action=newOrderdetail>AddOrderdetail</a>    
     </div>
-    
-    
-    
-</body>
-</html>
     
     
     
