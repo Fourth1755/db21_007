@@ -9,6 +9,12 @@
 <body>
     
     <div class="container">
+         <h1>Orderdetail</h1>
+        <form method="get"action="">
+            <input type="text" name="key">
+            <input type="hidden" name="controller" value="orderdetail">
+            <button type="submit" name="action" value="search">Search</button>
+        </form>
         <h1>Add New Orderdetail</h1>
         <form method="get" action="" style="width: 40%; ">
     <div class="mb-3">
@@ -45,11 +51,11 @@
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Orderdetail_QuantityColor</label>
-        <input type="int" class="form-control" name= "Orderdetail_QuantityColor" placeholder=" Ex 1">
+        <input type="text" class="form-control" name= "Orderdetail_QuantityColor" placeholder=" Ex 1">
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Orderdetail_Quantity</label>
-        <input type="int" class="form-control" name= "Orderdetail_Quantity" placeholder=" Ex 500">
+        <input type="text" class="form-control" name= "Orderdetail_Quantity" placeholder=" Ex 500">
     </div>
     <br>
     <input type="hidden" name="controller" value="Orderdetail"/>
