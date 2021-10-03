@@ -4,7 +4,7 @@
             $orderdetail_list = Orderdetail::getAll();
             require_once('views/orderdetail/index_orderdetail.php');
         }
-        public function newOrderdetail(){
+        /*public function newOrderdetail(){
             $colordetail_list = Colordetail::getAll();
             require_once('views/orderdetail/newOrderdetail.php');
         }
@@ -35,6 +35,6 @@
             $Orderdetail_ID=$_GET['Orderdetail_ID'];
             $Orderdetail=Order::delete($Orderdetail_ID);
             OrderdetailController::index();
-        }
+        }*/
     }
 ?>

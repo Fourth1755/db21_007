@@ -14,7 +14,7 @@
         <td>Update</td><td>Delete</td></tr>
         <?php
             foreach($orderdetail_list as $orderdetail){
-            echo "<tr><td>$orderdetail->orderdetail_ID</td>
+            echo "<tr>
                 <td>$orderdetail->Orderdetail_ID</td>
                 <td>$orderdetail->Order_ID</td>
                 <td>$orderdetail->Colordetail_ID</td>
@@ -23,7 +23,7 @@
                 <td><a href=?controller=orderdetail&action=updateForm&Orderdetail_ID=$orderdetail->Orderdetail_ID>Update</a></td>
                 <td>Delete</td></tr>";
             }    
-            echo "</table>";
+            echo "</table>";//<td>$orderdetail->orderdetail_ID</td>
         ?>
     <a class= "btn btn-success" href=?controller=orderdetail&action=newOrderdetail>AddOrderdetail</a>    
     </div>
