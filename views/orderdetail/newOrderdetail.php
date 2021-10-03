@@ -29,7 +29,7 @@
                     foreach($OrderList as $order){
                         if($order->Order_ID=='1101'){
                         echo"<option value=$order->Order_ID>$order->Order_ID</option>";
-                    *}    
+                    }    
                 } 
                 ?>
             </select>
