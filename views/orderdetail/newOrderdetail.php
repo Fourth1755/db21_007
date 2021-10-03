@@ -21,6 +21,17 @@
         <label for="formGroupExampleInput2" class="form-label">Orderdetail_ID</label>
         <input type="text" class="form-control" name= "Orderdetail_ID" placeholder=" Ex QD001">
     </div>
+   <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Order_ID
+            <select name="Order_ID" class="form-select" aria-label="Default select example">
+            <option selected disabled hidden>Open this select Order_ID</option>
+                <?php
+                    foreach($OrderList as $order){
+                        if($order->Order_ID=='1101'){
+                        echo"<option value=$order->Order_ID>$order->Order_ID</option>";
+                    *}    
+                } 
+                ?>
             </select>
         </label>
     </div>
