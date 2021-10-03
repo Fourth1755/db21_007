@@ -28,7 +28,6 @@
             require_once('views/orderdetail/updateOrderdetailForm.php');
         }
         public function updateOrderdetail(){
-            $Orderdetail_ID=$_GET["Orderdetail_ID"];
             $Order_ID=$_GET["Order_ID"];
             $Colordetail_ID=$_GET["Colordetail_ID"];
             $Orderdetail_QuantityColor=$_GET["Orderdetail_QuantityColor"];

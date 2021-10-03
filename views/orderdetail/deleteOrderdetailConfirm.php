@@ -20,11 +20,11 @@
         <td>$orderdetail->Orderdetail_Quantity</td>  
         </table>";
     ?>
-    <form method="get" action="">
+    <form method="get" action=""style="width: 40%;">
         <input type="hidden" name="controller" value="orderdetail"/>
-        <input type="hidden" name="Orderdetail_ID" value="<?php echo $orderdetail->Orderdetail_ID;?>"/>
-        <button type="submit" name="action" value="index">Back</button>
-        <button type="submit" name="action" value="deleteOrderdetail">Delete</button>
+        <input type="hidden" name="Orderdetail_ID" value="<?php echo $orderdetail->Orderdetail_ID?>"/>
+        <button class="btn btn-light" type="submit" name="action" value="index">Back</button>
+        <button  class="btn btn-danger" type="submit" name="action" value="deleteOrderdetail">Delete</button>
     </form>
 
 </body>

@@ -8,11 +8,11 @@
 </head>
 <body>
     <form method="get" action="">
-        <label>Orderdetail_ID<select name="Orderdetail_ID">
-            <?php foreach($orderdetail_list as $Orderdetail){
-                echo "<option value=$Orderdetail->Orderdetail_ID";
-                if($Orderdetail->Orderdetail_ID == $Orderdetail->Orderdetail_ID){echo" selected = 'selected'";}
-                echo ">$Orderdetail->Orderdetail_ID</option>";
+        <label>Colordetail_list<select name="Colordetail_ID">
+            <?php foreach($colordetail_list as $color){
+                echo "<option value=$color->Order_ID";
+                if($color->Colordetail_ID == $color->Color_Name){echo" selected = 'selected'";}
+                echo ">$color->Color_Name</option>";
                 }
             ?>
         </select></label><br>

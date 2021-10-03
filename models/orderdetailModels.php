@@ -81,7 +81,7 @@
 
         public static function delete($Orderdetail_ID){
             require("connection_connect.php");
-            $sql = "DELETE * FROM QuotationDetail WHERE QuotationDetail_ID='$Orderdetail_ID'";
+            $sql = "DELETE FROM QuotationDetail WHERE QuotationDetail_ID='$Orderdetail_ID'";
             $result = $conn->query($sql);
             require("connection_close.php");
             return "Delete success $result rows";
