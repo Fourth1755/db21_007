@@ -11,8 +11,8 @@
         <label>Orderdetail_ID<select name="Orderdetail_ID">
             <?php foreach($orderdetail_list as $Orderdetail){
                 echo "<option value=$Orderdetail->Orderdetail_ID";
-                if($Orderdetail->Orderdetail_ID == $Orderdetail->Product_ID){echo" selected = 'selected'";}
-                echo ">$Orderdetail->Product_Name</option>";
+                if($Orderdetail->Orderdetail_ID == $Orderdetail->Orderdetail_ID){echo" selected = 'selected'";}
+                echo ">$Orderdetail->Orderdetail_ID</option>";
                 }
             ?>
         </select></label><br>
@@ -22,7 +22,7 @@
         <label>Orderdetail_Quantity<input type="text" name="Orderdetail_Quantity" value="<?php echo $orderdetail->Orderdetail_Quantity;?>"></label><br>
         
         <input type="hidden" name="controller" value="orderdetail"/>
-        <button type="submit" name="action" value="index_orderdetail">Back</button>
+        <button type="submit" name="action" value="index">Back</button>
         <button type="submit" name="action" value="updateOrderdetail">Update</button>
     </form>
 </body>
