@@ -28,7 +28,7 @@
                     <a href=?controller=orderdetail&action=updateOrderForm&Orderdetail_ID=$orderdetail->Orderdetail_ID>Update</a>
                 </td>
                 <td>
-                    <a href=?controller=orderdetaile&action=deleteOrderdetailConfirm&Orderdetail_ID=$orderdetail->Orderdetail_ID>Delete</a>
+                    <a href=?controller=orderdetail&action=deleteOrderdetailConfirm&Orderdetail_ID=$orderdetail->Orderdetail_ID>Delete</a>
                 </td></tr>";
             }
             echo "</table>";
