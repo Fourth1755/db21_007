@@ -17,7 +17,7 @@
                 $Product_ID=$my_row["Product_ID"];
                 $Colordetail_ID=$my_row["ColorDetail_ID"];
                 $Color_Name=$my_row["Color_Name"];
-                $customerList[]=new Customer($Product_ID,$Colordetail_ID,$Color_Name);
+                $colordetailList[]=new Colordetail($Product_ID,$Colordetail_ID,$Color_Name);
             }
             require("connection_close.php");
             return $colordetailList;
