@@ -6,7 +6,7 @@
         public $Orderdetail_QuantityColor ;
         public $Orderdetail_Quantity ;
         
-        public function __constuct($Orderdetail_ID,$Order_ID,$Colordetail_ID,$Orderdetail_QuantityColor,$Orderdetail_Quantity){
+        public function __construct($Orderdetail_ID,$Order_ID,$Colordetail_ID,$Orderdetail_QuantityColor,$Orderdetail_Quantity){
             $this->Orderdetail_ID=$Orderdetail_ID;
             $this->Order_ID=$Order_ID;
             $this->Colordetail_ID=$Colordetail_ID;
