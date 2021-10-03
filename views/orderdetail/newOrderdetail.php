@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add New Orderdetail</title>
+    <title>Add NewOrderdetail</title>
 </head>
 <body>
     
@@ -15,7 +15,7 @@
             <input type="hidden" name="controller" value="orderdetail">
             <button type="submit" name="action" value="search">Search</button>
         </form>
-        <h1>Add New Orderdetail</h1>
+        <h1>Add NewOrderdetail</h1>
         <form method="get" action="" style="width: 40%; ">
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Orderdetail_ID</label>
@@ -26,9 +26,9 @@
             <select name="Order_ID" class="form-select" aria-label="Default select example">
             <option selected disabled hidden>Open this select Order_ID</option>
                 <?php
-                    foreach($ProductList as $product){
-                        if($product->Product_ID=='PR001'){
-                        echo"<option value=$product->Product_ID>$product->Product_Name</option>";
+                    foreach($OrderList as $order){
+                        if($order->Product_ID=='PR001'){
+                        echo"<option value=$order->Order_ID>$order->Order_ID</option>";
                     }    
                 } 
                 ?>
