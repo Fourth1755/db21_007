@@ -25,7 +25,7 @@
                 <td>$orderdetail->Orderdetail_QuantityColor</td>
                 <td>$orderdetail->Orderdetail_Quantity</td>
                 <td>
-                    <a href=?controller=orderdetail&action=updateOrderForm&Orderdetail_ID=$orderdetail->Orderdetail_ID>Update</a>
+                    <a href=?controller=orderdetail&action=updateOrderdetailForm&Orderdetail_ID=$orderdetail->Orderdetail_ID>Update</a>
                 </td>
                 <td>
                     <a href=?controller=orderdetail&action=deleteOrderdetailConfirm&Orderdetail_ID=$orderdetail->Orderdetail_ID>Delete</a>
