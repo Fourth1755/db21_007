@@ -10,11 +10,6 @@
     
     <div class="container">
          <h1>Orderdetail</h1>
-        <form method="get"action="">
-            <input type="text" name="key">
-            <input type="hidden" name="controller" value="orderdetail">
-            <button type="submit" name="action" value="search">Search</button>
-        </form>
         <h1>Add NewOrderdetail</h1>
         <form method="get" action="" style="width: 40%; ">
     <div class="mb-3">
@@ -26,9 +21,9 @@
             <select name="Order_ID" class="form-select" aria-label="Default select example">
             <option selected disabled hidden>Open this select Order_ID</option>
                 <?php
-                    foreach($OrderList as $order){
+                    foreach($Order_list as $order){
                         if($order->Order_ID=='1101'){
-                        echo"<option value=$order->Order_ID>$order->Order_ID</option>";
+                        echo"<option value=$order->Order_ID>$order->Order_name</option>";
                     }    
                 } 
                 ?>
@@ -36,14 +31,44 @@
         </label>
     </div>
     <div class="mb-3">
-        <label for="formGroupExampleInput2" class="form-label">Colordetail_ID
+        <label for="formGroupExampleInput2" class="form-label">Colordetail_Name
             <select name="Colordetail_ID" class="form-select" aria-label="Default select example">
-            <option selected disabled hidden>Open this select Colordetail_ID</option>
+            <option selected disabled hidden>Open this select Colordetail_Name</option>
                 <?php
                          foreach($colordetail_list as $color){
-                            if($color->Colordetail_ID=='COLOR011'){
+                            if($color->Colordetail_ID =='COLOR011'){
                                 echo"<option value=$color->Colordetail_ID>$color->Color_Name</option>";
                             }    
+                            if($color->Colordetail_ID =='COLOR012'){
+                                echo"<option value=$color->Colordetail_ID>$color->Color_Name</option>";
+                            }    
+                            if($color->Colordetail_ID =='COLOR021'){
+                                echo"<option value=$color->Colordetail_ID>$color->Color_Name</option>";
+                            }    
+                            if($color->Colordetail_ID =='COLOR031'){
+                                echo"<option value=$color->Colordetail_ID>$color->Color_Name</option>";
+                            }    
+                            if($color->Colordetail_ID =='COLOR041'){
+                                echo"<option value=$color->Colordetail_ID>$color->Color_Name</option>";
+                            }    
+                            if($color->Colordetail_ID =='COLOR042'){
+                                echo"<option value=$color->Colordetail_ID>$color->Color_Name</option>";
+                            }    
+                            if($color->Colordetail_ID =='COLOR043'){
+                                echo"<option value=$color->Colordetail_ID>$color->Color_Name</option>";
+                            }    
+                            if($color->Colordetail_ID =='COLOR051'){
+                                echo"<option value=$color->Colordetail_ID>$color->Color_Name</option>";
+                            }
+                            if($color->Colordetail_ID =='COLOR052'){
+                                echo"<option value=$color->Colordetail_ID>$color->Color_Name</option>";
+                            }
+                            if($color->Colordetail_ID =='COLOR061'){
+                                echo"<option value=$color->Colordetail_ID>$color->Color_Name</option>";
+                            }
+                            if($color->Colordetail_ID =='COLOR062'){
+                                echo"<option value=$color->Colordetail_ID>$color->Color_Name</option>";
+                            }
                         }   
                 ?>
             </select>
