@@ -21,7 +21,7 @@
         </table>";
     ?>
     <form method="get" action="">
-        <input type="hidden" name="controller" value="rderdetail"/>
+        <input type="hidden" name="controller" value="orderdetail"/>
         <input type="hidden" name="Orderdetail_ID" value="<?php echo $orderdetail->Orderdetail_ID;?>"/>
         <button type="submit" name="action" value="index">Back</button>
         <button type="submit" name="action" value="deleteOrderdetail">Delete</button>
