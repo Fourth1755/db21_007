@@ -43,12 +43,12 @@
         }
         public function deleteConfirm(){
             $Orderdetail_ID=$_GET['Orderdetail_ID'];
-            $Orderdetail = Orderdetail::getAll($Orderdetail_ID);
+            $orderdetail = Orderdetail::getAll($Orderdetail_ID);
             require_once('views/orderdetail/index_orderdetail.php');
         }
         public function delete(){
             $Orderdetail_ID=$_GET['Orderdetail_ID'];
-            $Orderdetail=Order::delete($Orderdetail_ID);
+            $orderdetail = Orderdetail::delete($Orderdetail_ID);
             OrderdetailController::index();
         }
     }
