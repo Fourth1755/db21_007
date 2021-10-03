@@ -9,15 +9,10 @@
 <body >
 <div class="container">
         <h1>Orderdetail</h1>
-        <form method="get"action="">
-            <input type="text" name="key">
-            <input type="hidden" name="controller" value="orderdetail">
-            <button type="submit" name="action" value="search">Search</button>
-        </form>
         <table class="table">
         <tr><td>Orderdetail_ID</td><td>Order_ID</td><td>Colordetail_ID</td><td>Orderdetail_QuantityColor</td><td>Orderdetail_Quantity</td><td>Update</td><td>Delete</td></tr>
         <?php
-            foreach($orderdetailList as $orderdetail){
+            foreach($orderdetail_list as $orderdetail){
             echo "<tr>
                 <td>$orderdetail->Orderdetail_ID</td>
                 <td>$orderdetail->Order_ID</td>
