@@ -9,9 +9,10 @@
 <body>
 <div class="container">
         <h1>Add new Orderdetail</h1>
+    <form method="get" action="" style="width: 40%; ">
+        <div class="mb-3">
+        <label>Orderdetail_ID<input type="text" name="Orderdetail_ID" value="<?php echo $orderdetail->Orderdetail_ID;?>"></label><br>
         <label>Order_ID<input type="text" name="Order_ID" value="<?php echo $orderdetail->Order_ID;?>"></label><br>
-        <form method="get" action="" style="width: 40%; ">
-                <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label">Colordetaildetail
                         <select name="Colordetail_ID" class="form-select" aria-label="Default select example">
                                 <?php foreach($colordetail_list as $color){
