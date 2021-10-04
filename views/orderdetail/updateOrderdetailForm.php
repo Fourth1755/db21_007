@@ -6,18 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>updateOrderdetailForm</title>
 </head>
-<body>
-    <form method="get" action="">
-        <label>Colordetail_list<select name="Colordetail_ID">
-            <?php foreach($colordetail_list as $color){
-                echo "<option value=$color->Order_ID";
-                if($color->Colordetail_ID == $color->Color_Name){echo" selected = 'selected'";}
-                echo ">$color->Color_Name</option>";
+        </select></label><br>
+        <label>Product_Name<select name="Product_ID">
+            <?php foreach($productList as $Product){
+                echo "<option value=$Product->Product_ID";
+                if($Product->Product_ID == $Rate->Product_ID){echo" selected = 'selected'";}
+                echo ">$Product->Product_ID</option>";
                 }
             ?>
-        </select></label><br>
         <label>Order_ID<input type="text" name="Order_ID" value="<?php echo $orderdetail->Order_ID;?>"></label><br>
         <label>Colordetail_ID<input type="text" name="Colordetail_ID" value="<?php echo $orderdetail->Colordetail_ID;?>"></label><br>
+        <form method="get" action="">
         <label>Orderdetail_QuantityColor<input type="text" name="Orderdetail_QuantityColor" value="<?php echo $orderdetail->Orderdetail_QuantityColor;?>"></label><br>
         <label>Orderdetail_Quantity<input type="text" name="Orderdetail_Quantity" value="<?php echo $orderdetail->Orderdetail_Quantity;?>"></label><br>
         
