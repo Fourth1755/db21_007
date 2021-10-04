@@ -9,7 +9,7 @@
 </head>
 <body >
     <div class="container">
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar sticky-top-10px navbar-expand-lg navbar-dark bg-primary">
   <div class="container-fluid">
     <a class="navbar-brand" href="?controller=order&action=index">Order</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
