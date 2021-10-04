@@ -36,9 +36,8 @@
                 echo "</table>";
             ?>
         <a class= "btn btn-success" href=?controller=rate&action=newRate>Add</a>
+        <br><br><br>
     </div>
-    <br>
-    <br>
-    <br>
+    
 </body>
 </html>

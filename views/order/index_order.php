@@ -59,10 +59,11 @@
             echo "</table>";
         ?>
     <a class= "btn btn-success" href=?controller=order&action=newOrder>Add new</a>
+    <br>
+    <br>
+    <br>
     </div>
-    <br>
-    <br>
-    <br>
+    
     
     
     

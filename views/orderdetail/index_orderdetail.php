@@ -34,9 +34,10 @@
             echo "</table>";
         ?>
     <a class= "btn btn-success" href=?controller=orderdetail&action=newOrderdetail>Add</a>
+    <br>
+    <br>
+    <br>
     </div>
-    <br>
-    <br>
-    <br>
+    
 </body>
 </html>
