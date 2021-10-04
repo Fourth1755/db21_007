@@ -36,7 +36,7 @@ p1 {
 </head>
 <body>
 <div style="background-image: url('https://images7.alphacoders.com/698/thumb-1920-698662.jpg')
-;background-repeat: no-repeat; background-size: 100% 700px;">
+;background-repeat: no-repeat; background-size: 100% 100%px;">
         <div style="height: 800px; background-color: rgba(0, 0, 0, 0.1)">
           <br><br><br><br><br><br>
             <div style="height: 400px; background-color: rgba(0, 0, 0, 0.5); text-align: center;">
@@ -45,6 +45,5 @@ p1 {
         </div>
         </div>
 </div>
-
 </body>
 </html>
