@@ -23,24 +23,24 @@
                     </label><br>
                 </div>
                 <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label">Rate_ID 
+                    <label for="formGroupExampleInput2" class="form-label">Rate_ID </label>
                         <input type="text" name="Rate_ID"/>
-                    </label><br>
+                    <br>
                 </div>
                 <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label">Rate_Quantity 
+                    <label for="formGroupExampleInput2" class="form-label">Rate_Quantity </label>
                         <input type="text" name="Rate_Quantity"/>
-                    </label><br>
+                    <br>
                 </div>
                 <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label">Rate_Price 
+                    <label for="formGroupExampleInput2" class="form-label">Rate_Price </label>
                         <input type="text" name="Rate_Price"/>
-                    </label><br>
+                    <br>
                 </div>
                 <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label">Rate_ScreenPrice 
+                    <label for="formGroupExampleInput2" class="form-label">Rate_ScreenPrice </label>
                         <input type="text" name="Rate_ScreenPrice"/>
-                    </label><br>
+                    <br>
                 </div>
             <input type="hidden" name="controller" value="rate"/>
             <button type="submit" class="btn btn-light" name="action" value="index_rate">Back</button>
