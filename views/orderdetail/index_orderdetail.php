@@ -35,6 +35,9 @@
         ?>
     <a class= "btn btn-success" href=?controller=orderdetail&action=newOrderdetail>Add</a>
     </div>
+    <br>
+    <br>
+    <br>
     
     
     

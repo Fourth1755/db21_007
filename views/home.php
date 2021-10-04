@@ -8,7 +8,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <title>Premium shop</title>
     <style>
-p {
+p1 {
   font-weight: 700;
   text-align: center;
   font-size: 60px;
@@ -41,10 +41,9 @@ p {
           <br><br><br><br><br><br>
             <div style="height: 400px; background-color: rgba(0, 0, 0, 0.5); text-align: center;">
           <br><br><br><br>
-          <p>Welcome to Premium shop</p>
+          <p1>Welcome to Premium shop</p1>
         </div>
         </div>
-    
 </div>
 
 </body>

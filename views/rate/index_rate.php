@@ -37,6 +37,9 @@
             ?>
         <a class= "btn btn-success" href=?controller=rate&action=newRate>Add</a>
     </div>
+    <br>
+    <br>
+    <br>
     
 </body>
 </html>
