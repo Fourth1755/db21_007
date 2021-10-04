@@ -29,13 +29,13 @@
                 <td>$orderdetail->Order_ID</td>
                 <td>$orderdetail->Colordetail_ID</td>
                 <td>$orderdetail->Orderdetail_QuantityColor</td>
-                <td>$orderdetail->Orderdetail_Quantity</td>
-                <td>
-                    <a href=?controller=orderdetail&action=updateOrderdetailForm&Orderdetail_ID=$orderdetail->Orderdetail_ID>Update</a>
+                <td>$orderdetail->Orderdetail_Quantity</td>"?>
+                <td><a class="btn btn-outline-primary" href=?controller=orderdetail&action=updateOrderdetailForm&<?php echo"Orderdetail_ID=$orderdetail->Orderdetail_ID"; ?>>Update</a>
                 </td>
                 <td>
-                    <a href=?controller=orderdetail&action=deleteOrderdetailConfirm&Orderdetail_ID=$orderdetail->Orderdetail_ID>Delete</a>
-                </td></tr>";
+                    <a class="btn btn-danger" href=?controller=orderdetail&action=deleteOrderdetailConfirm&<?php echo"Orderdetail_ID=$orderdetail->Orderdetail_ID"; ?>>Delete</a>
+                </td></tr>
+            <?php    
             }
             echo "</table>";
         ?>
