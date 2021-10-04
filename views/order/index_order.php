@@ -31,7 +31,7 @@
     <form class="d-flex" method="get" action="">
         <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="key">
         <input type="hidden" name="controller" value="order">
-        <button class="btn btn-outline-light" type="submit" value="search" name="action"><i class="material-icons-outlined">search</i></button>
+        <button class="btn btn-outline-light" type="submit" value="search" name="action">Search</button>
       </form>
     </div>
     </nav>
@@ -51,7 +51,7 @@
                 <td>$order->extraProduct</td>
                 <td>$order->dateMenufacture</td>
                 <td>$order->transmissionStatus</td>";?>
-                <td><a type="button" class="btn btn-outline" style="background-color: #974531;" href=?controller=order&action=updateForm&<?php echo "orderID=$order->id";?>><i class="material-icons">build</i></a></td>
+                <td><a type="button" class="btn btn-outline-light" style="background-color: #974531;" href=?controller=order&action=updateForm&<?php echo "orderID=$order->id";?>><i class="material-icons">build</i></a></td>
                 <td><a class="btn btn-danger"href=?controller=order&action=deleteConfirm&<?php echo "orderID=$order->id";?>><i class="material-icons">delete</i></a></td>
                 </tr>
             <?php

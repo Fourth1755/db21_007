@@ -32,10 +32,17 @@ p {
 }
 </style>
 </head>
-<body style="background-image: url(bgg.jpg);">
-<div style="height: 400px; margin: 150px; background-color: rgba(0, 0, 0, 0.5); text-align: center;">
-      <br><br><br><br>
-      <p>Welcome to Premium shop</p>
-    </div>
+<body >
+<div style="background-image: url(bgg.jpg);">
+        <div style="height: 700px; background-color: rgba(0, 0, 0, 0.1)">
+          <br><br><br><br><br><br>
+            <div style="height: 400px; background-color: rgba(0, 0, 0, 0.5); text-align: center;">
+          <br><br><br><br>
+          <p>Welcome to Premium shop</p>
+        </div>
+        </div>
+    
+</div>
+
 </body>
 </html>
