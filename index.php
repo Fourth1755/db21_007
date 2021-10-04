@@ -49,12 +49,11 @@
   </div>
 </nav>
         <?php
-            echo "controller=".$controller.",action= ".$action;
+            //echo "controller=".$controller.",action= ".$action;
         ?>
         <br>
         <?php require_once("routes.php") ?>
-</body>
-<footer class="text-center text-lg-start text-light"style="background-color: #451009">
+        <footer class="text-center text-lg-start text-light"style="background-color: #451009">
           <div class="container p-4">
             <div class="row" >
               <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
@@ -77,4 +76,6 @@
             <a class="text-dark" href="http://158.108.207.4/db21/db21_007/?controller=pages&action=home">db21_007</a>
           </div>
         </footer>
+</body>
+
 </html>
