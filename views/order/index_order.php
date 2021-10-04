@@ -8,10 +8,6 @@
     <title>Order</title>
 </head>
 <body >
-    <div class="container">
-      <div class="container" style="text-align: center;">
-        <h3>จัดทำโดยนายภูริวัฒน์ ภูลับ 6220504755</h3>
-    </div>
     <nav class="navbar navbar-expand-lg navbar-dark" style=" background-color: #974531;">
   <div class="container-fluid">
     <a class="navbar-brand" href="?controller=order&action=index">Order</a>
@@ -59,6 +55,10 @@
             echo "</table>";
         ?>
     <a class= "btn btn-success" href=?controller=order&action=newOrder>Add new</a>
+    <div class="container">
+      <div class="container" style="text-align: center;">
+        <h3>จัดทำโดยนายภูริวัฒน์ ภูลับ 6220504755</h3>
+    </div>
     <br>
     <br>
     <br>
