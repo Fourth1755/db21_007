@@ -20,6 +20,7 @@
         <button class="btn btn-outline-light" type="submit" value="search" name="action">Search</button>
       </form>
     </div>
+    </nav>
         <table class="table">
         <tr><td>Orderdetail_ID</td><td>Order_ID</td><td>Colordetail_ID</td><td>Orderdetail_QuantityColor</td><td>Orderdetail_Quantity</td><td>Update</td><td>Delete</td></tr>
         <?php
