@@ -34,7 +34,7 @@ p1 {
 }
 </style>
 </head>
-<body >
+<body style="background-color: #451009;">
 <div style="background-image: url('https://images7.alphacoders.com/698/thumb-1920-698662.jpg')
 ;background-repeat: no-repeat; background-size: 100% 700px;">
         <div style="height: 800px; background-color: rgba(0, 0, 0, 0.1)">
