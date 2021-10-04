@@ -11,7 +11,9 @@
         <h1>Add new Orderdetail</h1>
     <form method="get" action="" style="width: 40%; ">
         <div class="mb-3">
-        <label>Orderdetail_ID<input type="text" name="Orderdetail_ID" value="<?php echo $orderdetail->Orderdetail_ID;?>"></label><br>
+        <label for="formGroupExampleInput" class="form-label">Orderdetail_ID</label>
+        <input type="text" class="form-control" name= "Orderdetail_ID"  value="<?php echo $orderdetail->Orderdetail_ID;?>" placeholder="Quotation_ID Ex 11001"/> 
+        <label for="formGroupExampleInput" class="form-label">Order_ID</label>
         <label>Order_ID<input type="text" name="Order_ID" value="<?php echo $orderdetail->Order_ID;?>"></label><br>
                     <label for="formGroupExampleInput2" class="form-label">Colordetaildetail
                         <select name="Colordetail_ID" class="form-select" aria-label="Default select example">
@@ -24,7 +26,9 @@
                         </select>
                     </label><br>
                 </div>
+        <label for="formGroupExampleInput" class="form-label">Orderdetail_QuantityColor</label>
         <label>Orderdetail_QuantityColor<input type="text" name="Orderdetail_QuantityColor" value="<?php echo $orderdetail->Orderdetail_QuantityColor;?>"></label><br>
+        <label for="formGroupExampleInput" class="form-label">Orderdetail_Quantity</label>
         <label>Orderdetail_Quantity<input type="text" name="Orderdetail_Quantity" value="<?php echo $orderdetail->Orderdetail_Quantity;?>"></label><br>
         
         <input type="hidden" name="controller" value="orderdetail" class="form-control">
