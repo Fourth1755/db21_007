@@ -14,7 +14,7 @@
         <label for="formGroupExampleInput" class="form-label">Orderdetail_ID</label>
         <input type="text" class="form-control" name= "Orderdetail_ID"  value="<?php echo $orderdetail->Orderdetail_ID;?>" placeholder="Quotation_ID Ex 11001"/> 
         <label for="formGroupExampleInput" class="form-label">Order_ID</label>
-        <label>Order_ID<input type="text" name="Order_ID" value="<?php echo $orderdetail->Order_ID;?>"></label><br>
+        <input type="text" class="form-control" name= "Order_ID"  value="<?php echo $orderdetail->Order_ID;?>" placeholder="Quotation_ID Ex 11001"/> 
                     <label for="formGroupExampleInput2" class="form-label">Colordetaildetail
                         <select name="Colordetail_ID" class="form-select" aria-label="Default select example">
                                 <?php foreach($colordetail_list as $color){
@@ -27,10 +27,9 @@
                     </label><br>
                 </div>
         <label for="formGroupExampleInput" class="form-label">Orderdetail_QuantityColor</label>
-        <label>Orderdetail_QuantityColor<input type="text" name="Orderdetail_QuantityColor" value="<?php echo $orderdetail->Orderdetail_QuantityColor;?>"></label><br>
+        <input type="text" class="form-control" name= "Orderdetail_QuantityColor"  value="<?php echo $orderdetail->Orderdetail_QuantityColor;?>" placeholder="Quotation_ID Ex 11001"/> 
         <label for="formGroupExampleInput" class="form-label">Orderdetail_Quantity</label>
-        <label>Orderdetail_Quantity<input type="text" name="Orderdetail_Quantity" value="<?php echo $orderdetail->Orderdetail_Quantity;?>"></label><br>
-        
+        <input type="text" class="form-control" name= "Orderdetail_Quantity"  value="<?php echo $orderdetail->Orderdetail_Quantity;?>" placeholder="Quotation_ID Ex 11001"/> 
         <input type="hidden" name="controller" value="orderdetail" class="form-control">
     <button type="submit" class="btn btn" name="action" value="index">Back</button>
     <button type="submit" class="btn btn-success" name="action" value="updateOrderdetail">Update</button>
