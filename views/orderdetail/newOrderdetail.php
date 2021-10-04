@@ -30,9 +30,9 @@
         </label>
     </div>
     <div class="mb-3">
-        <label for="formGroupExampleInput2" class="form-label">Productdetail
+        <label for="formGroupExampleInput2" class="form-label">Colordetaildetail
             <select name="Colordetail_ID" class="form-select" aria-label="Default select example">
-            <option selected disabled hidden>Open this select Productdetail</option>
+            <option selected disabled hidden>Open this select Colordetail</option>
                 <?php
                          foreach($colordetail_list as $color){
                             {
