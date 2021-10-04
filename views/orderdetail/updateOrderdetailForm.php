@@ -8,10 +8,10 @@
 </head>
         </select></label><br>
         <label>Product_Name<select name="Product_ID">
-            <?php foreach($productList as $Product){
-                echo "<option value=$Product->Product_ID";
-                if($Product->Product_ID == $Rate->Product_ID){echo" selected = 'selected'";}
-                echo ">$Product->Product_ID</option>";
+            <?php foreach($order_list as $order){
+                echo "<option value=$order->id";
+                if($order->id == $order->id){echo" selected = 'selected'";}
+                echo ">$order->id</option>";
                 }
             ?>
         <label>Order_ID<input type="text" name="Order_ID" value="<?php echo $orderdetail->Order_ID;?>"></label><br>
