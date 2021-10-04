@@ -16,7 +16,7 @@
                         <select name="Colordetail_ID" class="form-select" aria-label="Default select example">
                                 <?php foreach($colordetail_list as $color){
                                     {
-                                        echo"<option value=$color->Colordetail_ID>$color->Product_ID $color->Color_Name</option>";
+                                        echo"<option value=$color->Colordetail_ID>$color->Product_ID $color->Colordetail_ID</option>";
                                     }     
                                 }    
                                 ?>
