@@ -48,10 +48,11 @@
     </div>
   </div>
 </nav>
+      <div style="background-color: #451009" class="text-light">
         <?php
-            //echo "controller=".$controller.",action= ".$action;
+            echo "controller=".$controller.",action= ".$action;
         ?>
-        <br>
+      </div>
         <?php require_once("routes.php") ?>
         <footer class="text-center text-lg-start text-light"style="background-color: #451009">
           <div class="container p-4">
