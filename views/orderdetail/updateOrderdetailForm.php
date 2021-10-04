@@ -16,7 +16,7 @@
                         <select name="Colordetail_ID" class="form-select" aria-label="Default select example">
                                 <?php foreach($colordetail_list as $color){
                                     {
-                                        echo"<option value=$color->Colordetail_ID>$color->Product_ID $color->Colordetail_ID</option>";
+                                        echo"<option value=$color->Colordetail_ID>$color->Product_ID $color->Color_Name</option>";
                                     }     
                                 }    
                                 ?>
@@ -26,9 +26,10 @@
         <label>Orderdetail_QuantityColor<input type="text" name="Orderdetail_QuantityColor" value="<?php echo $orderdetail->Orderdetail_QuantityColor;?>"></label><br>
         <label>Orderdetail_Quantity<input type="text" name="Orderdetail_Quantity" value="<?php echo $orderdetail->Orderdetail_Quantity;?>"></label><br>
         
-        <input type="hidden" name="controller" value="orderdetail"/>
-        <button type="submit" name="action" value="index">Back</button>
-        <button type="submit" name="action" value="updateOrderdetail">Update</button>
+        <input type="hidden" name="controller" value="orderdetail" class="form-control">
+    <button type="submit" class="btn btn" name="action" value="index">Back</button>
+    <button type="submit" class="btn btn-success" name="action" value="updateOrderdetail">Update</button>
     </form>
+    </div>
 </body>
 </html>
