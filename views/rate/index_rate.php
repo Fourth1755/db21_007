@@ -36,7 +36,11 @@
                 echo "</table>";
             ?>
         <a class= "btn btn-success" href=?controller=rate&action=newRate>Add</a>
+        <div class="container" style="text-align: center;">
+        <h3>จัดทำโดยนายอาทฤต เย็นเปรม 6220504801</h3>
+        </div>
         <br><br><br>
+        
     </div>
     
 </body>
