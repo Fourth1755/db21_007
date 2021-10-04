@@ -55,7 +55,7 @@
             }    
             echo "</table>";
         ?>
-    <a class= "btn btn-success" href=?controller=order&action=newOrder><i class="material-icons">add_box</i>Add new</a>
+    <a class= "btn btn-success" href=?controller=order&action=newOrder><i class="material-icons">add_box</i>  Add new</a>
     </div>
     
     
