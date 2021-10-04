@@ -8,7 +8,7 @@
 </head>
 <body >
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <nav class="navbar navbar-expand-lg navbar-dark" style=" background-color: #974531;">
             <div class="container-fluid">
                 <a class="navbar-brand">Rate</a>
                 <form class="d-flex" method="get" action="">

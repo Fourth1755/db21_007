@@ -9,7 +9,10 @@
 </head>
 <body >
     <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container" style="text-align: center;">
+        <h3>จัดทำโดยนายภูริวัฒน์ ภูลับ 6220504755</h3>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark" style=" background-color: #974531;">
   <div class="container-fluid">
     <a class="navbar-brand" href="?controller=order&action=index">Order</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,7 +31,7 @@
     <form class="d-flex" method="get" action="">
         <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="key">
         <input type="hidden" name="controller" value="order">
-        <button class="btn btn-outline-light" type="submit" value="search" name="action">Search</button>
+        <button class="btn btn-outline-light" type="submit" value="search" name="action"><i class="material-icons-outlined">search</i></button>
       </form>
     </div>
     </nav>
@@ -55,7 +58,7 @@
             }    
             echo "</table>";
         ?>
-    <a class= "btn btn-success" href=?controller=order&action=newOrder><i class="material-icons">add_box</i>  Add new</a>
+    <a class= "btn btn-success" href=?controller=order&action=newOrder>Add new</a>
     </div>
     
     
