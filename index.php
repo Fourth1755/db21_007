@@ -48,7 +48,7 @@
     </div>
   </div>
 </nav>
-      <div style="background-color: #451009" class="text-light">
+      <div style="background-color: #451009; text-align: center;" class="text-light">
         <?php
             echo "controller=".$controller.",action= ".$action;
         ?>
@@ -73,7 +73,7 @@
             </div>
           </div>
           <div class="text-center p-3 text-dark" style="background-color: #eed5b4">
-            © 2020 Copyright:
+            © 2021 Copyright:
             <a class="text-dark" href="http://158.108.207.4/db21/db21_007/?controller=pages&action=home">db21_007</a>
           </div>
         </footer>
