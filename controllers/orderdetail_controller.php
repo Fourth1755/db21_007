@@ -34,7 +34,8 @@
             $Colordetail_ID=$_GET["Colordetail_ID"];
             $Orderdetail_QuantityColor=$_GET["Orderdetail_QuantityColor"];
             $Orderdetail_Quantity=$_GET["Orderdetail_Quantity"];
-            Orderdetail::update($Orderdetail_ID, $Order_ID,  $Colordetail_ID, $Orderdetail_QuantityColor,$Orderdetail_Quantity);
+            
+            Orderdetail::update($Orderdetail_ID,$Order_ID,$Colordetail_ID, $Orderdetail_QuantityColor,$Orderdetail_Quantity);
             OrderdetailController::index();
         }
         public function search(){

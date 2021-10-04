@@ -9,7 +9,7 @@
 </head>
 <body >
     <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
   <div class="container-fluid">
     <a class="navbar-brand" href="?controller=order&action=index">Order</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,8 +48,8 @@
                 <td>$order->extraProduct</td>
                 <td>$order->dateMenufacture</td>
                 <td>$order->transmissionStatus</td>";?>
-                <td><a type="button" class="btn btn-outline-primary" href=?controller=order&action=updateForm&<?php echo "orderID=$order->id";?>></i></a><i class="fas fa-edit"></td>
-                <td><a class="btn btn-danger"href=?controller=order&action=deleteConfirm&<?php echo "orderID=$order->id";?>></a><i class="fas fa-trash-alt"></i></td>
+                <td><a type="button" class="btn btn-outline-primary" href=?controller=order&action=updateForm&<?php echo "orderID=$order->id";?>>Update</a></td>
+                <td><a class="btn btn-danger"href=?controller=order&action=deleteConfirm&<?php echo "orderID=$order->id";?>>Delete</a></td>
                 </tr>
             <?php
             }    
