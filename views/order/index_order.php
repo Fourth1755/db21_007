@@ -51,7 +51,7 @@
                 <td>$order->extraProduct</td>
                 <td>$order->dateMenufacture</td>
                 <td>$order->transmissionStatus</td>";?>
-                <td><a type="button" class="btn btn-outline-primary" href=?controller=order&action=updateForm&<?php echo "orderID=$order->id";?>><i class="material-icons">build</i></a></td>
+                <td><a type="button" class="btn btn-outline" style="background-color: #974531;" href=?controller=order&action=updateForm&<?php echo "orderID=$order->id";?>><i class="material-icons">build</i></a></td>
                 <td><a class="btn btn-danger"href=?controller=order&action=deleteConfirm&<?php echo "orderID=$order->id";?>><i class="material-icons">delete</i></a></td>
                 </tr>
             <?php

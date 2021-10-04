@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rate</title>
 </head>
-<body >
+<body>
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark" style=" background-color: #974531;">
             <div class="container-fluid">
