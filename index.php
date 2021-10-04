@@ -1,12 +1,12 @@
 <?php 
-    if(isset($_GET['controller'])&&isset($_GET['action'])){
-        $controller = $_GET['controller'];
-        $action =$_GET['action'];
-    }
-    else{
-        $controller='pages';
-        $action='home';
-    }
+    // if(isset($_GET['controller'])&&isset($_GET['action'])){
+    //     $controller = $_GET['controller'];
+    //     $action =$_GET['action'];
+    // }
+    // else{
+    //     $controller='pages';
+    //     $action='home';
+    // }
     ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,17 +44,6 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="?controller=rate&action=index_rate">Rate</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
       </ul>
     </div>
   </div>
@@ -64,5 +53,28 @@
         ?>
         <br>
         <?php require_once("routes.php") ?>
+        <footer class="text-center text-lg-start text-light"style="background-color: #451009">
+          <div class="container p-4">
+            <div class="row" >
+              <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                <h4 class="text-uppercase">รายชื่อผู้จัดทำ</h4>
+                <h6>นายภูริวัฒน์ ภูลับ              6220504755</h6>
+                <h6>นางสาวลลิตา อภิรักษ์อุษณีย์     6220504771</h6>
+                <h6>นายอาทฤต เย็นเปรม           6220504801</h6>
+              </div>
+              <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                <h4 class="text-uppercase">DB21_007</h4>
+                <p>
+                  อาทฤต เย็นเปรม บอกกับพวกเราว่าทำเว็บสนุกจังเลยยยย<br>
+                  อยากทำอีกเรื่อยๆ ทำตลอดไป ทำจนตาบวมไปเลย
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="text-center p-3 text-dark" style="background-color: #eed5b4">
+            © 2020 Copyright:
+            <a class="text-dark" href="http://158.108.207.4/db21/db21_007/?controller=pages&action=home">db21_007</a>
+          </div>
+        </footer>
 </body>
 </html>
