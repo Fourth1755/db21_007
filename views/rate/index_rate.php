@@ -10,7 +10,7 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="?controller=order&action=index">Rate</a>
+        <a class="navbar-brand">Rate</a>
     <form class="d-flex" method="get" action="">
         <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="key">
         <input type="hidden" name="controller" value="rate">
