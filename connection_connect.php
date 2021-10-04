@@ -1,3 +1,4 @@
+<div style="background-color: #451009; text-align: center;" class="text-light">
 <?php
     //เชื่อมต่อ server
     $severname = "localhost";
@@ -10,13 +11,14 @@
         die("Connection failed: ".$conn->connect_error);
     }
     else{
-        echo "Successfully connected to server <br>";
+        echo " Successfully connected to server ";
     }
 
     if(!$conn->select_db($dbname)){
         echo $conn->connect_error;
     }
     else{
-        echo "Successfully connected to databse <br>";
+        echo " Successfully connected to databse ";
     }
 ?>
+</div>
