@@ -67,7 +67,7 @@
                     if($man->positionID=='POS04'){
                             echo"<option value=$man->id";
                             if($man->id==$order->managerID){
-                                echo "selected='selected'";
+                                echo " selected='selected'";
                             }
                         echo">$man->name</option>";
                         } 
