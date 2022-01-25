@@ -8,12 +8,19 @@
 </head>
 <body >
 <div class="container">
-        <h1>Orderdetail</h1>
-        <form method="get"action="">
-            <input type="text" name="key">
-            <input type="hidden" name="controller" value="orderdetail">
-            <button type="submit" name="action" value="search">Search</button>
-        </form>
+<nav class="navbar navbar-expand-lg navbar-dark" style=" background-color: #974531;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="?controller=order&action=index">Orderdetail</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <form class="d-flex" method="get" action="">
+        <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="key">
+        <input type="hidden" name="controller" value="orderdetail">
+        <button class="btn btn-outline-light" type="submit" value="search" name="action">Search</button>
+      </form>
+    </div>
+    </nav>
         <table class="table">
         <tr><td>Orderdetail_ID</td><td>Order_ID</td><td>Colordetail_ID</td><td>Orderdetail_QuantityColor</td><td>Orderdetail_Quantity</td><td>Update</td><td>Delete</td></tr>
         <?php
@@ -23,20 +30,22 @@
                 <td>$orderdetail->Order_ID</td>
                 <td>$orderdetail->Colordetail_ID</td>
                 <td>$orderdetail->Orderdetail_QuantityColor</td>
-                <td>$orderdetail->Orderdetail_Quantity</td>
-                <td>
-                    <a href=?controller=orderdetail&action=updateOrderdetailForm&Orderdetail_ID=$orderdetail->Orderdetail_ID>Update</a>
+                <td>$orderdetail->Orderdetail_Quantity</td>"?>
+                <td><a class="btn btn-outline-primary" href=?controller=orderdetail&action=updateOrderdetailForm&<?php echo"Orderdetail_ID=$orderdetail->Orderdetail_ID"; ?>>Update</a>
                 </td>
                 <td>
-                    <a href=?controller=orderdetail&action=deleteOrderdetailConfirm&Orderdetail_ID=$orderdetail->Orderdetail_ID>Delete</a>
-                </td></tr>";
+                    <a class="btn btn-danger" href=?controller=orderdetail&action=deleteOrderdetailConfirm&<?php echo"Orderdetail_ID=$orderdetail->Orderdetail_ID"; ?>>Delete</a>
+                </td></tr>
+            <?php    
             }
             echo "</table>";
         ?>
     <a class= "btn btn-success" href=?controller=orderdetail&action=newOrderdetail>Add</a>
+    <div class="container" style="text-align: center;">
+        <h3>จัดทำโดยนางสาวลลิตา อภิรักษ์อุษณีย์ 6220504771</h3>
     </div>
-    
-    
+    <br><br><br>
+    </div>
     
 </body>
 </html>

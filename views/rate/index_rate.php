@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rate</title>
 </head>
-<body >
+<body>
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <nav class="navbar navbar-expand-lg navbar-dark" style=" background-color: #974531;">
             <div class="container-fluid">
                 <a class="navbar-brand">Rate</a>
                 <form class="d-flex" method="get" action="">
@@ -36,6 +36,11 @@
                 echo "</table>";
             ?>
         <a class= "btn btn-success" href=?controller=rate&action=newRate>Add</a>
+        <div class="container" style="text-align: center;">
+        <h3>จัดทำโดยนายอาทฤต เย็นเปรม 6220504801</h3>
+        </div>
+        <br><br><br>
+        
     </div>
     
 </body>
